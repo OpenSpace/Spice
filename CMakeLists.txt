@@ -20,4 +20,11 @@ elseif (APPLE)
     target_compile_options(Spice PUBLIC -m64 -ansi -fPIC)
 endif ()
  
+if (MSVC)
+    target_compile_options(Spice PUBLIC "/W0")
+else ()
+    target_compile_options(Spice PUBLIC "-w")
+endif ()
+
+ 
 target_include_directories(Spice PUBLIC "${PROJECT_SOURCE_DIR}/include")
