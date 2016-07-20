@@ -2,9 +2,25 @@ cmake_minimum_required(VERSION 3.0)
 project(Spice)
 
 # Include all *.c files from the library
-file(GLOB SPICE_SOURCE ${PROJECT_SOURCE_DIR}/src/*.c)
+file(GLOB SPICE_COMMON_SOURCE ${PROJECT_SOURCE_DIR}/src/common/*.c)
 
-add_library(Spice ${SPICE_SOURCE})
+if (MSVC)
+    file(GLOB SPICE_PLATFORM_SOURCE ${PROJECT_SOURCE_DIR}/src/msvc/*.c)
+elseif (APPLE)
+    file(GLOB SPICE_PLATFORM_SOURCE ${PROJECT_SOURCE_DIR}/src/mac/*.c)
+elseif (CYGWIN)
+    file(GLOB SPICE_PLATFORM_SOURCE ${PROJECT_SOURCE_DIR}/src/cygwin/*.c)
+elseif (MINGW)
+    # Untested
+    file(GLOB SPICE_PLATFORM_SOURCE ${PROJECT_SOURCE_DIR}/src/linux/*.c)
+elseif (UNIX)
+    file(GLOB SPICE_PLATFORM_SOURCE ${PROJECT_SOURCE_DIR}/src/linux/*.c)
+endif ()
+
+
+add_library(Spice ${SPICE_COMMON_SOURCE} ${SPICE_PLATFORM_SOURCE})
+
+target_include_directories(Spice PUBLIC "${PROJECT_SOURCE_DIR}/include")
 
 if (WIN32)
     # Our compile definitions on Windows
@@ -27,4 +43,3 @@ else ()
 endif ()
 
  
-target_include_directories(Spice PUBLIC "${PROJECT_SOURCE_DIR}/include")
