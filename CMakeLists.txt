@@ -24,7 +24,7 @@ elseif (UNIX)
 endif ()
 
 
-add_library(Spice ${SPICE_COMMON_SOURCE} ${SPICE_PLATFORM_SOURCE})
+add_library(Spice SHARED ${SPICE_COMMON_SOURCE} ${SPICE_PLATFORM_SOURCE})
 
 target_include_directories(Spice PUBLIC "${INCLUDE_PATH}")
 
