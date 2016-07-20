@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.4)
 project(Spice)
 
 # Include all *.c files from the library
@@ -36,6 +36,12 @@ if (WIN32)
         Spice
         PUBLIC "_COMPLEX_DEFINED;MSDOS;OMIT_BLANK_CC;NON_ANSI_STDIO"
     )
+
+    set_target_properties(
+        Spice
+            PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE
+        )
+
 elseif (APPLE)
     # The compile definitons on Mac
     target_compile_definitions(Spice PUBLIC "NON_ANSI_STDIO")
