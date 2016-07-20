@@ -3,6 +3,8 @@ An unofficial GitHub presence of JPL's NAIF's SPICE library. You can find all in
 
 
 ### Changelog to the official source release:
+Combining the different source code releases for Visual Studio, Linux, MacOS, and Cygwin into a single source tree that contains `common` files and platform specific subfolders.
+
 `fio.h`:
 ```cpp
 + #ifdef WIN32
@@ -13,5 +15,10 @@ An unofficial GitHub presence of JPL's NAIF's SPICE library. You can find all in
 
 - extern int isatty(int);
 + extern LINKAGE int isatty(int);
+```
 
+`open.c` (on Cygwin, Linux, and Mac)
+```cpp
+- (void) mktemp(buf);
++ fclose(mkstemp(buf));
 ```
