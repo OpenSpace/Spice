@@ -324,7 +324,7 @@ static void
 #ifdef NON_ANSI_STDIO
 
       (void) strcpy(buf,"tmp.FXXXXXX");
-      (void) mktemp(buf);
+      fclose(mkstemp(buf));
       goto replace;
 
 #else
