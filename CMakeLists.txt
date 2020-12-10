@@ -24,7 +24,7 @@ elseif (UNIX)
 endif ()
 
 
-add_library(Spice SHARED ${SPICE_COMMON_SOURCE} ${SPICE_PLATFORM_SOURCE})
+add_library(Spice ${SPICE_COMMON_SOURCE} ${SPICE_PLATFORM_SOURCE})
 
 target_include_directories(Spice PUBLIC "${INCLUDE_PATH}")
 
@@ -37,11 +37,7 @@ if (WIN32)
         PUBLIC "_COMPLEX_DEFINED;MSDOS;OMIT_BLANK_CC;NON_ANSI_STDIO"
     )
 
-    set_target_properties(
-        Spice
-            PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE
-        )
-
+    set_target_properties(Spice PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
 elseif (APPLE)
     # The compile definitons on Mac
     target_compile_definitions(Spice PUBLIC "NON_ANSI_STDIO")
@@ -52,7 +48,7 @@ elseif (UNIX)
 endif ()
 
 if (MSVC)
-    target_compile_options(Spice PRIVATE "/W0")
+    target_compile_options(Spice PRIVATE "/W0" "/MP")
 else ()
     target_compile_options(Spice PRIVATE "-w")
 endif ()
