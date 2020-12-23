@@ -23,36 +23,35 @@ elseif (UNIX)
     set(INCLUDE_PATH "${PROJECT_SOURCE_DIR}/include/linux" ${INCLUDE_PATH})
 endif ()
 
+option(SPICE_BUILD_SHARED_LIBRARY "Build SPICE library as shared library" ON)
 
-add_library(SpiceObj OBJECT ${SPICE_COMMON_SOURCE} ${SPICE_PLATFORM_SOURCE})
-set_property(TARGET SpiceObj PROPERTY POSITION_INDEPENDENT_CODE 1)
-
-target_include_directories(SpiceObj PUBLIC "${INCLUDE_PATH}")
+if (SPICE_BUILD_SHARED_LIBRARY)
+    add_library(spice SHARED ${SPICE_COMMON_SOURCE} ${SPICE_PLATFORM_SOURCE})
+else ()
+    add_library(spice STATIC ${SPICE_COMMON_SOURCE} ${SPICE_PLATFORM_SOURCE})
+endif ()
+set_property(TARGET spice PROPERTY POSITION_INDEPENDENT_CODE 1)
+target_include_directories(spice PUBLIC "${INCLUDE_PATH}")
 
 
 if (WIN32)
     # Our compile definitions on Windows
     # We are not manually setting the optimization level, but leave that to the Debug/Release flags
-    target_compile_definitions(SpiceObj PRIVATE 
+    target_compile_definitions(spice PRIVATE 
         _COMPLEX_DEFINED
         MSDOS
         OMIT_BLANK_CC
         NON_ANSI_STDIO
     )
 
-    set_target_properties(SpiceObj PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
+    set_target_properties(spice PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
 else ()
-    target_compile_definitions(SpiceObj PRIVATE NON_ANSI_STDIO)
-    target_compile_options(SpiceObj PRIVATE -m64 -ansi -fPIC)
+    target_compile_definitions(spice PRIVATE NON_ANSI_STDIO)
+    target_compile_options(spice PRIVATE -m64 -ansi -fPIC)
 endif ()
 
 if (MSVC)
-    target_compile_options(SpiceObj PRIVATE /W0)
+    target_compile_options(spice PRIVATE /W0)
 else ()
-    target_compile_options(SpiceObj PRIVATE -w)
+    target_compile_options(spice PRIVATE -w)
 endif ()
-
-add_library(Spice        SHARED $<TARGET_OBJECTS:SpiceObj>)
-add_library(Spice_static STATIC $<TARGET_OBJECTS:SpiceObj>)
-set_target_properties(Spice        PROPERTIES CLEAN_DIRECT_OUTPUT 1)
-set_target_properties(Spice_static PROPERTIES CLEAN_DIRECT_OUTPUT 1)
