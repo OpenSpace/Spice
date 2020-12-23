@@ -26,7 +26,7 @@ endif ()
 
 add_library(Spice ${SPICE_COMMON_SOURCE} ${SPICE_PLATFORM_SOURCE})
 
-target_include_directories(Spice PUBLIC "${INCLUDE_PATH}")
+target_include_directories(Spice SYSTEM PUBLIC "${INCLUDE_PATH}")
 
 if (WIN32)
     # Our compile definitions on Windows
