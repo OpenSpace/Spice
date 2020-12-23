@@ -48,10 +48,12 @@ elseif (UNIX)
     target_compile_options(SpiceObj PUBLIC -m64 -ansi -fPIC)
 endif ()
 
+get_property(compile_options TARGET SpiceObj PROPERTY COMPILE_OPTIONS)
+string(REGEX REPLACE "(^|;)([/-])W[0-9](;|$)" ";" compile_options "${compile_options}") # remove any other waning level
 if (MSVC)
-    target_compile_options(SpiceObj PRIVATE "/W0")
+    target_compile_options(SpiceObj PRIVATE "${compile_options} /W0")
 else ()
-    target_compile_options(SpiceObj PRIVATE "-w")
+    target_compile_options(SpiceObj PRIVATE "${compile_options} -w")
 endif ()
 
 add_library(Spice        SHARED $<TARGET_OBJECTS:SpiceObj>)
