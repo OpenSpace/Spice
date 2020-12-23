@@ -33,7 +33,7 @@ target_include_directories(SpiceObj PUBLIC "${INCLUDE_PATH}")
 if (WIN32)
     get_property(compile_options TARGET SpiceObj PROPERTY COMPILE_OPTIONS)
     string(REGEX REPLACE "(^|;)([/-])W[0-9](;|$)" ";" compile_options "${compile_options}") # remove any other waning level
-    set_property(TARGET SpiceObj PROPERTY COMPILE_OPTIONS ${compile_options}
+    set_property(TARGET SpiceObj PROPERTY COMPILE_OPTIONS ${compile_options})
 
     # Our compile definitions on Windows
     # We are not manually setting the optimization level, but leave that to the Debug/Release flags
