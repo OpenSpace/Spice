@@ -43,6 +43,7 @@ if (WIN32)
         OMIT_BLANK_CC
         NON_ANSI_STDIO
     )
+    target_compile_options(spice PRIVATE /MP)
 
     set_target_properties(spice PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
 else ()
