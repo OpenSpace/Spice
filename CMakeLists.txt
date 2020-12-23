@@ -56,5 +56,5 @@ endif ()
 
 add_library(Spice        SHARED $<TARGET_OBJECTS:SpiceObj>)
 add_library(Spice_static STATIC $<TARGET_OBJECTS:SpiceObj>)
-set_target_properties(Spice        PROPERTIES OUTPUT_NAME spice CLEAN_DIRECT_OUTPUT 1)
-set_target_properties(Spice_static PROPERTIES OUTPUT_NAME spice CLEAN_DIRECT_OUTPUT 1)
+set_target_properties(Spice        PROPERTIES CLEAN_DIRECT_OUTPUT 1)
+set_target_properties(Spice_static PROPERTIES CLEAN_DIRECT_OUTPUT 1)
