@@ -42,10 +42,10 @@ if (WIN32)
 elseif (APPLE)
     # The compile definitons on Mac
     target_compile_definitions(SpiceObj PUBLIC "NON_ANSI_STDIO")
-    target_compile_options(SpiceObj PUBLIC -m64 -ansi -fPIC)
+    target_compile_options(SpiceObj PUBLIC "-m64;-ansi;-fPIC")
 elseif (UNIX)
     target_compile_definitions(SpiceObj PUBLIC "NON_ANSI_STDIO")
-    target_compile_options(SpiceObj PUBLIC -m64 -ansi -fPIC)
+    target_compile_options(SpiceObj PUBLIC "-m64;-ansi;-fPIC")
 endif ()
 
 get_property(compile_options TARGET SpiceObj PROPERTY COMPILE_OPTIONS)
