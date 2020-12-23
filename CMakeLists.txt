@@ -38,11 +38,7 @@ if (WIN32)
         PUBLIC "_COMPLEX_DEFINED;MSDOS;OMIT_BLANK_CC;NON_ANSI_STDIO"
     )
 
-    set_target_properties(
-        SpiceObj
-            PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE
-        )
-
+    set_target_properties(SpiceObj PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
 elseif (APPLE)
     # The compile definitons on Mac
     target_compile_definitions(SpiceObj PUBLIC "NON_ANSI_STDIO")
