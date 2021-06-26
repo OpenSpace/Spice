@@ -123,6 +123,19 @@
    
 -Version
 
+   -CSPICE Version 6.0.0, 07-FEB-2010 (NJB) 
+
+      Now includes SpiceOsc.h.
+
+    27-FEB-2016 (NJB) 
+
+      Updated to include header files
+
+        SpiceDLA.h
+        SpiceDSK.h
+        SpiceSrf.h
+        SpiceDtl.h
+
    -CSPICE Version 5.0.0, 11-MAY-2012 (NJB) (SCK) 
 
       Updated to include header files
@@ -218,7 +231,32 @@
    Include the CSPICE occultation definitions.
    */
    #include "SpiceOccult.h"
-   
+
+   /*
+   Include the CSPICE DLA definitions.
+   */
+   #include "SpiceDLA.h"
+
+   /*
+   Include the CSPICE DSK definitions.
+   */
+   #include "SpiceDSK.h"
+  
+   /*
+   Include the CSPICE DSK tolerance definitions.
+   */
+   #include "SpiceDtl.h"
+  
+   /*
+   Include the CSPICE surface definitions.
+   */
+   #include "SpiceSrf.h"
+
+   /*
+   Include oscltx_c definitions.
+   */
+   #include "SpiceOsc.h"
+  
    /*
    Include CSPICE prototypes.
    */

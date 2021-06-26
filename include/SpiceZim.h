@@ -71,6 +71,36 @@
 
 -Version
 
+   -CSPICE Version 13.0.0, 25-JAN-2017 (NJB) (EDW) 
+
+       Defined new abbreviation macro CONST_IVEC3.
+       Added macros for
+
+          dskgd_c 
+          dskmi2_c
+          dskb02_c
+          dskd02_c
+          dski02_c
+          dskn02_c
+          dskobj_c
+          dskp02_c
+          dskrb2_c
+          dsksrf_c
+          dskv02_c
+          dskxv_c
+          dskxsi_c
+          dskw02_c
+          latsrf_c
+          limbpt_c
+          oscltx_c
+          pltar_c
+          pltexp_c
+          pltnp_c
+          pltnrm_c
+          pltvol_c
+          srfnrm_c
+          termpt_c
+
    -CSPICE Version 12.0.0, 03-DEC-2013 (NJB) (EDW) (SCK)
 
        Added include for SpiceZrnm.h to eliminate symbol conflict
@@ -297,8 +327,11 @@ Macros used to abbreviate type casts:
 */
 
    #define  CONST_BOOL         ( ConstSpiceBoolean   *      )
+   #define  CONST_DLADSC       ( ConstSpiceDLADescr  *      )
+   #define  CONST_DSKDSC       ( ConstSpiceDSKDescr  *      )
    #define  CONST_ELLIPSE      ( ConstSpiceEllipse   *      )
    #define  CONST_IVEC         ( ConstSpiceInt       *      )
+   #define  CONST_IVEC3        ( ConstSpiceInt      (*) [3] )
    #define  CONST_MAT          ( ConstSpiceDouble   (*) [3] )
    #define  CONST_MAT2         ( ConstSpiceDouble   (*) [2] )
    #define  CONST_MAT6         ( ConstSpiceDouble   (*) [6] )
@@ -433,6 +466,119 @@ Macros that substitute for function calls:
                                                                        \
         (   diags2_c ( CONST_MAT2(symmat), (diag), (rotate) )   )
 
+
+   #define  dskb02_c( handle, dladsc, nv,     np,     nvxtot,         \
+                      vtxbds, voxsiz, voxori, vgrext, cgscal,         \
+                      vtxnpl, voxnpt, voxnpl                  )       \
+                                                                      \
+        (   dskb02_c( (handle), CONST_DLADSC(dladsc), (nv), (np),     \
+                      (nvxtot), (vtxbds), (voxsiz), (voxori),         \
+                      (vgrext), (cgscal), (vtxnpl), (voxnpt),         \
+                      (voxnpl)    )   )
+
+
+   #define  dskd02_c( handle, dladsc, item, start, room, n, values )  \
+                                                                      \
+        (   dskd02_c ( (handle), CONST_DLADSC(dladsc), (item),        \
+                       (start), (room), (n), (values)         )  )
+
+
+   #define  dski02_c( handle, dladsc, item, start, room, n, values )  \
+                                                                      \
+        (   dski02_c ( (handle), CONST_DLADSC(dladsc), (item),        \
+                       (start), (room), (n), (values)         )  )
+
+
+   #define  dskgd_c( handle, dladsc, dskdsc )                         \
+                                                                      \
+        (   dskgd_c ( (handle), CONST_DLADSC(dladsc), (dskdsc) )  )
+
+
+   #define  dskmi2_c( nv,     vrtces, np,     plates,                 \
+                      finscl, corscl, worksz, voxpsz, voxlsz,         \
+                      makvtl, spxisz, work,   spaixd, spaixi  )       \
+                                                                      \
+        (   dskmi2_c ( (nv),                CONST_VEC3(vrtces), (np), \
+                       CONST_IVEC3(plates), (finscl),                 \
+                       (corscl),            (worksz),  (voxpsz),      \
+                       (voxlsz),            (makvtl),  (spxisz),      \
+                       (work),              (spaixd),  (spaixi)  )  )
+
+
+   #define  dskn02_c( handle, dladsc, plid, normal )                  \
+                                                                      \
+        (   dskn02_c ( (handle), CONST_DLADSC(dladsc), (plid),        \
+                       (normal)                                )  )
+
+
+   #define  dskobj_c( dsk, bodids )                                   \
+                                                                      \
+        (   dskobj_c ( CONST_STR(dsk), (bodids) )   )
+
+
+   #define  dskp02_c( handle, dladsc, start, room, n, plates )        \
+                                                                      \
+        (   dskp02_c ( (handle), CONST_DLADSC(dladsc), (start),       \
+                       (room), (n),  (plates)                   )  )
+
+
+   #define  dskrb2_c( nv,     vrtces, np,     plates,                 \
+                      corsys, corpar, mncor3, mxcor3   )              \
+                                                                      \
+        (   dskrb2_c ( (nv),                CONST_VEC3(vrtces), (np), \
+                       CONST_IVEC3(plates), (corsys),                 \
+                       (corpar),            (mncor3),  (mxcor3) )  )
+
+
+   #define  dsksrf_c( dsk,    bodyid, srfids )                        \
+                                                                      \
+        (   dsksrf_c ( CONST_STR(dsk), (bodyid), (srfids) )   )
+
+
+   #define  dskv02_c( handle, dladsc, start, room, n, vrtces )        \
+                                                                      \
+        (   dskv02_c ( (handle), CONST_DLADSC(dladsc), (start),       \
+                       (room), (n),  (vrtces)                   )  )
+
+
+   #define  dskw02_c( handle, center, surfce, dclass,                 \
+                      frame,  corsys, corpar, mncor1,                 \
+                      mxcor1, mncor2, mxcor2, mncor3,                 \
+                      mxcor3, first,  last,   nv,                     \
+                      vrtces, np,     plates, spaixd, spaixi )        \
+                                                                      \
+        (   dskw02_c ( (handle), (center), (surfce), (dclass),        \
+                       CONST_STR(frame),   (corsys),                  \
+                       CONST_VEC(corpar),  (mncor1), (mxcor1),        \
+                       (mncor2),           (mxcor2), (mncor3),        \
+                       (mxcor3),           (first),  (last),          \
+                       (nv),               CONST_VEC3(vrtces),        \
+                       (np),               CONST_IVEC3(plates),       \
+                       (spaixd),           (spaixi)             )   )
+
+
+   #define  dskxsi_c( pri,    target, nsurf,  srflst, et,             \
+                      fixref, vertex, raydir, maxd,   maxi,           \
+                      xpt,    handle, dladsc, dskdsc, dc,             \
+                      ic,     found                         )         \
+                                                                      \
+        (   dskxsi_c( (pri),              CONST_STR(target), (nsurf), \
+                      CONST_IVEC(srflst), (et),                       \
+                      CONST_STR(fixref),  CONST_VEC(vertex),          \
+                      CONST_VEC(raydir),  (maxd),            (maxi),  \
+                      (xpt),              (handle),          (dladsc),\
+                      (dskdsc),           (dc),              (ic),    \
+                      (found)                                     )   )
+
+
+   #define   dskxv_c( pri,   target, nsurf,  srflst, et,    fixref,   \
+                      nrays, vtxarr, dirarr, xptarr, fndarr        )  \
+                                                                      \
+           ( dskxv_c( (pri),              CONST_STR(target), (nsurf), \
+                      CONST_IVEC(srflst), (et),                       \
+                      CONST_STR(fixref),  (nrays),                    \
+                      CONST_VEC3(vtxarr), CONST_VEC3(dirarr),         \
+                      (xptarr),           (fndarr)            )   )
 
 
    #define  dvdot_c( s1, s2 )                                         \
@@ -688,6 +834,29 @@ Macros that substitute for function calls:
         (   isrot_c ( CONST_MAT(m), (ntol), (dtol) )   )
 
 
+   #define  latsrf_c( method, target, et,    fixref,                   \
+                      npts,   lonlat, srfpts         )                 \
+                                                                       \
+        (   latsrf_c( CONST_STR(method), CONST_STR(target), (et),      \
+                      CONST_STR(fixref), (npts), CONST_MAT2(lonlat),   \
+                      (srfpts)                                     )  )
+
+
+   #define  limbpt_c( method, target, et,     fixref,                  \
+                      abcorr, corloc, obsrvr, refvec,                  \
+                      rolstp, ncuts,  schstp, soltol,                  \
+                      maxn,   npts,   points, epochs,                  \
+                      tangts                          )                \
+                                                                       \
+       (   limbpt_c( CONST_STR(method), CONST_STR(target),  (et),      \
+                     CONST_STR(fixref), CONST_STR(abcorr),             \
+                     CONST_STR(corloc), CONST_STR(obsrvr),             \
+                     CONST_VEC(refvec), (rolstp),           (ncuts),   \
+                     (schstp),          (soltol),           (maxn),    \
+                     (npts),            (points),           (epochs),  \
+                     (tangts)                                      )  )
+
+
    #define  lmpool_c( cvals, lenvals, n )                              \
                                                                        \
         (   lmpool_c( CONST_VOID(cvals), (lenvals), (n) )  )
@@ -849,6 +1018,11 @@ Macros that substitute for function calls:
         (   oscelt_c ( CONST_VEC(state), (et), (mu), (elts)  )   )
 
 
+   #define  oscltx_c( state, et, mu, elts )                            \
+                                                                       \
+        (   oscltx_c ( CONST_VEC(state), (et), (mu), (elts)  )   )
+
+
    #define  pcpool_c( name, n, lenvals, cvals )                        \
                                                                        \
         (   pcpool_c ( (name), (n), (lenvals), CONST_VOID(cvals) )  )
@@ -877,6 +1051,35 @@ Macros that substitute for function calls:
    #define  pl2psv_c( plane, point, span1, span2 )                     \
                                                                        \
         (   pl2psv_c( CONST_PLANE(plane), (point), (span1), (span2) )  )
+
+
+   #define  pltar_c( nv, vrtces, np, plates )                          \
+                                                                       \
+        (   pltar_c( (nv), CONST_VEC3(vrtces),                         \
+                     (np), CONST_IVEC3(plates) )   )
+
+
+   #define  pltexp_c( iverts, delta, overts )                          \
+                                                                       \
+        (   pltexp_c( CONST_VEC3(iverts), (delta), (overts) )  )
+
+
+   #define  pltnp_c( point, v1, v2, v3, pnear, dist )                  \
+                                                                       \
+        (   pltnp_c( CONST_VEC(point), CONST_VEC(v1), CONST_VEC(v2),   \
+                     CONST_VEC(v3),    (pnear),       (dist)       )  )
+
+
+   #define  pltnrm_c( v1, v2, v3, normal )                             \
+                                                                       \
+        (   pltnrm_c( CONST_VEC(v1), CONST_VEC(v2), CONST_VEC(v3),     \
+                     (normal)  )   )
+
+
+   #define  pltvol_c( nv, vrtces, np, plates )                         \
+                                                                       \
+        (   pltvol_c( (nv), CONST_VEC3(vrtces),                        \
+                      (np), CONST_IVEC3(plates) )   )
 
 
    #define  prop2b_c( gm, pvinit, dt, pvprop )                         \
@@ -1169,6 +1372,14 @@ Macros that substitute for function calls:
                        (trgepc), (obspos),        (found)          )   )
 
 
+   #define  srfnrm_c( method, target, et,    fixref,                   \
+                      npts,   srfpts, normls         )                 \
+                                                                       \
+        (   srfnrm_c ( CONST_STR(method),  CONST_STR(target), (et),    \
+                       CONST_STR(fixref),  (npts),                     \
+                       CONST_VEC3(srfpts), (normls)               )   )
+
+
    #define  stelab_c( pobj, vobj, appobj )                             \
                                                                        \
         (   stelab_c ( CONST_VEC(pobj), CONST_VEC(vobj), (appobj)  )   )
@@ -1207,6 +1418,22 @@ Macros that substitute for function calls:
                                                                        \
         (   swpool_c( CONST_STR(agent), (nnames),                      \
                       (lenvals),        CONST_VOID(names)         )    )
+
+
+   #define  termpt_c( method, ilusrc, target, et,     fixref,          \
+                      abcorr, corloc, obsrvr, refvec,                  \
+                      rolstp, ncuts,  schstp, soltol,                  \
+                      maxn,   npts,   points, epochs,                  \
+                      tangts                          )                \
+                                                                       \
+       (   termpt_c( CONST_STR(method), CONST_STR(ilusrc),             \
+                     CONST_STR(target), (et),                          \
+                     CONST_STR(fixref), CONST_STR(abcorr),             \
+                     CONST_STR(corloc), CONST_STR(obsrvr),             \
+                     CONST_VEC(refvec), (rolstp),           (ncuts),   \
+                     (schstp),          (soltol),           (maxn),    \
+                     (npts),            (points),           (epochs),  \
+                     (tangts)                                      )  )
 
 
    #define  trace_c( m1 )                                              \

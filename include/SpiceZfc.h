@@ -384,34 +384,9 @@ extern logical bodfnd_(integer *body, char *item, ftnlen item_len);
 extern int bodmat_(integer *body, doublereal *et, doublereal *tipm);
 /*:ref: return_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
-/*:ref: irfnum_ 14 3 13 4 124 */
-/*:ref: pckmat_ 14 5 4 7 4 7 12 */
-/*:ref: repmi_ 14 7 13 13 4 13 124 124 124 */
-/*:ref: dtpool_ 14 6 13 12 4 13 124 124 */
-/*:ref: ccifrm_ 14 7 4 4 4 13 4 12 124 */
-/*:ref: etcal_ 14 3 7 13 124 */
-/*:ref: setmsg_ 14 2 13 124 */
-/*:ref: errch_ 14 4 13 13 124 124 */
-/*:ref: suffix_ 14 5 13 4 13 124 124 */
-/*:ref: errint_ 14 3 13 4 124 */
-/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: tisbod_ 14 5 13 4 7 7 124 */
+/*:ref: failed_ 12 0 */
 /*:ref: chkout_ 14 2 13 124 */
-/*:ref: zzbodbry_ 4 1 4 */
-/*:ref: gdpool_ 14 7 13 4 4 4 7 12 124 */
-/*:ref: spd_ 7 0 */
-/*:ref: j2000_ 7 0 */
-/*:ref: cleard_ 14 2 4 7 */
-/*:ref: bodvcd_ 14 6 4 13 4 4 7 124 */
-/*:ref: bodfnd_ 12 3 4 13 124 */
-/*:ref: errdp_ 14 3 13 7 124 */
-/*:ref: rpd_ 7 0 */
-/*:ref: vdotg_ 7 3 7 7 4 */
-/*:ref: twopi_ 7 0 */
-/*:ref: halfpi_ 7 0 */
-/*:ref: eul2m_ 14 7 7 7 7 4 4 4 7 */
-/*:ref: irfrot_ 14 3 4 4 7 */
-/*:ref: mxm_ 14 3 7 7 7 */
-/*:ref: moved_ 14 3 7 4 7 */
  
 extern int bodn2c_(char *name__, integer *code, logical *found, ftnlen name_len);
 /*:ref: return_ 12 0 */
@@ -1810,10 +1785,9 @@ extern int dafwfr_(integer *handle, integer *nd, integer *ni, char *ifname, inte
  
 extern int dasa2l_(integer *handle, integer *type__, integer *addrss, integer *clbase, integer *clsize, integer *recno, integer *wordno);
 /*:ref: chkin_ 14 2 13 124 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: isrchi_ 4 3 4 4 4 */
@@ -1828,7 +1802,7 @@ extern int dasac_(integer *handle, integer *n, char *buffer, ftnlen buffer_len);
 /*:ref: dassih_ 14 3 4 13 124 */
 /*:ref: failed_ 12 0 */
 /*:ref: chkout_ 14 2 13 124 */
-/*:ref: dashlu_ 14 2 4 4 */
+/*:ref: zzddhhlu_ 14 5 4 13 12 4 124 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errfnm_ 14 3 13 4 124 */
 /*:ref: errint_ 14 3 13 4 124 */
@@ -1843,7 +1817,7 @@ extern int dasacr_(integer *handle, integer *n);
 /*:ref: return_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: dassih_ 14 3 4 13 124 */
-/*:ref: dashlu_ 14 2 4 4 */
+/*:ref: zzddhhlu_ 14 5 4 13 12 4 124 */
 /*:ref: failed_ 12 0 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: setmsg_ 14 2 13 124 */
@@ -1923,7 +1897,7 @@ extern int dasbt_(char *binfil, integer *xfrlun, ftnlen binfil_len);
 /*:ref: failed_ 12 0 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: dasrfr_ 14 9 4 13 13 4 4 4 4 124 124 */
-/*:ref: dashlu_ 14 2 4 4 */
+/*:ref: zzddhhlu_ 14 5 4 13 12 4 124 */
 /*:ref: dascls_ 14 1 4 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
@@ -1949,7 +1923,7 @@ extern int dascls_(integer *handle);
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: dasham_ 14 3 4 13 124 */
 /*:ref: daswbr_ 14 1 4 */
-/*:ref: dashlu_ 14 2 4 4 */
+/*:ref: zzddhhlu_ 14 5 4 13 12 4 124 */
 /*:ref: failed_ 12 0 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
@@ -1991,7 +1965,7 @@ extern int dasec_(integer *handle, integer *bufsiz, integer *n, char *buffer, lo
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
-/*:ref: dashlu_ 14 2 4 4 */
+/*:ref: zzddhhlu_ 14 5 4 13 12 4 124 */
 /*:ref: isrchi_ 4 3 4 4 4 */
 /*:ref: dasrfr_ 14 9 4 13 13 4 4 4 4 124 124 */
 /*:ref: dasioc_ 14 6 13 4 4 13 124 124 */
@@ -2028,30 +2002,32 @@ extern int dasham_(integer *handle, char *access, ftnlen access_len);
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: lnkini_ 14 2 4 4 */
 /*:ref: ssizei_ 14 2 4 4 */
-/*:ref: setmsg_ 14 2 13 124 */
-/*:ref: exists_ 12 2 13 124 */
-/*:ref: rtrim_ 4 2 13 124 */
-/*:ref: errch_ 14 4 13 13 124 124 */
-/*:ref: lnknxt_ 4 2 4 4 */
-/*:ref: errint_ 14 3 13 4 124 */
-/*:ref: lnknfn_ 4 1 4 */
-/*:ref: getlun_ 14 1 4 */
+/*:ref: zzddhopn_ 14 7 13 13 13 4 124 124 124 */
 /*:ref: failed_ 12 0 */
-/*:ref: zzddhppf_ 14 3 4 4 4 */
-/*:ref: zzplatfm_ 14 4 13 13 124 124 */
-/*:ref: isrchc_ 4 5 13 4 13 124 124 */
-/*:ref: idw2at_ 14 6 13 13 13 124 124 124 */
+/*:ref: lnknxt_ 4 2 4 4 */
+/*:ref: lnknfn_ 4 1 4 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: errch_ 14 4 13 13 124 124 */
+/*:ref: zzdasrfr_ 14 9 4 13 13 4 4 4 4 124 124 */
 /*:ref: lnkan_ 14 2 4 4 */
 /*:ref: lnkilb_ 14 3 4 4 4 */
 /*:ref: cleari_ 14 2 4 4 */
-/*:ref: dasioi_ 14 5 13 4 4 4 124 */
+/*:ref: zzdasgri_ 14 3 4 4 4 */
 /*:ref: maxai_ 14 4 4 4 4 4 */
 /*:ref: insrti_ 14 2 4 4 */
+/*:ref: zzddhhlu_ 14 5 4 13 12 4 124 */
+/*:ref: dasioi_ 14 5 13 4 4 4 124 */
 /*:ref: ltrim_ 4 2 13 124 */
+/*:ref: rtrim_ 4 2 13 124 */
+/*:ref: zzplatfm_ 14 4 13 13 124 124 */
 /*:ref: zzdasnfr_ 14 11 4 13 13 4 4 4 4 13 124 124 124 */
+/*:ref: zzddhcls_ 14 4 4 13 12 124 */
 /*:ref: lnkfsl_ 14 3 4 4 4 */
 /*:ref: removi_ 14 2 4 4 */
 /*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: zzddhluh_ 14 3 4 4 12 */
+/*:ref: zzddhfnh_ 14 4 13 4 12 124 */
 /*:ref: copyi_ 14 2 4 4 */
 /*:ref: ljust_ 14 4 13 13 124 124 */
 /*:ref: ucase_ 14 4 13 13 124 124 */
@@ -2107,7 +2083,7 @@ extern int dasrcr_(integer *handle, integer *n);
 /*:ref: return_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: dassih_ 14 3 4 13 124 */
-/*:ref: dashlu_ 14 2 4 4 */
+/*:ref: zzddhhlu_ 14 5 4 13 12 4 124 */
 /*:ref: failed_ 12 0 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: setmsg_ 14 2 13 124 */
@@ -2145,13 +2121,9 @@ extern int dasrdi_(integer *handle, integer *first, integer *last, integer *data
 extern int dasrfr_(integer *handle, char *idword, char *ifname, integer *nresvr, integer *nresvc, integer *ncomr, integer *ncomc, ftnlen idword_len, ftnlen ifname_len);
 /*:ref: return_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
-/*:ref: dashlu_ 14 2 4 4 */
+/*:ref: zzdasrfr_ 14 9 4 13 13 4 4 4 4 124 124 */
 /*:ref: failed_ 12 0 */
 /*:ref: chkout_ 14 2 13 124 */
-/*:ref: setmsg_ 14 2 13 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
-/*:ref: errint_ 14 3 13 4 124 */
-/*:ref: sigerr_ 14 2 13 124 */
  
 extern int dasrwr_(integer *handle, integer *recno, char *recc, doublereal *recd, integer *reci, integer *first, integer *last, doublereal *datad, integer *datai, char *datac, ftnlen recc_len, ftnlen datac_len);
 extern int dasrrd_(integer *handle, integer *recno, integer *first, integer *last, doublereal *datad);
@@ -2169,19 +2141,21 @@ extern int daswbr_(integer *handle);
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: lnkini_ 14 2 4 4 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: lnkxsl_ 14 3 4 4 4 */
 /*:ref: lnkilb_ 14 3 4 4 4 */
 /*:ref: moved_ 14 3 7 4 7 */
 /*:ref: lnktl_ 4 2 4 4 */
+/*:ref: zzddhhlu_ 14 5 4 13 12 4 124 */
+/*:ref: failed_ 12 0 */
 /*:ref: dasiod_ 14 5 13 4 4 7 124 */
 /*:ref: lnkan_ 14 2 4 4 */
-/*:ref: failed_ 12 0 */
+/*:ref: zzdasgrd_ 14 3 4 4 7 */
 /*:ref: movei_ 14 3 4 4 4 */
 /*:ref: dasioi_ 14 5 13 4 4 4 124 */
+/*:ref: zzdasgri_ 14 3 4 4 4 */
 /*:ref: dasioc_ 14 6 13 4 4 13 124 124 */
 /*:ref: dassih_ 14 3 4 13 124 */
 /*:ref: lnkfsl_ 14 3 4 4 4 */
@@ -2223,7 +2197,7 @@ extern int dastb_(integer *xfrlun, char *binfil, ftnlen binfil_len);
 /*:ref: daswfr_ 14 9 4 13 13 4 4 4 4 124 124 */
 /*:ref: dascls_ 14 1 4 */
 /*:ref: rdenci_ 14 3 4 4 4 */
-/*:ref: dashlu_ 14 2 4 4 */
+/*:ref: zzddhhlu_ 14 5 4 13 12 4 124 */
 /*:ref: dasacr_ 14 2 4 4 */
 /*:ref: nextwd_ 14 6 13 13 13 124 124 124 */
 /*:ref: nparsi_ 14 6 13 4 13 4 124 124 */
@@ -2275,7 +2249,7 @@ extern int daswfr_(integer *handle, char *idword, char *ifname, integer *nresvr,
 /*:ref: return_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: dassih_ 14 3 4 13 124 */
-/*:ref: dashlu_ 14 2 4 4 */
+/*:ref: zzddhhlu_ 14 5 4 13 12 4 124 */
 /*:ref: failed_ 12 0 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: setmsg_ 14 2 13 124 */
@@ -2391,6 +2365,64 @@ extern int diffi_(integer *a, integer *b, integer *c__);
 /*:ref: excess_ 14 3 4 13 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
+ 
+extern int dlabbs_(integer *handle, integer *descr, logical *found);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: dasrdi_ 14 4 4 4 4 4 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
+ 
+extern int dlabfs_(integer *handle, integer *descr, logical *found);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: dasrdi_ 14 4 4 4 4 4 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
+ 
+extern int dlabns_(integer *handle);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: dassih_ 14 3 4 13 124 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: dasrdi_ 14 4 4 4 4 4 */
+/*:ref: daslla_ 14 4 4 4 4 4 */
+/*:ref: filli_ 14 3 4 4 4 */
+/*:ref: dasadi_ 14 3 4 4 4 */
+/*:ref: dasudi_ 14 4 4 4 4 4 */
+ 
+extern int dlaens_(integer *handle);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: dasrdi_ 14 4 4 4 4 4 */
+/*:ref: daslla_ 14 4 4 4 4 4 */
+/*:ref: dasudi_ 14 4 4 4 4 4 */
+/*:ref: chkout_ 14 2 13 124 */
+ 
+extern int dlafns_(integer *handle, integer *descr, integer *nxtdsc, logical *found);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: dasrdi_ 14 4 4 4 4 4 */
+ 
+extern int dlafps_(integer *handle, integer *descr, integer *prvdsc, logical *found);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: dasrdi_ 14 4 4 4 4 4 */
+ 
+extern int dlaopn_(char *fname, char *ftype, char *ifname, integer *ncomch, integer *handle, ftnlen fname_len, ftnlen ftype_len, ftnlen ifname_len);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: dasonw_ 14 8 13 13 13 4 4 124 124 124 */
+/*:ref: dasadi_ 14 3 4 4 4 */
+ 
+extern logical dlassg_(integer *han1, integer *han2, integer *dsc1, integer *dsc2);
  
 extern int dlatdr_(doublereal *x, doublereal *y, doublereal *z__, doublereal *jacobi);
 /*:ref: return_ 12 0 */
@@ -2509,6 +2541,281 @@ extern int drotat_(doublereal *angle, integer *iaxis, doublereal *dmout);
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
  
+extern int dskb02_(integer *handle, integer *dladsc, integer *nv, integer *np, integer *nvxtot, doublereal *vtxbds, doublereal *voxsiz, doublereal *voxori, integer *vgrext, integer *cgscal, integer *vtxnpl, integer *voxnpt, integer *voxnpl);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: dasrdi_ 14 4 4 4 4 4 */
+/*:ref: movei_ 14 3 4 4 4 */
+/*:ref: dasrdd_ 14 4 4 4 4 7 */
+/*:ref: moved_ 14 3 7 4 7 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: chkout_ 14 2 13 124 */
+ 
+extern int dskcls_(integer *handle, logical *optmiz);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: dascls_ 14 1 4 */
+/*:ref: dasham_ 14 3 4 13 124 */
+/*:ref: daswbr_ 14 1 4 */
+/*:ref: dasllc_ 14 1 4 */
+/*:ref: chkout_ 14 2 13 124 */
+ 
+extern int dskd02_(integer *handle, integer *dladsc, integer *item, integer *start, integer *room, integer *n, doublereal *values);
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: dasrdi_ 14 4 4 4 4 4 */
+/*:ref: failed_ 12 0 */
+/*:ref: dasrdd_ 14 4 4 4 4 7 */
+ 
+extern int dskgd_(integer *handle, integer *dladsc, doublereal *dskdsc);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: dasrdd_ 14 4 4 4 4 7 */
+ 
+extern int dski02_(integer *handle, integer *dladsc, integer *item, integer *start, integer *room, integer *n, integer *values);
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: dasrdi_ 14 4 4 4 4 4 */
+/*:ref: failed_ 12 0 */
+ 
+extern int dskmi2_(integer *nv, doublereal *vrtces, integer *np, integer *plates, doublereal *finscl, integer *corscl, integer *worksz, integer *voxpsz, integer *voxlsz, logical *makvtl, integer *spxisz, integer *work, doublereal *spaixd, integer *spaixi);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: zzmkspin_ 14 19 4 4 7 7 4 4 4 4 4 4 7 7 4 4 4 4 4 7 4 */
+/*:ref: failed_ 12 0 */
+/*:ref: zzvrtplt_ 14 9 4 4 4 4 4 4 4 4 4 */
+ 
+extern int dskn02_(integer *handle, integer *dladsc, integer *plid, doublereal *normal);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: dskgd_ 14 3 4 4 7 */
+/*:ref: dskz02_ 14 4 4 4 4 4 */
+/*:ref: zzddhhlu_ 14 5 4 13 12 4 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: dski02_ 14 7 4 4 4 4 4 4 4 */
+/*:ref: dskd02_ 14 7 4 4 4 4 4 4 7 */
+/*:ref: failed_ 12 0 */
+/*:ref: vsub_ 14 3 7 7 7 */
+/*:ref: ucrss_ 14 3 7 7 7 */
+ 
+extern int dskobj_(char *dsk, integer *bodids, ftnlen dsk_len);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: getfat_ 14 6 13 13 13 124 124 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errch_ 14 4 13 13 124 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: dasopr_ 14 3 13 4 124 */
+/*:ref: dlabfs_ 14 3 4 4 12 */
+/*:ref: failed_ 12 0 */
+/*:ref: movei_ 14 3 4 4 4 */
+/*:ref: dskgd_ 14 3 4 4 7 */
+/*:ref: cardi_ 4 1 4 */
+/*:ref: sizei_ 4 1 4 */
+/*:ref: dskcls_ 14 2 4 12 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: appndi_ 14 2 4 4 */
+/*:ref: dlafns_ 14 4 4 4 4 12 */
+/*:ref: validi_ 14 3 4 4 4 */
+/*:ref: dascls_ 14 1 4 */
+ 
+extern int dskopn_(char *fname, char *ifname, integer *ncomch, integer *handle, ftnlen fname_len, ftnlen ifname_len);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: dlaopn_ 14 8 13 13 13 4 4 124 124 124 */
+/*:ref: chkout_ 14 2 13 124 */
+ 
+extern int dskp02_(integer *handle, integer *dladsc, integer *start, integer *room, integer *n, integer *plates);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: dskgd_ 14 3 4 4 7 */
+/*:ref: dskz02_ 14 4 4 4 4 4 */
+/*:ref: zzddhhlu_ 14 5 4 13 12 4 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: dski02_ 14 7 4 4 4 4 4 4 4 */
+ 
+extern int dskrb2_(integer *nv, doublereal *vrtces, integer *np, integer *plates, integer *corsys, doublereal *corpar, doublereal *mncor3, doublereal *mxcor3);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: vnorm_ 7 1 7 */
+/*:ref: dpmax_ 7 0 */
+/*:ref: pltnp_ 14 6 7 7 7 7 7 7 */
+/*:ref: dpmin_ 7 0 */
+/*:ref: recgeo_ 14 6 7 7 7 7 7 7 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: vlcom3_ 14 7 7 7 7 7 7 7 7 */
+/*:ref: vdist_ 7 2 7 7 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+ 
+extern int dsksrf_(char *dsk, integer *bodyid, integer *srfids, ftnlen dsk_len);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: getfat_ 14 6 13 13 13 124 124 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errch_ 14 4 13 13 124 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: dasopr_ 14 3 13 4 124 */
+/*:ref: dlabfs_ 14 3 4 4 12 */
+/*:ref: failed_ 12 0 */
+/*:ref: movei_ 14 3 4 4 4 */
+/*:ref: dskgd_ 14 3 4 4 7 */
+/*:ref: cardi_ 4 1 4 */
+/*:ref: sizei_ 4 1 4 */
+/*:ref: dskcls_ 14 2 4 12 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: appndi_ 14 2 4 4 */
+/*:ref: dlafns_ 14 4 4 4 4 12 */
+/*:ref: validi_ 14 3 4 4 4 */
+/*:ref: dascls_ 14 1 4 */
+ 
+extern int dsktol_(integer *keywrd, doublereal *dpval);
+extern int dskgtl_(integer *keywrd, doublereal *dpval);
+extern int dskstl_(integer *keywrd, doublereal *dpval);
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: return_ 12 0 */
+/*:ref: errch_ 14 4 13 13 124 124 */
+ 
+extern int dskv02_(integer *handle, integer *dladsc, integer *start, integer *room, integer *n, doublereal *vrtces);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: dskgd_ 14 3 4 4 7 */
+/*:ref: dskz02_ 14 4 4 4 4 4 */
+/*:ref: zzddhhlu_ 14 5 4 13 12 4 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: dskd02_ 14 7 4 4 4 4 4 4 7 */
+ 
+extern int dskw02_(integer *handle, integer *center, integer *surfid, integer *dclass, char *frame, integer *corsys, doublereal *corpar, doublereal *mncor1, doublereal *mxcor1, doublereal *mncor2, doublereal *mxcor2, doublereal *mncor3, doublereal *mxcor3, doublereal *first, doublereal *last, integer *nv, doublereal *vrtces, integer *np, integer *plates, doublereal *spaixd, integer *spaixi, ftnlen frame_len);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: namfrm_ 14 3 13 4 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errch_ 14 4 13 13 124 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: dpr_ 7 0 */
+/*:ref: twopi_ 7 0 */
+/*:ref: halfpi_ 7 0 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: moved_ 14 3 7 4 7 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: movei_ 14 3 4 4 4 */
+/*:ref: dlabns_ 14 1 4 */
+/*:ref: failed_ 12 0 */
+/*:ref: cleard_ 14 2 4 7 */
+/*:ref: dasadd_ 14 3 4 4 7 */
+/*:ref: dasadi_ 14 3 4 4 4 */
+/*:ref: dlaens_ 14 1 4 */
+ 
+extern int dskx02_(integer *handle, integer *dladsc, doublereal *vertex, doublereal *raydir, integer *plid, doublereal *xpt, logical *found);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: dpmax_ 7 0 */
+/*:ref: cleari_ 14 2 4 4 */
+/*:ref: vzero_ 12 1 7 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: vhat_ 14 2 7 7 */
+/*:ref: dskb02_ 14 13 4 4 4 4 4 7 7 7 4 4 4 4 4 */
+/*:ref: failed_ 12 0 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: dski02_ 14 7 4 4 4 4 4 4 4 */
+/*:ref: dskgd_ 14 3 4 4 7 */
+/*:ref: movei_ 14 3 4 4 4 */
+/*:ref: dskgtl_ 14 2 4 7 */
+/*:ref: zzraybox_ 14 6 7 7 7 7 7 12 */
+/*:ref: zztogrid_ 14 4 7 7 7 7 */
+/*:ref: xdda_ 14 6 7 7 4 4 4 4 */
+/*:ref: vsub_ 14 3 7 7 7 */
+/*:ref: vlcom3_ 14 7 7 7 7 7 7 7 7 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: filli_ 14 3 4 4 4 */
+/*:ref: orderi_ 14 3 4 4 4 */
+/*:ref: isrchi_ 4 3 4 4 4 */
+/*:ref: dskd02_ 14 7 4 4 4 4 4 4 7 */
+/*:ref: vsubg_ 14 4 7 7 4 7 */
+/*:ref: pltexp_ 14 3 7 7 7 */
+/*:ref: insang_ 14 6 7 7 7 7 12 7 */
+/*:ref: pltnrm_ 14 4 7 7 7 7 */
+/*:ref: vdot_ 7 2 7 7 */
+/*:ref: vlcom_ 14 5 7 7 7 7 7 */
+/*:ref: zzinvelt_ 14 7 7 4 7 7 7 4 12 */
+ 
+extern int dskxsi_(logical *pri, char *target, integer *nsurf, integer *srflst, doublereal *et, char *fixref, doublereal *vertex, doublereal *raydir, integer *maxd, integer *maxi, doublereal *xpt, integer *handle, integer *dladsc, doublereal *dskdsc, doublereal *dc, integer *ic, logical *found, ftnlen target_len, ftnlen fixref_len);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: zzctruin_ 14 1 4 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: zzbods2c_ 14 9 4 13 4 12 13 4 12 124 124 */
+/*:ref: errch_ 14 4 13 13 124 124 */
+/*:ref: zzpctrck_ 14 2 4 12 */
+/*:ref: namfrm_ 14 3 13 4 124 */
+/*:ref: frinfo_ 14 5 4 4 4 4 12 */
+/*:ref: zzsbfxri_ 14 14 4 4 4 7 4 7 7 7 4 4 7 7 4 12 */
+ 
+extern int dskxv_(logical *pri, char *target, integer *nsurf, integer *srflst, doublereal *et, char *fixref, integer *nrays, doublereal *vtxarr, doublereal *dirarr, doublereal *xptarr, logical *fndarr, ftnlen target_len, ftnlen fixref_len);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: zzctruin_ 14 1 4 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: zzbods2c_ 14 9 4 13 4 12 13 4 12 124 124 */
+/*:ref: errch_ 14 4 13 13 124 124 */
+/*:ref: zzpctrck_ 14 2 4 12 */
+/*:ref: namfrm_ 14 3 13 4 124 */
+/*:ref: frinfo_ 14 5 4 4 4 4 12 */
+/*:ref: zzsbfxr_ 14 9 4 4 4 7 4 7 7 7 12 */
+ 
+extern int dskz02_(integer *handle, integer *dladsc, integer *nv, integer *np);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: dski02_ 14 7 4 4 4 4 4 4 4 */
+/*:ref: chkout_ 14 2 13 124 */
+ 
 extern int dsphdr_(doublereal *x, doublereal *y, doublereal *z__, doublereal *jacobi);
 /*:ref: return_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
@@ -2575,6 +2882,26 @@ extern int edlimb_(doublereal *a, doublereal *b, doublereal *c__, doublereal *vi
 /*:ref: vsclg_ 14 4 7 7 4 7 */
 /*:ref: moved_ 14 3 7 4 7 */
  
+extern int ednmpt_(doublereal *a, doublereal *b, doublereal *c__, doublereal *normal, doublereal *point);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: touchd_ 7 1 7 */
+/*:ref: vzero_ 12 1 7 */
+ 
+extern int edpnt_(doublereal *p, doublereal *a, doublereal *b, doublereal *c__, doublereal *ep);
+/*:ref: failed_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: vzero_ 12 1 7 */
+/*:ref: touchd_ 7 1 7 */
+ 
 extern int edterm_(char *trmtyp, char *source, char *target, doublereal *et, char *fixref, char *abcorr, char *obsrvr, integer *npts, doublereal *trgepc, doublereal *obspos, doublereal *trmpts, ftnlen trmtyp_len, ftnlen source_len, ftnlen target_len, ftnlen fixref_len, ftnlen abcorr_len, ftnlen obsrvr_len);
 /*:ref: return_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
@@ -2599,11 +2926,10 @@ extern int ekacec_(integer *handle, integer *segno, integer *recno, char *column
 /*:ref: zzekcdsc_ 14 5 4 4 13 4 124 */
 /*:ref: failed_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errch_ 14 4 13 13 124 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: zzektrdp_ 14 4 4 4 4 4 */
@@ -2615,11 +2941,10 @@ extern int ekaced_(integer *handle, integer *segno, integer *recno, char *column
 /*:ref: zzekcdsc_ 14 5 4 4 13 4 124 */
 /*:ref: failed_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errch_ 14 4 13 13 124 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: zzektrdp_ 14 4 4 4 4 4 */
@@ -2631,11 +2956,10 @@ extern int ekacei_(integer *handle, integer *segno, integer *recno, char *column
 /*:ref: zzekcdsc_ 14 5 4 4 13 4 124 */
 /*:ref: failed_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errch_ 14 4 13 13 124 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: zzektrdp_ 14 4 4 4 4 4 */
@@ -2896,10 +3220,9 @@ extern int ekgi_(integer *selidx, integer *row, integer *elment, integer *idata,
 /*:ref: lnknxt_ 4 2 4 4 */
 /*:ref: zzekpgch_ 14 3 4 13 124 */
 /*:ref: lnknfn_ 4 1 4 */
-/*:ref: dashlu_ 14 2 4 4 */
-/*:ref: ekcls_ 14 1 4 */
 /*:ref: setmsg_ 14 2 13 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
+/*:ref: ekcls_ 14 1 4 */
 /*:ref: eknseg_ 4 1 4 */
 /*:ref: lnkan_ 14 2 4 4 */
 /*:ref: lnkilb_ 14 3 4 4 4 */
@@ -2951,11 +3274,10 @@ extern int ekrcec_(integer *handle, integer *segno, integer *recno, char *column
 /*:ref: zzekcdsc_ 14 5 4 4 13 4 124 */
 /*:ref: failed_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errch_ 14 4 13 13 124 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: zzektrdp_ 14 4 4 4 4 4 */
@@ -2969,11 +3291,10 @@ extern int ekrced_(integer *handle, integer *segno, integer *recno, char *column
 /*:ref: zzekcdsc_ 14 5 4 4 13 4 124 */
 /*:ref: failed_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errch_ 14 4 13 13 124 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: zzektrdp_ 14 4 4 4 4 4 */
@@ -2987,11 +3308,10 @@ extern int ekrcei_(integer *handle, integer *segno, integer *recno, char *column
 /*:ref: zzekcdsc_ 14 5 4 4 13 4 124 */
 /*:ref: failed_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errch_ 14 4 13 13 124 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: zzektrdp_ 14 4 4 4 4 4 */
@@ -3014,11 +3334,10 @@ extern int ekucec_(integer *handle, integer *segno, integer *recno, char *column
 /*:ref: zzekcdsc_ 14 5 4 4 13 4 124 */
 /*:ref: failed_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errch_ 14 4 13 13 124 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: zzektrdp_ 14 4 4 4 4 4 */
@@ -3032,11 +3351,10 @@ extern int ekuced_(integer *handle, integer *segno, integer *recno, char *column
 /*:ref: zzekcdsc_ 14 5 4 4 13 4 124 */
 /*:ref: failed_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errch_ 14 4 13 13 124 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: zzektrdp_ 14 4 4 4 4 4 */
@@ -3050,11 +3368,10 @@ extern int ekucei_(integer *handle, integer *segno, integer *recno, char *column
 /*:ref: zzekcdsc_ 14 5 4 4 13 4 124 */
 /*:ref: failed_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errch_ 14 4 13 13 124 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: zzektrdp_ 14 4 4 4 4 4 */
@@ -3257,7 +3574,13 @@ extern int eul2m_(doublereal *angle3, doublereal *angle2, doublereal *angle1, in
 /*:ref: rotmat_ 14 4 7 7 4 7 */
  
 extern int ev2lin_(doublereal *et, doublereal *geophs, doublereal *elems, doublereal *state);
+/*:ref: chkin_ 14 2 13 124 */
 /*:ref: twopi_ 7 0 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
 /*:ref: brcktd_ 7 3 7 7 7 */
  
 extern logical even_(integer *i__);
@@ -3465,10 +3788,6 @@ extern int getfat_(char *file, char *arch, char *kertyp, ftnlen file_len, ftnlen
 /*:ref: zzddhhlu_ 14 5 4 13 12 4 124 */
 /*:ref: errint_ 14 3 13 4 124 */
 /*:ref: errch_ 14 4 13 13 124 124 */
-/*:ref: ssizei_ 14 2 4 4 */
-/*:ref: dashof_ 14 1 4 */
-/*:ref: cardi_ 4 1 4 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: getlun_ 14 1 4 */
 /*:ref: ljust_ 14 4 13 13 124 124 */
 /*:ref: ucase_ 14 4 13 13 124 124 */
@@ -3879,18 +4198,52 @@ extern int illum_(char *target, doublereal *et, char *abcorr, char *obsrvr, doub
 /*:ref: surfnm_ 14 5 7 7 7 7 7 */
 /*:ref: vsep_ 7 2 7 7 */
  
-extern int illumg_(char *method, char *target, char *illum, doublereal *et, char *fixref, char *abcorr, char *obsrvr, doublereal *spoint, doublereal *trgepc, doublereal *srfvec, doublereal *phase, doublereal *incdnc, doublereal *emissn, ftnlen method_len, ftnlen target_len, ftnlen illum_len, ftnlen fixref_len, ftnlen abcorr_len, ftnlen obsrvr_len);
+extern int illumf_(char *method, char *target, char *ilusrc, doublereal *et, char *fixref, char *abcorr, char *obsrvr, doublereal *spoint, doublereal *trgepc, doublereal *srfvec, doublereal *phase, doublereal *incdnc, doublereal *emissn, logical *visibl, logical *lit, ftnlen method_len, ftnlen target_len, ftnlen ilusrc_len, ftnlen fixref_len, ftnlen abcorr_len, ftnlen obsrvr_len);
 /*:ref: return_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: zzctruin_ 14 1 4 */
 /*:ref: zzvalcor_ 14 3 13 12 124 */
 /*:ref: failed_ 12 0 */
 /*:ref: chkout_ 14 2 13 124 */
+/*:ref: zzbods2c_ 14 9 4 13 4 12 13 4 12 124 124 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errch_ 14 4 13 13 124 124 */
 /*:ref: sigerr_ 14 2 13 124 */
-/*:ref: ljucrs_ 14 5 4 13 13 124 124 */
+/*:ref: zzsrftrk_ 14 2 4 12 */
+/*:ref: zzprsmet_ 14 15 4 13 4 13 13 12 4 4 13 13 124 124 124 124 124 */
+/*:ref: eqstr_ 12 4 13 13 124 124 */
+/*:ref: zznamfrm_ 14 7 4 13 4 13 4 124 124 */
+/*:ref: frinfo_ 14 5 4 4 4 4 12 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: spkcpt_ 14 16 7 13 13 7 13 13 13 13 7 7 124 124 124 124 124 124 */
+/*:ref: spkcpo_ 14 16 13 7 13 13 13 7 13 13 7 7 124 124 124 124 124 124 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: vminus_ 14 2 7 7 */
+/*:ref: bodvcd_ 14 6 4 13 4 4 7 124 */
+/*:ref: surfnm_ 14 5 7 7 7 7 7 */
+/*:ref: zzsudski_ 14 4 4 4 4 4 */
+/*:ref: zzsbfnrm_ 14 7 4 4 4 7 4 7 7 */
+/*:ref: vhatip_ 14 1 7 */
+/*:ref: vsep_ 7 2 7 7 */
+/*:ref: halfpi_ 7 0 */
+/*:ref: zzmaxrad_ 14 1 7 */
+/*:ref: vlcom_ 14 5 7 7 7 7 7 */
+/*:ref: zzraysfx_ 14 5 7 7 7 7 12 */
+ 
+extern int illumg_(char *method, char *target, char *ilusrc, doublereal *et, char *fixref, char *abcorr, char *obsrvr, doublereal *spoint, doublereal *trgepc, doublereal *srfvec, doublereal *phase, doublereal *incdnc, doublereal *emissn, ftnlen method_len, ftnlen target_len, ftnlen ilusrc_len, ftnlen fixref_len, ftnlen abcorr_len, ftnlen obsrvr_len);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: zzctruin_ 14 1 4 */
+/*:ref: zzvalcor_ 14 3 13 12 124 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
 /*:ref: zzbods2c_ 14 9 4 13 4 12 13 4 12 124 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errch_ 14 4 13 13 124 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: zzsrftrk_ 14 2 4 12 */
+/*:ref: zzprsmet_ 14 15 4 13 4 13 13 12 4 4 13 13 124 124 124 124 124 */
+/*:ref: eqstr_ 12 4 13 13 124 124 */
 /*:ref: zznamfrm_ 14 7 4 13 4 13 4 124 124 */
 /*:ref: frinfo_ 14 5 4 4 4 4 12 */
 /*:ref: errint_ 14 3 13 4 124 */
@@ -3898,6 +4251,7 @@ extern int illumg_(char *method, char *target, char *illum, doublereal *et, char
 /*:ref: spkcpo_ 14 16 13 7 13 13 13 7 13 13 7 7 124 124 124 124 124 124 */
 /*:ref: bodvcd_ 14 6 4 13 4 4 7 124 */
 /*:ref: surfnm_ 14 5 7 7 7 7 7 */
+/*:ref: zzsbfnrm_ 14 7 4 4 4 7 4 7 7 */
 /*:ref: vequ_ 14 2 7 7 */
 /*:ref: vminus_ 14 2 7 7 */
 /*:ref: vsep_ 7 2 7 7 */
@@ -3907,6 +4261,32 @@ extern int ilumin_(char *method, char *target, doublereal *et, char *fixref, cha
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: illumg_ 14 19 13 13 13 7 13 13 13 7 7 7 7 7 7 124 124 124 124 124 124 */
 /*:ref: chkout_ 14 2 13 124 */
+ 
+extern int incnsg_(doublereal *apex, doublereal *axis, doublereal *angle, doublereal *endpt1, doublereal *endpt2, integer *nxpts, doublereal *xpt1, doublereal *xpt2);
+/*:ref: return_ 12 0 */
+/*:ref: unorm_ 14 3 7 7 7 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: vsub_ 14 3 7 7 7 */
+/*:ref: pi_ 7 0 */
+/*:ref: vhat_ 14 2 7 7 */
+/*:ref: vdot_ 7 2 7 7 */
+/*:ref: nvp2pl_ 14 3 7 7 7 */
+/*:ref: inrypl_ 14 5 7 7 7 4 7 */
+/*:ref: vdist_ 7 2 7 7 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: zzcnquad_ 14 7 7 7 7 7 4 7 7 */
+/*:ref: zzcxbrut_ 14 7 7 7 7 7 7 7 12 */
+/*:ref: frame_ 14 3 7 7 7 */
+/*:ref: mxv_ 14 3 7 7 7 */
+/*:ref: zzsglatx_ 14 6 7 7 7 7 7 7 */
+/*:ref: failed_ 12 0 */
+/*:ref: halfpi_ 7 0 */
+/*:ref: mtxv_ 14 3 7 7 7 */
+/*:ref: vadd_ 14 3 7 7 7 */
  
 extern int inedpl_(doublereal *a, doublereal *b, doublereal *c__, doublereal *plane, doublereal *ellips, logical *found);
 /*:ref: return_ 12 0 */
@@ -3947,9 +4327,9 @@ extern int inelpl_(doublereal *ellips, doublereal *plane, integer *nxpts, double
  
 extern int inrypl_(doublereal *vertex, doublereal *dir, doublereal *plane, integer *nxpts, doublereal *xpt);
 /*:ref: return_ 12 0 */
-/*:ref: chkin_ 14 2 13 124 */
 /*:ref: dpmax_ 7 0 */
 /*:ref: vnorm_ 7 1 7 */
+/*:ref: chkin_ 14 2 13 124 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
@@ -3963,6 +4343,10 @@ extern int inrypl_(doublereal *vertex, doublereal *dir, doublereal *plane, integ
 /*:ref: cleard_ 14 2 4 7 */
 /*:ref: vlcom_ 14 5 7 7 7 7 7 */
 /*:ref: vsclip_ 14 2 7 7 */
+ 
+extern int insang_(doublereal *v, doublereal *e1, doublereal *e2, doublereal *e3, logical *found, doublereal *scale);
+/*:ref: vcrss_ 14 3 7 7 7 */
+/*:ref: vdot_ 7 2 7 7 */
  
 extern int inslac_(char *elts, integer *ne, integer *loc, char *array, integer *na, ftnlen elts_len, ftnlen array_len);
 /*:ref: return_ 12 0 */
@@ -4197,12 +4581,14 @@ extern int unload_(char *file, ftnlen file_len);
 /*:ref: ckupf_ 14 1 4 */
 /*:ref: pckuof_ 14 1 4 */
 /*:ref: ekuef_ 14 1 4 */
+/*:ref: zzdskusf_ 14 1 4 */
 /*:ref: clpool_ 14 0 */
 /*:ref: remlac_ 14 5 4 4 13 4 124 */
 /*:ref: remlai_ 14 4 4 4 4 4 */
 /*:ref: ldpool_ 14 2 13 124 */
 /*:ref: spklef_ 14 3 13 4 124 */
 /*:ref: cklpf_ 14 3 13 4 124 */
+/*:ref: zzdsklsf_ 14 3 13 4 124 */
 /*:ref: pcklof_ 14 3 13 4 124 */
 /*:ref: eklef_ 14 3 13 4 124 */
  
@@ -4255,6 +4641,33 @@ extern int latrec_(doublereal *radius, doublereal *long__, doublereal *lat, doub
 extern int latsph_(doublereal *radius, doublereal *long__, doublereal *lat, doublereal *rho, doublereal *colat, doublereal *longs);
 /*:ref: halfpi_ 7 0 */
  
+extern int latsrf_(char *method, char *target, doublereal *et, char *fixref, integer *npts, doublereal *lonlat, doublereal *srfpts, ftnlen method_len, ftnlen target_len, ftnlen fixref_len);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: zzctruin_ 14 1 4 */
+/*:ref: zzbods2c_ 14 9 4 13 4 12 13 4 12 124 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errch_ 14 4 13 13 124 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: zznamfrm_ 14 7 4 13 4 13 4 124 124 */
+/*:ref: frinfo_ 14 5 4 4 4 4 12 */
+/*:ref: failed_ 12 0 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: zzsrftrk_ 14 2 4 12 */
+/*:ref: zzprsmet_ 14 15 4 13 4 13 13 12 4 4 13 13 124 124 124 124 124 */
+/*:ref: eqstr_ 12 4 13 13 124 124 */
+/*:ref: zzbodvcd_ 14 7 4 13 4 4 4 7 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: latrec_ 14 4 7 7 7 7 */
+/*:ref: edpnt_ 14 5 7 7 7 7 7 */
+/*:ref: zzsudski_ 14 4 4 4 4 4 */
+/*:ref: zzmaxrad_ 14 1 7 */
+/*:ref: vminus_ 14 2 7 7 */
+/*:ref: zzraysfx_ 14 5 7 7 7 7 12 */
+/*:ref: dpr_ 7 0 */
+/*:ref: vdot_ 7 2 7 7 */
+ 
 extern int lbuild_(char *items, integer *n, char *delim, char *list, ftnlen items_len, ftnlen delim_len, ftnlen list_len);
 /*:ref: frstnb_ 4 2 13 124 */
 /*:ref: lastnb_ 4 2 13 124 */
@@ -4287,6 +4700,60 @@ extern doublereal lgrint_(integer *n, doublereal *xvals, doublereal *yvals, doub
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: errdp_ 14 3 13 7 124 */
+ 
+extern int limbpt_(char *method, char *target, doublereal *et, char *fixref, char *abcorr, char *corloc, char *obsrvr, doublereal *refvec, doublereal *rolstp, integer *ncuts, doublereal *schstp, doublereal *soltol, integer *maxn, integer *npts, doublereal *points, doublereal *epochs, doublereal *tangts, ftnlen method_len, ftnlen target_len, ftnlen fixref_len, ftnlen abcorr_len, ftnlen corloc_len, ftnlen obsrvr_len);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: zzctruin_ 14 1 4 */
+/*:ref: zzvalcor_ 14 3 13 12 124 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errch_ 14 4 13 13 124 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: zzbods2c_ 14 9 4 13 4 12 13 4 12 124 124 */
+/*:ref: zznamfrm_ 14 7 4 13 4 13 4 124 124 */
+/*:ref: frinfo_ 14 5 4 4 4 4 12 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: zzsrftrk_ 14 2 4 12 */
+/*:ref: zzprsmet_ 14 15 4 13 4 13 13 12 4 4 13 13 124 124 124 124 124 */
+/*:ref: eqstr_ 12 4 13 13 124 124 */
+/*:ref: ljucrs_ 14 5 4 13 13 124 124 */
+/*:ref: vzero_ 12 1 7 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: zzsudski_ 14 4 4 4 4 4 */
+/*:ref: zzbodvcd_ 14 7 4 13 4 4 4 7 124 */
+/*:ref: cleari_ 14 2 4 4 */
+/*:ref: ssized_ 14 2 4 7 */
+/*:ref: spkpos_ 14 11 13 7 13 13 13 7 7 124 124 124 124 */
+/*:ref: zzcorepc_ 14 5 13 7 7 7 124 */
+/*:ref: vminus_ 14 2 7 7 */
+/*:ref: vcrss_ 14 3 7 7 7 */
+/*:ref: edlimb_ 14 5 7 7 7 7 7 */
+/*:ref: el2cgv_ 14 4 7 7 7 7 */
+/*:ref: ucrss_ 14 3 7 7 7 */
+/*:ref: vdot_ 7 2 7 7 */
+/*:ref: vsclip_ 14 2 7 7 */
+/*:ref: zzmaxrad_ 14 1 7 */
+/*:ref: vrotv_ 14 4 7 7 7 7 */
+/*:ref: scardd_ 14 2 4 7 */
+/*:ref: zztangnt_ 14 14 4 7 4 4 4 4 4 7 7 7 7 7 7 7 */
+/*:ref: cardd_ 4 1 7 */
+/*:ref: vlcom_ 14 5 7 7 7 7 7 */
+/*:ref: zzraysfx_ 14 5 7 7 7 7 12 */
+/*:ref: surfpt_ 14 7 7 7 7 7 7 7 12 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: vsub_ 14 3 7 7 7 */
+/*:ref: spkssb_ 14 5 4 7 13 7 124 */
+/*:ref: touchd_ 7 1 7 */
+/*:ref: spkgps_ 14 7 4 7 13 4 7 7 124 */
+/*:ref: stelab_ 14 3 7 7 7 */
+/*:ref: vadd_ 14 3 7 7 7 */
+/*:ref: pxform_ 14 6 13 13 7 7 124 124 */
+/*:ref: mxv_ 14 3 7 7 7 */
+/*:ref: mtxv_ 14 3 7 7 7 */
+/*:ref: vnorm_ 7 1 7 */
+/*:ref: clight_ 7 0 */
  
 extern int ljucrs_(integer *n, char *input, char *output, ftnlen input_len, ftnlen output_len);
  
@@ -4664,8 +5131,8 @@ extern int npelpt_(doublereal *point, doublereal *ellips, doublereal *pnear, dou
  
 extern int nplnpt_(doublereal *linpt, doublereal *lindir, doublereal *point, doublereal *pnear, doublereal *dist);
 /*:ref: return_ 12 0 */
-/*:ref: chkin_ 14 2 13 124 */
 /*:ref: vzero_ 12 1 7 */
+/*:ref: chkin_ 14 2 13 124 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
@@ -4673,6 +5140,16 @@ extern int nplnpt_(doublereal *linpt, doublereal *lindir, doublereal *point, dou
 /*:ref: vproj_ 14 3 7 7 7 */
 /*:ref: vadd_ 14 3 7 7 7 */
 /*:ref: vdist_ 7 2 7 7 */
+ 
+extern int npsgpt_(doublereal *ep1, doublereal *ep2, doublereal *point, doublereal *pnear, doublereal *dist);
+/*:ref: return_ 12 0 */
+/*:ref: vsub_ 14 3 7 7 7 */
+/*:ref: vzero_ 12 1 7 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: vdist_ 7 2 7 7 */
+/*:ref: nplnpt_ 14 5 7 7 7 7 7 */
+/*:ref: failed_ 12 0 */
+/*:ref: vdot_ 7 2 7 7 */
  
 extern int nthwd_(char *string, integer *nth, char *word, integer *loc, ftnlen string_len, ftnlen word_len);
  
@@ -4703,13 +5180,16 @@ extern int occult_(char *targ1, char *shape1, char *frame1, char *targ2, char *s
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: ljust_ 14 4 13 13 124 124 */
 /*:ref: ucase_ 14 4 13 13 124 124 */
-/*:ref: zzgfocin_ 14 18 13 13 13 13 13 13 13 13 13 124 124 124 124 124 124 124 124 124 */
-/*:ref: failed_ 12 0 */
-/*:ref: chkout_ 14 2 13 124 */
-/*:ref: zzgfocst_ 14 2 7 12 */
+/*:ref: bods2c_ 14 4 13 4 12 124 */
 /*:ref: setmsg_ 14 2 13 124 */
-/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: errch_ 14 4 13 13 124 124 */
 /*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: zzprsmet_ 14 15 4 13 4 13 13 12 4 4 13 13 124 124 124 124 124 */
+/*:ref: failed_ 12 0 */
+/*:ref: zzgfocin_ 14 18 13 13 13 13 13 13 13 13 13 124 124 124 124 124 124 124 124 124 */
+/*:ref: zzgfocst_ 14 2 7 12 */
+/*:ref: errint_ 14 3 13 4 124 */
  
 extern logical odd_(integer *i__);
  
@@ -4769,6 +5249,26 @@ extern int oscelt_(doublereal *state, doublereal *et, doublereal *mu, doublereal
 /*:ref: ucrss_ 14 3 7 7 7 */
 /*:ref: vhat_ 14 2 7 7 */
 /*:ref: dacosh_ 7 1 7 */
+ 
+extern int oscltx_(doublereal *state, doublereal *et, doublereal *mu, doublereal *elts);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: dpmax_ 7 0 */
+/*:ref: cleard_ 14 2 4 7 */
+/*:ref: oscelt_ 14 4 7 7 7 7 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: unorm_ 14 3 7 7 7 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: vnorm_ 7 1 7 */
+/*:ref: exact_ 7 3 7 7 7 */
+/*:ref: vdot_ 7 2 7 7 */
+/*:ref: vlcom_ 14 5 7 7 7 7 7 */
+/*:ref: ucrss_ 14 3 7 7 7 */
+/*:ref: twovec_ 14 5 7 4 7 4 7 */
+/*:ref: mxv_ 14 3 7 7 7 */
+/*:ref: recrad_ 14 4 7 7 7 7 */
+/*:ref: twopi_ 7 0 */
  
 extern int outmsg_(char *list, ftnlen list_len);
 /*:ref: lparse_ 14 8 13 13 4 4 13 124 124 124 */
@@ -5139,6 +5639,46 @@ extern integer plnsns_(integer *bodid);
 /*:ref: repmi_ 14 7 13 13 4 13 124 124 124 */
 /*:ref: dtpool_ 14 6 13 12 4 13 124 124 */
 /*:ref: gdpool_ 14 7 13 4 4 4 7 12 124 */
+ 
+extern doublereal pltar_(integer *nv, doublereal *vrtces, integer *np, integer *plates);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: vsub_ 14 3 7 7 7 */
+/*:ref: vcrss_ 14 3 7 7 7 */
+/*:ref: vnorm_ 7 1 7 */
+ 
+extern int pltexp_(doublereal *iverts, doublereal *delta, doublereal *overts);
+ 
+extern int pltnp_(doublereal *point, doublereal *v1, doublereal *v2, doublereal *v3, doublereal *pnear, doublereal *dist);
+/*:ref: return_ 12 0 */
+/*:ref: vsub_ 14 3 7 7 7 */
+/*:ref: vcrss_ 14 3 7 7 7 */
+/*:ref: vzero_ 12 1 7 */
+/*:ref: vnorm_ 7 1 7 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: vdist_ 7 2 7 7 */
+/*:ref: npsgpt_ 14 5 7 7 7 7 7 */
+/*:ref: vperp_ 14 3 7 7 7 */
+/*:ref: vdot_ 7 2 7 7 */
+/*:ref: vadd_ 14 3 7 7 7 */
+ 
+extern int pltnrm_(doublereal *v1, doublereal *v2, doublereal *v3, doublereal *normal);
+/*:ref: vsub_ 14 3 7 7 7 */
+/*:ref: vcrss_ 14 3 7 7 7 */
+ 
+extern doublereal pltvol_(integer *nv, doublereal *vrtces, integer *np, integer *plates);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: det_ 7 1 7 */
  
 extern int polyds_(doublereal *coeffs, integer *deg, integer *nderiv, doublereal *t, doublereal *p);
  
@@ -6220,7 +6760,6 @@ extern int sincpt_(char *method, char *target, doublereal *et, char *fixref, cha
 /*:ref: zzvalcor_ 14 3 13 12 124 */
 /*:ref: failed_ 12 0 */
 /*:ref: chkout_ 14 2 13 124 */
-/*:ref: suffix_ 14 5 13 4 13 124 124 */
 /*:ref: zzbods2c_ 14 9 4 13 4 12 13 4 12 124 124 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errch_ 14 4 13 13 124 124 */
@@ -6229,28 +6768,12 @@ extern int sincpt_(char *method, char *target, doublereal *et, char *fixref, cha
 /*:ref: frinfo_ 14 5 4 4 4 4 12 */
 /*:ref: errint_ 14 3 13 4 124 */
 /*:ref: vzero_ 12 1 7 */
-/*:ref: spkezp_ 14 9 4 7 13 13 4 7 7 124 124 */
-/*:ref: vminus_ 14 2 7 7 */
-/*:ref: pxform_ 14 6 13 13 7 7 124 124 */
-/*:ref: mxv_ 14 3 7 7 7 */
-/*:ref: vequ_ 14 2 7 7 */
-/*:ref: spkssb_ 14 5 4 7 13 7 124 */
-/*:ref: stelab_ 14 3 7 7 7 */
-/*:ref: stlabx_ 14 3 7 7 7 */
-/*:ref: vsub_ 14 3 7 7 7 */
-/*:ref: vadd_ 14 3 7 7 7 */
-/*:ref: vnorm_ 7 1 7 */
+/*:ref: zzsrftrk_ 14 2 4 12 */
+/*:ref: zzprsmet_ 14 15 4 13 4 13 13 12 4 4 13 13 124 124 124 124 124 */
 /*:ref: eqstr_ 12 4 13 13 124 124 */
-/*:ref: bodvcd_ 14 6 4 13 4 4 7 124 */
-/*:ref: dasine_ 7 2 7 7 */
-/*:ref: vsep_ 7 2 7 7 */
-/*:ref: surfpt_ 14 7 7 7 7 7 7 7 12 */
-/*:ref: npedln_ 14 7 7 7 7 7 7 7 7 */
-/*:ref: vdist_ 7 2 7 7 */
-/*:ref: clight_ 7 0 */
-/*:ref: touchd_ 7 1 7 */
-/*:ref: vhatip_ 14 1 7 */
-/*:ref: vscl_ 14 3 7 7 7 */
+/*:ref: zzsuelin_ 14 1 4 */
+/*:ref: zzsudski_ 14 4 4 4 4 4 */
+/*:ref: zzsfxcor_ 14 22 200 200 200 4 7 13 12 12 12 12 13 4 4 4 4 7 7 7 7 12 124 124 */
  
 extern integer sizec_(char *cell, ftnlen cell_len);
 /*:ref: return_ 12 0 */
@@ -6677,8 +7200,10 @@ extern int spke10_(doublereal *et, doublereal *record, doublereal *state);
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: pi_ 7 0 */
 /*:ref: twopi_ 7 0 */
-/*:ref: ev2lin_ 14 4 7 7 7 7 */
-/*:ref: dpspce_ 14 4 7 7 7 7 */
+/*:ref: xxsgp4i_ 14 3 7 7 4 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: xxsgp4e_ 14 2 7 7 */
 /*:ref: vlcomg_ 14 6 4 7 7 7 7 7 */
 /*:ref: vlcom_ 14 5 7 7 7 7 7 */
 /*:ref: vadd_ 14 3 7 7 7 */
@@ -6687,7 +7212,6 @@ extern int spke10_(doublereal *et, doublereal *record, doublereal *state);
 /*:ref: invstm_ 14 2 7 7 */
 /*:ref: mxvg_ 14 5 7 7 4 4 7 */
 /*:ref: moved_ 14 3 7 4 7 */
-/*:ref: chkout_ 14 2 13 124 */
  
 extern int spke12_(doublereal *et, doublereal *record, doublereal *state);
 /*:ref: return_ 12 0 */
@@ -6753,8 +7277,14 @@ extern int spke18_(doublereal *et, doublereal *record, doublereal *state);
 extern int spke19_(doublereal *et, doublereal *record, doublereal *state);
 /*:ref: return_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
-/*:ref: spke18_ 14 3 7 7 7 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
+/*:ref: hrmint_ 14 7 4 7 7 7 7 7 7 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: xpsgip_ 14 3 4 4 7 */
+/*:ref: lgrint_ 7 5 4 7 7 7 7 */
  
 extern int spke20_(doublereal *et, doublereal *record, doublereal *xyzdot);
 /*:ref: return_ 12 0 */
@@ -7644,13 +8174,70 @@ extern int spkw21_(integer *handle, integer *body, integer *center, char *frame,
 /*:ref: dafada_ 14 2 7 4 */
 /*:ref: dafena_ 14 0 */
  
+extern int srfc2s_(integer *code, integer *bodyid, char *srfstr, logical *isname, ftnlen srfstr_len);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: zzsrfc2n_ 14 5 4 4 13 12 124 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: intstr_ 14 3 4 13 124 */
+ 
+extern int srfcss_(integer *code, char *bodstr, char *srfstr, logical *isname, ftnlen bodstr_len, ftnlen srfstr_len);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: bods2c_ 14 4 13 4 12 124 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: zzsrfc2n_ 14 5 4 4 13 12 124 */
+/*:ref: intstr_ 14 3 4 13 124 */
+ 
+extern int srfnrm_(char *method, char *target, doublereal *et, char *fixref, integer *npts, doublereal *srfpts, doublereal *normls, ftnlen method_len, ftnlen target_len, ftnlen fixref_len);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: zzctruin_ 14 1 4 */
+/*:ref: zzbods2c_ 14 9 4 13 4 12 13 4 12 124 124 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errch_ 14 4 13 13 124 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: zznamfrm_ 14 7 4 13 4 13 4 124 124 */
+/*:ref: frinfo_ 14 5 4 4 4 4 12 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: zzsrftrk_ 14 2 4 12 */
+/*:ref: zzprsmet_ 14 15 4 13 4 13 13 12 4 4 13 13 124 124 124 124 124 */
+/*:ref: eqstr_ 12 4 13 13 124 124 */
+/*:ref: zzbodvcd_ 14 7 4 13 4 4 4 7 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: dskgtl_ 14 2 4 7 */
+/*:ref: surfnm_ 14 5 7 7 7 7 7 */
+/*:ref: zzsbfnrm_ 14 7 4 4 4 7 4 7 7 */
+/*:ref: vhatip_ 14 1 7 */
+ 
 extern int srfrec_(integer *body, doublereal *long__, doublereal *lat, doublereal *rectan);
 /*:ref: return_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: bodvcd_ 14 6 4 13 4 4 7 124 */
 /*:ref: latrec_ 14 4 7 7 7 7 */
-/*:ref: surfpt_ 14 7 7 7 7 7 7 7 12 */
+/*:ref: edpnt_ 14 5 7 7 7 7 7 */
 /*:ref: chkout_ 14 2 13 124 */
+ 
+extern int srfs2c_(char *srfstr, char *bodstr, integer *code, logical *found, ftnlen srfstr_len, ftnlen bodstr_len);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: bods2c_ 14 4 13 4 12 124 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: zzsrfn2c_ 14 5 13 4 4 12 124 */
+/*:ref: nparsi_ 14 6 13 4 13 4 124 124 */
+ 
+extern int srfscc_(char *srfstr, integer *bodyid, integer *code, logical *found, ftnlen srfstr_len);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: zzsrfn2c_ 14 5 13 4 4 12 124 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: nparsi_ 14 6 13 4 13 4 124 124 */
  
 extern int srfxpt_(char *method, char *target, doublereal *et, char *abcorr, char *obsrvr, char *dref, doublereal *dvec, doublereal *spoint, doublereal *dist, doublereal *trgepc, doublereal *obspos, logical *found, ftnlen method_len, ftnlen target_len, ftnlen abcorr_len, ftnlen obsrvr_len, ftnlen dref_len);
 /*:ref: return_ 12 0 */
@@ -7845,17 +8432,20 @@ extern int subpnt_(char *method, char *target, doublereal *et, char *fixref, cha
 /*:ref: zznamfrm_ 14 7 4 13 4 13 4 124 124 */
 /*:ref: frinfo_ 14 5 4 4 4 4 12 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: ljucrs_ 14 5 4 13 13 124 124 */
-/*:ref: lparse_ 14 8 13 13 4 4 13 124 124 124 */
+/*:ref: zzsrftrk_ 14 2 4 12 */
+/*:ref: zzprsmet_ 14 15 4 13 4 13 13 12 4 4 13 13 124 124 124 124 124 */
+/*:ref: eqstr_ 12 4 13 13 124 124 */
+/*:ref: zzsudski_ 14 4 4 4 4 4 */
 /*:ref: spkezp_ 14 9 4 7 13 13 4 7 7 124 124 */
 /*:ref: vminus_ 14 2 7 7 */
 /*:ref: bodvcd_ 14 6 4 13 4 4 7 124 */
 /*:ref: vnorm_ 7 1 7 */
 /*:ref: nearpt_ 14 6 7 7 7 7 7 7 */
+/*:ref: vsub_ 14 3 7 7 7 */
+/*:ref: zzsbfxr_ 14 9 4 4 4 7 4 7 7 7 12 */
 /*:ref: surfpt_ 14 7 7 7 7 7 7 7 12 */
 /*:ref: vdist_ 7 2 7 7 */
 /*:ref: clight_ 7 0 */
-/*:ref: vsub_ 14 3 7 7 7 */
 /*:ref: spkssb_ 14 5 4 7 13 7 124 */
 /*:ref: pxform_ 14 6 13 13 7 7 124 124 */
 /*:ref: mxv_ 14 3 7 7 7 */
@@ -7897,16 +8487,19 @@ extern int subslr_(char *method, char *target, doublereal *et, char *fixref, cha
 /*:ref: zznamfrm_ 14 7 4 13 4 13 4 124 124 */
 /*:ref: frinfo_ 14 5 4 4 4 4 12 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: ljucrs_ 14 5 4 13 13 124 124 */
-/*:ref: lparse_ 14 8 13 13 4 4 13 124 124 124 */
+/*:ref: zzsrftrk_ 14 2 4 12 */
+/*:ref: zzprsmet_ 14 15 4 13 4 13 13 12 4 4 13 13 124 124 124 124 124 */
+/*:ref: eqstr_ 12 4 13 13 124 124 */
+/*:ref: zzsudski_ 14 4 4 4 4 4 */
 /*:ref: spkezp_ 14 9 4 7 13 13 4 7 7 124 124 */
 /*:ref: vminus_ 14 2 7 7 */
 /*:ref: bodvcd_ 14 6 4 13 4 4 7 124 */
 /*:ref: nearpt_ 14 6 7 7 7 7 7 7 */
+/*:ref: vsub_ 14 3 7 7 7 */
+/*:ref: zzsbfxr_ 14 9 4 4 4 7 4 7 7 7 12 */
 /*:ref: surfpt_ 14 7 7 7 7 7 7 7 12 */
 /*:ref: vdist_ 7 2 7 7 */
 /*:ref: clight_ 7 0 */
-/*:ref: vsub_ 14 3 7 7 7 */
 /*:ref: spkssb_ 14 5 4 7 13 7 124 */
 /*:ref: pxform_ 14 6 13 13 7 7 124 124 */
 /*:ref: mxv_ 14 3 7 7 7 */
@@ -8632,6 +9225,57 @@ extern int tchckd_(char *type__, ftnlen type_len);
 /*:ref: repmi_ 14 7 13 13 4 13 124 124 124 */
 /*:ref: eqstr_ 12 4 13 13 124 124 */
  
+extern int termpt_(char *method, char *ilusrc, char *target, doublereal *et, char *fixref, char *abcorr, char *corloc, char *obsrvr, doublereal *refvec, doublereal *rolstp, integer *ncuts, doublereal *schstp, doublereal *soltol, integer *maxn, integer *npts, doublereal *points, doublereal *epochs, doublereal *trmvcs, ftnlen method_len, ftnlen ilusrc_len, ftnlen target_len, ftnlen fixref_len, ftnlen abcorr_len, ftnlen corloc_len, ftnlen obsrvr_len);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: zzctruin_ 14 1 4 */
+/*:ref: zzvalcor_ 14 3 13 12 124 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errch_ 14 4 13 13 124 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: zzbods2c_ 14 9 4 13 4 12 13 4 12 124 124 */
+/*:ref: zznamfrm_ 14 7 4 13 4 13 4 124 124 */
+/*:ref: frinfo_ 14 5 4 4 4 4 12 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: zzsrftrk_ 14 2 4 12 */
+/*:ref: zzprsmet_ 14 15 4 13 4 13 13 12 4 4 13 13 124 124 124 124 124 */
+/*:ref: eqstr_ 12 4 13 13 124 124 */
+/*:ref: ljucrs_ 14 5 4 13 13 124 124 */
+/*:ref: vzero_ 12 1 7 */
+/*:ref: zzsudski_ 14 4 4 4 4 4 */
+/*:ref: zzmaxrad_ 14 1 7 */
+/*:ref: zzbodvcd_ 14 7 4 13 4 4 4 7 124 */
+/*:ref: cleari_ 14 2 4 4 */
+/*:ref: ssized_ 14 2 4 7 */
+/*:ref: spkpos_ 14 11 13 7 13 13 13 7 7 124 124 124 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: zzcorepc_ 14 5 13 7 7 7 124 */
+/*:ref: vcrss_ 14 3 7 7 7 */
+/*:ref: vrotv_ 14 4 7 7 7 7 */
+/*:ref: scardd_ 14 2 4 7 */
+/*:ref: zztangnt_ 14 14 4 7 4 4 4 4 4 7 7 7 7 7 7 7 */
+/*:ref: cardd_ 4 1 7 */
+/*:ref: zzedtmpt_ 14 8 12 7 7 7 7 7 7 7 */
+/*:ref: vhat_ 14 2 7 7 */
+/*:ref: vscl_ 14 3 7 7 7 */
+/*:ref: vminus_ 14 2 7 7 */
+/*:ref: zzraysfx_ 14 5 7 7 7 7 12 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: vadd_ 14 3 7 7 7 */
+/*:ref: spkssb_ 14 5 4 7 13 7 124 */
+/*:ref: spkgps_ 14 7 4 7 13 4 7 7 124 */
+/*:ref: vsub_ 14 3 7 7 7 */
+/*:ref: spkezp_ 14 9 4 7 13 13 4 7 7 124 124 */
+/*:ref: pxform_ 14 6 13 13 7 7 124 124 */
+/*:ref: mxv_ 14 3 7 7 7 */
+/*:ref: touchd_ 7 1 7 */
+/*:ref: vnorm_ 7 1 7 */
+/*:ref: clight_ 7 0 */
+/*:ref: mtxv_ 14 3 7 7 7 */
+/*:ref: stelab_ 14 3 7 7 7 */
+ 
 extern int texpyr_(integer *year);
 extern int tsetyr_(integer *year);
  
@@ -8679,18 +9323,20 @@ extern int timout_(doublereal *et, char *pictur, char *output, ftnlen pictur_len
 extern int tipbod_(char *ref, integer *body, doublereal *et, doublereal *tipm, ftnlen ref_len);
 /*:ref: return_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
-/*:ref: irftrn_ 14 5 13 13 7 124 124 */
-/*:ref: bodmat_ 14 3 4 7 7 */
+/*:ref: tisbod_ 14 5 13 4 7 7 124 */
 /*:ref: failed_ 12 0 */
 /*:ref: chkout_ 14 2 13 124 */
-/*:ref: mxm_ 14 3 7 7 7 */
-/*:ref: moved_ 14 3 7 4 7 */
  
 extern int tisbod_(char *ref, integer *body, doublereal *et, doublereal *tsipm, ftnlen ref_len);
 /*:ref: return_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
+/*:ref: zzctruin_ 14 1 4 */
+/*:ref: zzhsiini_ 14 3 4 4 4 */
 /*:ref: irfnum_ 14 3 13 4 124 */
+/*:ref: spd_ 7 0 */
 /*:ref: pckmat_ 14 5 4 7 4 7 12 */
+/*:ref: zzpctrck_ 14 2 4 12 */
+/*:ref: zzhsichk_ 14 5 4 4 4 4 4 */
 /*:ref: repmi_ 14 7 13 13 4 13 124 124 124 */
 /*:ref: dtpool_ 14 6 13 12 4 13 124 124 */
 /*:ref: ccifrm_ 14 7 4 4 4 13 4 12 124 */
@@ -8703,17 +9349,19 @@ extern int tisbod_(char *ref, integer *body, doublereal *et, doublereal *tsipm, 
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: zzbodbry_ 4 1 4 */
 /*:ref: gdpool_ 14 7 13 4 4 4 7 12 124 */
-/*:ref: spd_ 7 0 */
 /*:ref: j2000_ 7 0 */
 /*:ref: cleard_ 14 2 4 7 */
 /*:ref: bodvcd_ 14 6 4 13 4 4 7 124 */
+/*:ref: failed_ 12 0 */
 /*:ref: bodfnd_ 12 3 4 13 124 */
 /*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: zzhsiavl_ 14 2 4 4 */
+/*:ref: zzhsiadd_ 14 6 4 4 4 4 4 12 */
+/*:ref: moved_ 14 3 7 4 7 */
 /*:ref: rpd_ 7 0 */
 /*:ref: vdotg_ 7 3 7 7 4 */
 /*:ref: twopi_ 7 0 */
 /*:ref: halfpi_ 7 0 */
-/*:ref: failed_ 12 0 */
 /*:ref: vpack_ 14 4 7 7 7 7 */
 /*:ref: eul2xf_ 14 5 7 4 4 4 7 */
 /*:ref: irfrot_ 14 3 4 4 7 */
@@ -9378,6 +10026,20 @@ extern int clline_(char *device, ftnlen device_len);
 /*:ref: suffix_ 14 5 13 4 13 124 124 */
 /*:ref: intstr_ 14 3 4 13 124 */
  
+extern int xdda_(doublereal *vertex, doublereal *raydir, integer *grdext, integer *maxnvx, integer *nvx, integer *voxlst);
+/*:ref: return_ 12 0 */
+/*:ref: vzero_ 12 1 7 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: brckti_ 4 3 4 4 4 */
+/*:ref: brcktd_ 7 3 7 7 7 */
+/*:ref: dpmax_ 7 0 */
+/*:ref: zzingrd_ 12 2 4 4 */
+ 
 extern int xf2eul_(doublereal *xform, integer *axisa, integer *axisb, integer *axisc, doublereal *eulang, logical *unique);
 extern int eul2xf_(doublereal *eulang, integer *axisa, integer *axisb, integer *axisc, doublereal *xform);
 /*:ref: return_ 12 0 */
@@ -9446,6 +10108,14 @@ extern int xpose_(doublereal *m1, doublereal *mout);
 extern int xposeg_(doublereal *matrix, integer *nrow, integer *ncol, doublereal *xposem);
  
 extern int xpsgip_(integer *nrow, integer *ncol, doublereal *matrix);
+ 
+extern int zzaddlnk_(integer *aval, integer *bval, integer *maxa, integer *cellsz, integer *pntrs, integer *ncell, integer *cells);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
  
 extern int zzascii_(char *file, char *line, logical *check, char *termin, ftnlen file_len, ftnlen line_len, ftnlen termin_len);
 /*:ref: return_ 12 0 */
@@ -9574,18 +10244,34 @@ extern int zzbctrck_(integer *usrctr, logical *update);
 /*:ref: errch_ 14 4 13 13 124 124 */
 /*:ref: zzctrchk_ 14 3 4 4 12 */
  
-extern int zzbodvcd_(integer *bodyid, char *item, integer *maxn, integer *dim, doublereal *values, ftnlen item_len);
+extern int zzbodvcd_(integer *bodyid, char *item, integer *maxn, integer *varctr, integer *n, doublereal *values, ftnlen item_len);
 /*:ref: return_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
-/*:ref: intstr_ 14 3 4 13 124 */
-/*:ref: suffix_ 14 5 13 4 13 124 124 */
-/*:ref: dtpool_ 14 6 13 12 4 13 124 124 */
+/*:ref: zzpctrck_ 14 2 4 12 */
+/*:ref: bodvcd_ 14 6 4 13 4 4 7 124 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
+ 
+extern int zzbquad_(doublereal *a, doublereal *b, doublereal *c__, doublereal *ub, integer *n, integer *nx, doublereal *r1, doublereal *r2);
+/*:ref: return_ 12 0 */
+/*:ref: dpmax_ 7 0 */
+/*:ref: chkin_ 14 2 13 124 */
 /*:ref: setmsg_ 14 2 13 124 */
-/*:ref: errch_ 14 4 13 13 124 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
-/*:ref: errint_ 14 3 13 4 124 */
-/*:ref: gdpool_ 14 7 13 4 4 4 7 12 124 */
+/*:ref: touchd_ 7 1 7 */
+ 
+extern int zzchrlat_(doublereal *midlat, doublereal *dlon, doublereal *eptlat);
+/*:ref: return_ 12 0 */
+/*:ref: pi_ 7 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: halfpi_ 7 0 */
+/*:ref: brcktd_ 7 3 7 7 7 */
  
 extern int zzck4d2i_(doublereal *dpcoef, integer *nsets, doublereal *parcod, integer *i__);
  
@@ -9696,6 +10382,14 @@ extern int zzcln_(integer *lookat, integer *nameat, integer *namlst, integer *da
 /*:ref: lnkfsl_ 14 3 4 4 4 */
 /*:ref: chkout_ 14 2 13 124 */
  
+extern int zzcnquad_(doublereal *a, doublereal *b, doublereal *c__, doublereal *ub, integer *n, doublereal *r1, doublereal *r2);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: dpmax_ 7 0 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: touchd_ 7 1 7 */
+/*:ref: zzbquad_ 14 8 7 7 7 7 4 4 7 7 */
+ 
 extern int zzcorepc_(char *abcorr, doublereal *et, doublereal *lt, doublereal *etcorr, ftnlen abcorr_len);
 /*:ref: return_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
@@ -9742,6 +10436,24 @@ extern int zzcvssta_(doublereal *state, integer *center, doublereal *et, char *r
 /*:ref: failed_ 12 0 */
 /*:ref: mxvg_ 14 5 7 7 4 4 7 */
 /*:ref: moved_ 14 3 7 4 7 */
+ 
+extern int zzcxbrut_(doublereal *apex, doublereal *axis, doublereal *angle, doublereal *endpt1, doublereal *endpt2, doublereal *xpt, logical *isbrck);
+/*:ref: return_ 12 0 */
+/*:ref: vzero_ 12 1 7 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: halfpi_ 7 0 */
+/*:ref: pi_ 7 0 */
+/*:ref: vminus_ 14 2 7 7 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: vhatip_ 14 1 7 */
+/*:ref: vsub_ 14 3 7 7 7 */
+/*:ref: vhat_ 14 2 7 7 */
+/*:ref: vdot_ 7 2 7 7 */
+/*:ref: vlcom_ 14 5 7 7 7 7 7 */
+/*:ref: vadd_ 14 3 7 7 7 */
  
 extern int zzdafgdr_(integer *handle, integer *recno, doublereal *dprec, logical *found);
 /*:ref: return_ 12 0 */
@@ -9808,6 +10520,34 @@ extern int zzdafnfr_(integer *lun, char *idword, integer *nd, integer *ni, char 
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
  
+extern int zzdasgrd_(integer *handle, integer *recno, doublereal *record);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: zzddhnfc_ 14 1 4 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: zzddhhlu_ 14 5 4 13 12 4 124 */
+/*:ref: zzddhnfo_ 14 7 4 13 4 4 4 12 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: zzxlated_ 14 5 4 13 4 7 124 */
+ 
+extern int zzdasgri_(integer *handle, integer *recno, integer *record);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: zzddhnfc_ 14 1 4 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: zzddhhlu_ 14 5 4 13 12 4 124 */
+/*:ref: zzddhnfo_ 14 7 4 13 4 4 4 12 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: zzxlatei_ 14 5 4 13 4 4 124 */
+ 
 extern int zzdasnfr_(integer *lun, char *idword, char *ifname, integer *nresvr, integer *nresvc, integer *ncomr, integer *ncomc, char *format, ftnlen idword_len, ftnlen ifname_len, ftnlen format_len);
 /*:ref: return_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
@@ -9818,6 +10558,20 @@ extern int zzdasnfr_(integer *lun, char *idword, char *ifname, integer *nresvr, 
 /*:ref: errint_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
+ 
+extern int zzdasrfr_(integer *handle, char *idword, char *ifname, integer *nresvr, integer *nresvc, integer *ncomr, integer *ncomc, ftnlen idword_len, ftnlen ifname_len);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: zzddhnfc_ 14 1 4 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: zzddhhlu_ 14 5 4 13 12 4 124 */
+/*:ref: zzddhppf_ 14 3 4 4 4 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: zzxlatei_ 14 5 4 13 4 4 124 */
  
 extern integer zzddhclu_(logical *utlck, integer *nut);
  
@@ -9912,6 +10666,18 @@ extern doublereal zzddhmnm_(integer *unit);
 /*:ref: isrchi_ 4 3 4 4 4 */
 /*:ref: zzxlatei_ 14 5 4 13 4 4 124 */
  
+extern int zzddhnfc_(integer *natbff);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: zzddhgsd_ 14 5 13 4 13 124 124 */
+/*:ref: zzplatfm_ 14 4 13 13 124 124 */
+/*:ref: ucase_ 14 4 13 13 124 124 */
+/*:ref: isrchc_ 4 5 13 4 13 124 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errch_ 14 4 13 13 124 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+ 
 extern int zzddhppf_(integer *unit, integer *arch, integer *bff);
 /*:ref: return_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
@@ -9949,6 +10715,263 @@ extern doublereal zzdiv_(doublereal *numr, doublereal *denom);
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errdp_ 14 3 13 7 124 */
 /*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+ 
+extern int zzdscm_(doublereal *epoch, doublereal *eccp, doublereal *argpp, doublereal *tc, doublereal *inclp, doublereal *nodep, doublereal *np, doublereal *snodm, doublereal *cnodm, doublereal *sinim, doublereal *cosim, doublereal *sinomm, doublereal *cosomm, doublereal *day, doublereal *e3, doublereal *ee2, doublereal *eccm, doublereal *emsq, doublereal *gam, doublereal *peo, doublereal *pgho, doublereal *pho, doublereal *pinco, doublereal *plo, doublereal *rtemsq, doublereal *se2, doublereal *se3, doublereal *sgh2, doublereal *sgh3, doublereal *sgh4, doublereal *sh2, doublereal *sh3, doublereal *si2, doublereal *si3, doublereal *sl2, doublereal *sl3, doublereal *sl4, doublereal *s1, doublereal *s2, doublereal *s3, doublereal *s4, doublereal *s5, doublereal *s6, doublereal *s7, doublereal *ss1, doublereal *ss2, doublereal *ss3, doublereal *ss4, doublereal *ss5, doublereal *ss6, doublereal *ss7, doublereal *sz1, doublereal *sz2, doublereal *sz3, doublereal *sz11, doublereal *sz12, doublereal *sz13, doublereal *sz21, doublereal *sz22, doublereal *sz23, doublereal *sz31, doublereal *sz32, doublereal *sz33, doublereal *xgh2, doublereal *xgh3, doublereal *xgh4, doublereal *xh2, doublereal *xh3, doublereal *xi2, doublereal *xi3, doublereal *xl2, doublereal *xl3, doublereal *xl4, doublereal *xn, doublereal *z1, doublereal *z2, doublereal *z3, doublereal *z11, doublereal *z12, doublereal *z13, doublereal *z21, doublereal *z22, doublereal *z23, doublereal *z31, doublereal *z32, doublereal *z33, doublereal *zmol, doublereal *zmos);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: twopi_ 7 0 */
+/*:ref: chkout_ 14 2 13 124 */
+ 
+extern int zzdsin_(doublereal *geophs, doublereal *cosim, doublereal *emsq, doublereal *argpo, doublereal *s1, doublereal *s2, doublereal *s3, doublereal *s4, doublereal *s5, doublereal *sinim, doublereal *ss1, doublereal *ss2, doublereal *ss3, doublereal *ss4, doublereal *ss5, doublereal *sz1, doublereal *sz3, doublereal *sz11, doublereal *sz13, doublereal *sz21, doublereal *sz23, doublereal *sz31, doublereal *sz33, doublereal *t, doublereal *tc, doublereal *gsto, doublereal *mo, doublereal *mdot, doublereal *no, doublereal *nodeo, doublereal *nodedot, doublereal *xpidot, doublereal *z1, doublereal *z3, doublereal *z11, doublereal *z13, doublereal *z21, doublereal *z23, doublereal *z31, doublereal *z33, doublereal *ecco, doublereal *eccsq, doublereal *eccm, doublereal *argpm, doublereal *inclm, doublereal *mm, doublereal *xn, doublereal *nodem, integer *irez, doublereal *atime, doublereal *d2201, doublereal *d2211, doublereal *d3210, doublereal *d3222, doublereal *d4410, doublereal *d4422, doublereal *d5220, doublereal *d5232, doublereal *d5421, doublereal *d5433, doublereal *dedt, doublereal *didt, doublereal *dmdt, doublereal *dndt, doublereal *dnodt, doublereal *domdt, doublereal *del1, doublereal *del2, doublereal *del3, doublereal *xfact, doublereal *xlamo, doublereal *xli, doublereal *xni);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: pi_ 7 0 */
+/*:ref: twopi_ 7 0 */
+/*:ref: chkout_ 14 2 13 124 */
+ 
+extern int zzdskbbl_(integer *bodyid);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: zzctruin_ 14 1 4 */
+/*:ref: zzdskchk_ 14 2 4 12 */
+/*:ref: zzdskbss_ 14 1 4 */
+/*:ref: zzdsksns_ 14 5 200 4 4 7 12 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
+ 
+extern int zzdskbsr_(char *fname, integer *bodyid, integer *handle, L_fp cmpfun, integer *usrctr, logical *update, integer *dladsc, doublereal *dskdsc, logical *found, ftnlen fname_len);
+extern int zzdsklsf_(char *fname, integer *handle, ftnlen fname_len);
+extern int zzdskusf_(integer *handle);
+extern int zzdskbss_(integer *bodyid);
+extern int zzdsksns_(L_fp cmpfun, integer *handle, integer *dladsc, doublereal *dskdsc, logical *found);
+extern int zzdskchk_(integer *usrctr, logical *update);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: zzctrsin_ 14 1 4 */
+/*:ref: zzctrinc_ 14 1 4 */
+/*:ref: lnkini_ 14 2 4 4 */
+/*:ref: dasopr_ 14 3 13 4 124 */
+/*:ref: failed_ 12 0 */
+/*:ref: isrchi_ 4 3 4 4 4 */
+/*:ref: dascls_ 14 1 4 */
+/*:ref: lnknxt_ 4 2 4 4 */
+/*:ref: lnkfsl_ 14 3 4 4 4 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: intmax_ 4 0 */
+/*:ref: lnkprv_ 4 2 4 4 */
+/*:ref: dlabfs_ 14 3 4 4 12 */
+/*:ref: dlafns_ 14 4 4 4 4 12 */
+/*:ref: movei_ 14 3 4 4 4 */
+/*:ref: dskgd_ 14 3 4 4 7 */
+/*:ref: dlabbs_ 14 3 4 4 12 */
+/*:ref: dlafps_ 14 4 4 4 4 12 */
+/*:ref: moved_ 14 3 7 4 7 */
+/*:ref: lnknfn_ 4 1 4 */
+/*:ref: lnkan_ 14 2 4 4 */
+/*:ref: lnkilb_ 14 3 4 4 4 */
+/*:ref: lnkila_ 14 3 4 4 4 */
+/*:ref: zzctrchk_ 14 3 4 4 12 */
+ 
+extern int zzdskbun_(integer *bodyid, integer *nsurf, integer *srflst, doublereal *et, integer *fixfid, integer *nseg, integer *hanbuf, integer *dlabuf, doublereal *dskbuf, doublereal *offbuf, doublereal *ctrbuf, doublereal *radbuf, doublereal *point, doublereal *normal);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: dskgtl_ 14 2 4 7 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: isrchi_ 4 3 4 4 4 */
+/*:ref: refchg_ 14 4 4 4 7 7 */
+/*:ref: failed_ 12 0 */
+/*:ref: mxv_ 14 3 7 7 7 */
+/*:ref: vsub_ 14 3 7 7 7 */
+/*:ref: vdist_ 7 2 7 7 */
+/*:ref: zzinlat_ 14 5 7 7 7 4 12 */
+/*:ref: zzinrec_ 14 5 7 7 7 4 12 */
+/*:ref: zzinpdt_ 14 6 7 7 7 7 4 12 */
+/*:ref: moved_ 14 3 7 4 7 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: zzptpl02_ 14 8 4 4 7 7 4 4 7 12 */
+/*:ref: pltnrm_ 14 4 7 7 7 7 */
+/*:ref: vhatip_ 14 1 7 */
+/*:ref: mtxv_ 14 3 7 7 7 */
+ 
+extern int zzdskbux_(integer *bodyid, integer *nsurf, integer *srflst, doublereal *et, integer *fixfid, integer *nseg, integer *hanbuf, integer *dlabuf, doublereal *dskbuf, doublereal *offbuf, doublereal *ctrbuf, doublereal *radbuf, doublereal *vertex, doublereal *raydir, doublereal *xpt, integer *segidx, doublereal *dc, integer *ic, logical *found);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: dskgtl_ 14 2 4 7 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: zzdsksph_ 14 5 4 4 4 7 7 */
+/*:ref: failed_ 12 0 */
+/*:ref: vnorm_ 7 1 7 */
+/*:ref: surfpt_ 14 7 7 7 7 7 7 7 12 */
+/*:ref: isrchi_ 4 3 4 4 4 */
+/*:ref: refchg_ 14 4 4 4 7 7 */
+/*:ref: mxv_ 14 3 7 7 7 */
+/*:ref: vsub_ 14 3 7 7 7 */
+/*:ref: nplnpt_ 14 5 7 7 7 7 7 */
+/*:ref: zzrytelt_ 14 6 7 7 7 7 4 7 */
+/*:ref: vdist_ 7 2 7 7 */
+/*:ref: moved_ 14 3 7 4 7 */
+/*:ref: orderd_ 14 3 7 4 4 */
+/*:ref: zzdsksgx_ 14 10 4 4 4 7 7 7 7 7 4 12 */
+/*:ref: vzero_ 12 1 7 */
+/*:ref: vadd_ 14 3 7 7 7 */
+/*:ref: mtxv_ 14 3 7 7 7 */
+ 
+extern int zzdsksba_(integer *bodyid, integer *maxbod, integer *stsize, integer *btbody, integer *btnbod, integer *btsegp, integer *btstsz, integer *sthan, doublereal *stdscr, integer *stdlad, integer *stfree, doublereal *stoff, doublereal *stctr, doublereal *strad);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: isrchi_ 4 3 4 4 4 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: zzdskbbl_ 14 1 4 */
+/*:ref: failed_ 12 0 */
+/*:ref: zzdsksbd_ 12 1 4 */
+/*:ref: zzdskbss_ 14 1 4 */
+/*:ref: zzdsksns_ 14 5 200 4 4 7 12 */
+/*:ref: zzdsksbr_ 14 14 4 4 4 4 4 4 4 4 7 4 4 7 7 7 */
+/*:ref: movei_ 14 3 4 4 4 */
+/*:ref: moved_ 14 3 7 4 7 */
+/*:ref: zzsegbox_ 14 3 7 7 7 */
+/*:ref: frinfo_ 14 5 4 4 4 4 12 */
+/*:ref: cleard_ 14 2 4 7 */
+/*:ref: frmnam_ 14 3 4 13 124 */
+/*:ref: spkgps_ 14 7 4 7 13 4 7 7 124 */
+ 
+extern int zzdsksbf_(integer *bodyid, integer *nsurf, integer *srflst, doublereal *et, integer *fixfid, doublereal *vertex, doublereal *raydir, doublereal *point, doublereal *xpt, integer *handle, integer *dladsc, doublereal *dskdsc, doublereal *dc, integer *ic, logical *found, doublereal *normal);
+extern int zzsbfxr_(integer *bodyid, integer *nsurf, integer *srflst, doublereal *et, integer *fixfid, doublereal *vertex, doublereal *raydir, doublereal *xpt, logical *found);
+extern int zzsbfxri_(integer *bodyid, integer *nsurf, integer *srflst, doublereal *et, integer *fixfid, doublereal *vertex, doublereal *raydir, doublereal *xpt, integer *handle, integer *dladsc, doublereal *dskdsc, doublereal *dc, integer *ic, logical *found);
+extern int zzsbfnrm_(integer *bodyid, integer *nsurf, integer *srflst, doublereal *et, integer *fixfid, doublereal *point, doublereal *normal);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: zzctruin_ 14 1 4 */
+/*:ref: zzdskchk_ 14 2 4 12 */
+/*:ref: zzdskbbl_ 14 1 4 */
+/*:ref: zzdsksbi_ 14 13 4 4 4 4 4 4 4 7 4 4 7 7 7 */
+/*:ref: failed_ 12 0 */
+/*:ref: isrchi_ 4 3 4 4 4 */
+/*:ref: zzdsksba_ 14 14 4 4 4 4 4 4 4 4 7 4 4 7 7 7 */
+/*:ref: zzdskbux_ 14 19 4 4 4 7 4 4 4 4 7 7 7 7 7 7 7 4 7 4 12 */
+/*:ref: movei_ 14 3 4 4 4 */
+/*:ref: moved_ 14 3 7 4 7 */
+/*:ref: zzdskbun_ 14 14 4 4 4 7 4 4 4 4 7 7 7 7 7 7 */
+ 
+extern int zzdsksbi_(integer *maxbod, integer *stsize, integer *btbody, integer *btnbod, integer *btsegp, integer *btstsz, integer *sthan, doublereal *stdscr, integer *stdlad, integer *stfree, doublereal *stoff, doublereal *stctr, doublereal *strad);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: cleard_ 14 2 4 7 */
+/*:ref: cleari_ 14 2 4 4 */
+/*:ref: chkout_ 14 2 13 124 */
+ 
+extern int zzdsksbr_(integer *needed, integer *maxbod, integer *stsize, integer *btbody, integer *btnbod, integer *btsegp, integer *btstsz, integer *sthan, doublereal *stdscr, integer *stdlad, integer *stfree, doublereal *stoff, doublereal *stctr, doublereal *strad);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: moved_ 14 3 7 4 7 */
+/*:ref: movei_ 14 3 4 4 4 */
+ 
+extern logical zzdsksel_(integer *surfid, integer *nsurf, integer *srflst, integer *bodyid, integer *dclass, integer *corsys, doublereal *corpar, doublereal *cor1, doublereal *cor2, integer *framid, doublereal *pos, doublereal *et, integer *handle, integer *dladsc, doublereal *dskdsc);
+extern logical zzdsksbd_(integer *bodyid);
+extern logical zzdskbdc_(integer *handle, integer *dladsc, doublereal *dskdsc);
+extern logical zzdsknot_(integer *handle, integer *dladsc, doublereal *dskdsc);
+extern logical zzdsksit_(integer *bodyid, integer *nsurf, integer *srflst, doublereal *et);
+extern logical zzdskcit_(integer *handle, integer *dladsc, doublereal *dskdsc);
+extern logical zzdskusc_(integer *bodyid, doublereal *et, doublereal *cor1, doublereal *cor2);
+extern logical zzdskumc_(integer *handle, integer *dladsc, doublereal *dskdsc);
+extern logical zzdskmsc_(integer *bodyid, integer *surfid, integer *framid, integer *corsys, doublereal *corpar, doublereal *et, doublereal *cor1, doublereal *cor2);
+extern logical zzdskmmc_(integer *handle, integer *dladsc, doublereal *dskdsc);
+extern logical zzdsksrc_(integer *surfid, integer *bodyid, integer *dclass, doublereal *et, integer *framid, doublereal *pos);
+extern logical zzdskmrc_(integer *handle, integer *dladsc, doublereal *dskdsc);
+/*:ref: touchi_ 4 1 4 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: shelli_ 14 2 4 4 */
+/*:ref: bsrchi_ 4 3 4 4 4 */
+/*:ref: twopi_ 7 0 */
+/*:ref: moved_ 14 3 7 4 7 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: refchg_ 14 4 4 4 7 7 */
+/*:ref: mxv_ 14 3 7 7 7 */
+/*:ref: reclat_ 14 4 7 7 7 7 */
+/*:ref: recgeo_ 14 6 7 7 7 7 7 7 */
+ 
+extern doublereal zzdsksgr_(doublereal *dskdsc);
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: moved_ 14 3 7 4 7 */
+/*:ref: vnorm_ 7 1 7 */
+/*:ref: errint_ 14 3 13 4 124 */
+ 
+extern int zzdsksgx_(integer *handle, integer *dladsc, integer *dtype, doublereal *et, doublereal *vertex, doublereal *raydir, doublereal *xpt, doublereal *dc, integer *ic, logical *found);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: touchd_ 7 1 7 */
+/*:ref: dskx02_ 14 7 4 4 7 7 4 7 12 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+ 
+extern int zzdsksph_(integer *bodyid, integer *nsurf, integer *srflst, doublereal *minrad, doublereal *maxrad);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: zzctruin_ 14 1 4 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: zzdskchk_ 14 2 4 12 */
+/*:ref: dpmax_ 7 0 */
+/*:ref: zzdskbbl_ 14 1 4 */
+/*:ref: failed_ 12 0 */
+/*:ref: cleard_ 14 2 4 7 */
+/*:ref: zzdskbss_ 14 1 4 */
+/*:ref: zzdsksbd_ 14 1 4 */
+/*:ref: zzdsksns_ 14 5 200 4 4 7 12 */
+/*:ref: isrchi_ 4 3 4 4 4 */
+/*:ref: frinfo_ 14 5 4 4 4 4 12 */
+/*:ref: frmnam_ 14 3 4 13 124 */
+/*:ref: spkgps_ 14 7 4 7 13 4 7 7 124 */
+/*:ref: vnorm_ 7 1 7 */
+/*:ref: zzrecbox_ 14 6 7 7 7 7 7 7 */
+/*:ref: repmc_ 14 8 13 13 13 13 124 124 124 124 */
+/*:ref: repmi_ 14 7 13 13 4 13 124 124 124 */
+/*:ref: movei_ 14 3 4 4 4 */
+ 
+extern int zzdspc_(integer *irez, doublereal *d2201, doublereal *d2211, doublereal *d3210, doublereal *d3222, doublereal *d4410, doublereal *d4422, doublereal *d5220, doublereal *d5232, doublereal *d5421, doublereal *d5433, doublereal *dedt, doublereal *del1, doublereal *del2, doublereal *del3, doublereal *didt, doublereal *dmdt, doublereal *dnodt, doublereal *domdt, doublereal *argpo, doublereal *argpdot, doublereal *t, doublereal *tc, doublereal *gsto, doublereal *xfact, doublereal *xlamo, doublereal *no, doublereal *atime, doublereal *eccm, doublereal *argpm, doublereal *inclm, doublereal *xli, doublereal *mm, doublereal *xni, doublereal *nodem, doublereal *dndt, doublereal *xn);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: twopi_ 7 0 */
+/*:ref: chkout_ 14 2 13 124 */
+ 
+extern int zzdspr_(integer *opmode, doublereal *e3, doublereal *ee2, doublereal *peo, doublereal *pgho, doublereal *pho, doublereal *pinco, doublereal *plo, doublereal *se2, doublereal *se3, doublereal *sgh2, doublereal *sgh3, doublereal *sgh4, doublereal *sh2, doublereal *sh3, doublereal *si2, doublereal *si3, doublereal *sl2, doublereal *sl3, doublereal *sl4, doublereal *t, doublereal *xgh2, doublereal *xgh3, doublereal *xgh4, doublereal *xh2, doublereal *xh3, doublereal *xi2, doublereal *xi3, doublereal *xl2, doublereal *xl3, doublereal *xl4, doublereal *zmol, doublereal *zmos, doublereal *inclo, logical *doinit, doublereal *eccp, doublereal *inclp, doublereal *nodep, doublereal *argpp, doublereal *mp);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: twopi_ 7 0 */
+/*:ref: pi_ 7 0 */
 /*:ref: chkout_ 14 2 13 124 */
  
 extern int zzdynbid_(char *frname, integer *frcode, char *item, integer *idcode, ftnlen frname_len, ftnlen item_len);
@@ -10334,6 +11357,33 @@ extern int zzedterm_(char *type__, doublereal *a, doublereal *b, doublereal *c__
 /*:ref: vsep_ 7 2 7 7 */
 /*:ref: vdot_ 7 2 7 7 */
  
+extern int zzedtmpt_(logical *umbral, doublereal *a, doublereal *b, doublereal *c__, doublereal *r__, doublereal *axis, doublereal *plnvec, doublereal *point);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: vzero_ 12 1 7 */
+/*:ref: vnorm_ 7 1 7 */
+/*:ref: cleard_ 14 2 4 7 */
+/*:ref: mxv_ 14 3 7 7 7 */
+/*:ref: vhat_ 14 2 7 7 */
+/*:ref: vcrss_ 14 3 7 7 7 */
+/*:ref: dasine_ 7 2 7 7 */
+/*:ref: failed_ 12 0 */
+/*:ref: halfpi_ 7 0 */
+/*:ref: vrotv_ 14 4 7 7 7 7 */
+/*:ref: vdot_ 7 2 7 7 */
+/*:ref: vscl_ 14 3 7 7 7 */
+/*:ref: ednmpt_ 14 5 7 7 7 7 7 */
+/*:ref: vadd_ 14 3 7 7 7 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: touchd_ 7 1 7 */
+/*:ref: vperp_ 14 3 7 7 7 */
+/*:ref: vdist_ 7 2 7 7 */
+/*:ref: errint_ 14 3 13 4 124 */
+ 
 extern int zzekac01_(integer *handle, integer *segdsc, integer *coldsc, integer *ivals, logical *nlflgs, integer *rcptrs, integer *wkindx);
 /*:ref: return_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
@@ -10652,12 +11702,11 @@ extern int zzekcdsc_(integer *handle, integer *segdsc, char *column, integer *co
 /*:ref: dasrdi_ 14 4 4 4 4 4 */
 /*:ref: dasrdc_ 14 7 4 4 4 4 4 13 124 */
 /*:ref: eqstr_ 12 4 13 13 124 124 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errch_ 14 4 13 13 124 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
  
@@ -10686,10 +11735,9 @@ extern int zzekde01_(integer *handle, integer *segdsc, integer *coldsc, integer 
 /*:ref: zzekdps_ 14 4 4 4 4 4 */
 /*:ref: dasudi_ 14 4 4 4 4 4 */
 /*:ref: zzekrp2n_ 4 3 4 4 4 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
  
 extern int zzekde02_(integer *handle, integer *segdsc, integer *coldsc, integer *recptr);
@@ -10706,10 +11754,9 @@ extern int zzekde02_(integer *handle, integer *segdsc, integer *coldsc, integer 
 /*:ref: zzekdps_ 14 4 4 4 4 4 */
 /*:ref: dasudi_ 14 4 4 4 4 4 */
 /*:ref: zzekrp2n_ 4 3 4 4 4 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
  
 extern int zzekde03_(integer *handle, integer *segdsc, integer *coldsc, integer *recptr);
@@ -10728,10 +11775,9 @@ extern int zzekde03_(integer *handle, integer *segdsc, integer *coldsc, integer 
 /*:ref: zzekslnk_ 14 4 4 4 4 4 */
 /*:ref: zzekdps_ 14 4 4 4 4 4 */
 /*:ref: zzekrp2n_ 4 3 4 4 4 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
  
 extern int zzekde04_(integer *handle, integer *segdsc, integer *coldsc, integer *recptr);
@@ -10747,10 +11793,9 @@ extern int zzekde04_(integer *handle, integer *segdsc, integer *coldsc, integer 
 /*:ref: zzekglnk_ 14 4 4 4 4 4 */
 /*:ref: zzekslnk_ 14 4 4 4 4 4 */
 /*:ref: zzekdps_ 14 4 4 4 4 4 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
  
 extern int zzekde05_(integer *handle, integer *segdsc, integer *coldsc, integer *recptr);
@@ -10768,10 +11813,9 @@ extern int zzekde05_(integer *handle, integer *segdsc, integer *coldsc, integer 
 /*:ref: zzekslnk_ 14 4 4 4 4 4 */
 /*:ref: zzekdps_ 14 4 4 4 4 4 */
 /*:ref: zzekrp2n_ 4 3 4 4 4 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
  
 extern int zzekde06_(integer *handle, integer *segdsc, integer *coldsc, integer *recptr);
@@ -10789,10 +11833,9 @@ extern int zzekde06_(integer *handle, integer *segdsc, integer *coldsc, integer 
 /*:ref: zzekslnk_ 14 4 4 4 4 4 */
 /*:ref: zzekdps_ 14 4 4 4 4 4 */
 /*:ref: zzekrp2n_ 4 3 4 4 4 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
  
 extern int zzekdps_(integer *handle, integer *segdsc, integer *type__, integer *p);
@@ -10804,10 +11847,9 @@ extern int zzekdps_(integer *handle, integer *segdsc, integer *type__, integer *
  
 extern integer zzekecmp_(integer *hans, integer *sgdscs, integer *cldscs, integer *rows, integer *elts);
 /*:ref: zzekrsi_ 14 8 4 4 4 4 4 4 12 12 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: setmsg_ 14 2 13 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: errint_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
@@ -10862,14 +11904,13 @@ extern integer zzekesiz_(integer *handle, integer *segdsc, integer *coldsc, inte
 /*:ref: zzeksz04_ 4 4 4 4 4 4 */
 /*:ref: zzeksz05_ 4 4 4 4 4 4 */
 /*:ref: zzeksz06_ 4 4 4 4 4 4 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: zzekcnam_ 14 4 4 4 13 124 */
 /*:ref: zzekrp2n_ 4 3 4 4 4 */
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
 /*:ref: errch_ 14 4 13 13 124 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
  
@@ -10896,9 +11937,8 @@ extern int zzekfrx_(integer *handle, integer *segdsc, integer *coldsc, integer *
 /*:ref: zzekrsc_ 14 10 4 4 4 4 4 4 13 12 12 124 */
 /*:ref: zzekrsd_ 14 8 4 4 4 4 4 7 12 12 */
 /*:ref: zzekrsi_ 14 8 4 4 4 4 4 4 12 12 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: errint_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
@@ -10909,11 +11949,10 @@ extern int zzekfrx_(integer *handle, integer *segdsc, integer *coldsc, integer *
  
 extern int zzekgcdp_(integer *handle, integer *segdsc, integer *coldsc, integer *recptr, integer *datptr);
 /*:ref: zzekrp2n_ 4 3 4 4 4 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: dasrdi_ 14 4 4 4 4 4 */
@@ -11054,8 +12093,7 @@ extern int zzekixdl_(integer *handle, integer *segdsc, integer *coldsc, integer 
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: zzekrp2n_ 4 3 4 4 4 */
-/*:ref: dashlu_ 14 2 4 4 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
  
 extern int zzekixlk_(integer *handle, integer *coldsc, integer *key, integer *recptr);
 /*:ref: zzektrdp_ 14 4 4 4 4 4 */
@@ -11096,8 +12134,7 @@ extern int zzekjsrt_(integer *njrs, integer *ubases, integer *norder, integer *o
 /*:ref: zzekvcal_ 14 3 4 4 4 */
 /*:ref: lnknxt_ 4 2 4 4 */
 /*:ref: zzekrsc_ 14 10 4 4 4 4 4 4 13 12 12 124 */
-/*:ref: dashlu_ 14 2 4 4 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: zzekrsd_ 14 8 4 4 4 4 4 7 12 12 */
 /*:ref: zzekrsi_ 14 8 4 4 4 4 4 4 12 12 */
 /*:ref: zzekvcmp_ 12 15 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 */
@@ -11321,9 +12358,8 @@ extern int zzekpgst_(integer *handle, char *stat, integer *value, ftnlen stat_le
 /*:ref: failed_ 12 0 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: daslla_ 14 4 4 4 4 4 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: errint_ 14 3 13 4 124 */
 /*:ref: fillc_ 14 5 13 4 13 124 124 */
 /*:ref: filld_ 14 3 7 4 7 */
@@ -11395,9 +12431,8 @@ extern int zzekpgch_(integer *handle, char *access, ftnlen access_len);
 /*:ref: failed_ 12 0 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: dasrdi_ 14 4 4 4 4 4 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: errint_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: daslla_ 14 4 4 4 4 4 */
@@ -11472,17 +12507,15 @@ extern logical zzekrcmp_(integer *op, integer *ncols, integer *han1, integer *sg
  
 extern int zzekrd01_(integer *handle, integer *segdsc, integer *coldsc, integer *recptr, integer *ival, logical *isnull);
 /*:ref: zzekrp2n_ 4 3 4 4 4 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: dasrdi_ 14 4 4 4 4 4 */
  
 extern int zzekrd02_(integer *handle, integer *segdsc, integer *coldsc, integer *recptr, doublereal *dval, logical *isnull);
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
@@ -11491,15 +12524,14 @@ extern int zzekrd02_(integer *handle, integer *segdsc, integer *coldsc, integer 
 /*:ref: dasrdi_ 14 4 4 4 4 4 */
 /*:ref: dasrdd_ 14 4 4 4 4 7 */
 /*:ref: zzekrp2n_ 4 3 4 4 4 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
  
 extern int zzekrd03_(integer *handle, integer *segdsc, integer *coldsc, integer *recptr, integer *cvlen, char *cval, logical *isnull, ftnlen cval_len);
 /*:ref: zzekrp2n_ 4 3 4 4 4 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: dasrdi_ 14 4 4 4 4 4 */
@@ -11522,8 +12554,7 @@ extern int zzekrd04_(integer *handle, integer *segdsc, integer *coldsc, integer 
 /*:ref: failed_ 12 0 */
 /*:ref: zzekgfwd_ 14 4 4 4 4 4 */
 /*:ref: zzekrp2n_ 4 3 4 4 4 */
-/*:ref: dashlu_ 14 2 4 4 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
  
 extern int zzekrd05_(integer *handle, integer *segdsc, integer *coldsc, integer *recptr, integer *beg, integer *end, doublereal *dvals, logical *isnull, logical *found);
 /*:ref: chkin_ 14 2 13 124 */
@@ -11538,8 +12569,7 @@ extern int zzekrd05_(integer *handle, integer *segdsc, integer *coldsc, integer 
 /*:ref: zzekpgbs_ 14 3 4 4 4 */
 /*:ref: failed_ 12 0 */
 /*:ref: zzekrp2n_ 4 3 4 4 4 */
-/*:ref: dashlu_ 14 2 4 4 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
  
 extern int zzekrd06_(integer *handle, integer *segdsc, integer *coldsc, integer *recptr, integer *beg, integer *end, char *cvals, logical *isnull, logical *found, ftnlen cvals_len);
 /*:ref: chkin_ 14 2 13 124 */
@@ -11547,11 +12577,10 @@ extern int zzekrd06_(integer *handle, integer *segdsc, integer *coldsc, integer 
 /*:ref: errint_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: zzekcnam_ 14 4 4 4 13 124 */
 /*:ref: zzekrp2n_ 4 3 4 4 4 */
 /*:ref: errch_ 14 4 13 13 124 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: dasrdi_ 14 4 4 4 4 4 */
 /*:ref: zzekgei_ 14 3 4 4 4 */
 /*:ref: zzekpgpg_ 14 4 4 4 4 4 */
@@ -11561,11 +12590,10 @@ extern int zzekrd06_(integer *handle, integer *segdsc, integer *coldsc, integer 
  
 extern int zzekrd07_(integer *handle, integer *segdsc, integer *coldsc, integer *recptr, integer *ival, logical *isnull);
 /*:ref: zzekrp2n_ 4 3 4 4 4 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: dasrdi_ 14 4 4 4 4 4 */
@@ -11573,10 +12601,10 @@ extern int zzekrd07_(integer *handle, integer *segdsc, integer *coldsc, integer 
  
 extern int zzekrd08_(integer *handle, integer *segdsc, integer *coldsc, integer *recptr, doublereal *dval, logical *isnull);
 /*:ref: zzekrp2n_ 4 3 4 4 4 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: dasrdi_ 14 4 4 4 4 4 */
@@ -11584,11 +12612,10 @@ extern int zzekrd08_(integer *handle, integer *segdsc, integer *coldsc, integer 
 /*:ref: dasrdd_ 14 4 4 4 4 7 */
  
 extern int zzekrd09_(integer *handle, integer *segdsc, integer *coldsc, integer *recno, integer *cvlen, char *cval, logical *isnull, ftnlen cval_len);
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: zzekcnam_ 14 4 4 4 13 124 */
@@ -11613,11 +12640,10 @@ extern integer zzekrp2n_(integer *handle, integer *segno, integer *recptr);
 /*:ref: zzeksdsc_ 14 3 4 4 4 */
 /*:ref: failed_ 12 0 */
 /*:ref: zzektrls_ 4 3 4 4 4 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
  
@@ -11633,11 +12659,10 @@ extern int zzekrsc_(integer *handle, integer *segdsc, integer *coldsc, integer *
 /*:ref: zzekcnam_ 14 4 4 4 13 124 */
 /*:ref: zzekrp2n_ 4 3 4 4 4 */
 /*:ref: chkin_ 14 2 13 124 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errch_ 14 4 13 13 124 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: zzekrd03_ 14 8 4 4 4 4 4 13 12 124 */
@@ -11646,13 +12671,12 @@ extern int zzekrsc_(integer *handle, integer *segdsc, integer *coldsc, integer *
  
 extern int zzekrsd_(integer *handle, integer *segdsc, integer *coldsc, integer *recptr, integer *eltidx, doublereal *dval, logical *isnull, logical *found);
 /*:ref: zzekcnam_ 14 4 4 4 13 124 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: zzekrp2n_ 4 3 4 4 4 */
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errch_ 14 4 13 13 124 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: zzekrd02_ 14 6 4 4 4 4 7 12 */
@@ -11661,13 +12685,12 @@ extern int zzekrsd_(integer *handle, integer *segdsc, integer *coldsc, integer *
  
 extern int zzekrsi_(integer *handle, integer *segdsc, integer *coldsc, integer *recptr, integer *eltidx, integer *ival, logical *isnull, logical *found);
 /*:ref: zzekcnam_ 14 4 4 4 13 124 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: zzekrp2n_ 4 3 4 4 4 */
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errch_ 14 4 13 13 124 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: zzekrd01_ 14 6 4 4 4 4 4 12 */
@@ -11724,11 +12747,10 @@ extern int zzekscdp_(integer *handle, integer *segdsc, integer *coldsc, integer 
 /*:ref: zzekpgch_ 14 3 4 13 124 */
 /*:ref: failed_ 12 0 */
 /*:ref: zzekrp2n_ 4 3 4 4 4 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: dasudi_ 14 4 4 4 4 4 */
@@ -11743,8 +12765,7 @@ extern logical zzekscmp_(integer *op, integer *handle, integer *segdsc, integer 
 /*:ref: errint_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
-/*:ref: dashlu_ 14 2 4 4 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: matchi_ 12 8 13 13 13 13 124 124 124 124 */
  
 extern int zzeksdsc_(integer *handle, integer *segno, integer *segdsc);
@@ -11875,10 +12896,9 @@ extern int zzektr1s_(integer *handle, integer *tree, integer *size, integer *val
 /*:ref: return_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: zzektrsz_ 4 2 4 4 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: zzekpgri_ 14 3 4 4 4 */
@@ -11978,10 +12998,9 @@ extern int zzektrfr_(integer *handle, integer *tree);
 /*:ref: return_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: zzekpgri_ 14 3 4 4 4 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: zzekpgfr_ 14 3 4 4 4 */
@@ -12020,10 +13039,9 @@ extern int zzektrlk_(integer *handle, integer *tree, integer *key, integer *idx,
 /*:ref: dasham_ 14 3 4 13 124 */
 /*:ref: zzekpgri_ 14 3 4 4 4 */
 /*:ref: chkin_ 14 2 13 124 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: lstlei_ 4 3 4 4 4 */
@@ -12039,10 +13057,9 @@ extern integer zzektrnk_(integer *handle, integer *tree, integer *node);
 extern int zzektrpi_(integer *handle, integer *tree, integer *key, integer *parent, integer *pkey, integer *poffst, integer *lpidx, integer *lpkey, integer *lsib, integer *rpidx, integer *rpkey, integer *rsib);
 /*:ref: zzekpgri_ 14 3 4 4 4 */
 /*:ref: chkin_ 14 2 13 124 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: lstlei_ 4 3 4 4 4 */
@@ -12071,10 +13088,9 @@ extern integer zzektrsz_(integer *handle, integer *tree);
 extern int zzektrud_(integer *handle, integer *tree, integer *key, integer *trgkey, logical *undrfl);
 /*:ref: zzekpgri_ 14 3 4 4 4 */
 /*:ref: chkin_ 14 2 13 124 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: zzekpgwi_ 14 3 4 4 4 */
 /*:ref: zzektrlk_ 14 8 4 4 4 4 4 4 4 4 */
@@ -12085,10 +13101,9 @@ extern int zzektrud_(integer *handle, integer *tree, integer *key, integer *trgk
 extern int zzektrui_(integer *handle, integer *tree, integer *key, integer *value, logical *overfl);
 /*:ref: zzekpgri_ 14 3 4 4 4 */
 /*:ref: chkin_ 14 2 13 124 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errint_ 14 3 13 4 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: zzekpgwi_ 14 3 4 4 4 */
@@ -12114,8 +13129,7 @@ extern int zzekue01_(integer *handle, integer *segdsc, integer *coldsc, integer 
 /*:ref: dasudi_ 14 4 4 4 4 4 */
 /*:ref: zzekad01_ 14 6 4 4 4 4 4 12 */
 /*:ref: zzekrp2n_ 4 3 4 4 4 */
-/*:ref: dashlu_ 14 2 4 4 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
  
 extern int zzekue02_(integer *handle, integer *segdsc, integer *coldsc, integer *recptr, doublereal *dval, logical *isnull);
 /*:ref: return_ 12 0 */
@@ -12136,8 +13150,7 @@ extern int zzekue02_(integer *handle, integer *segdsc, integer *coldsc, integer 
 /*:ref: dasudd_ 14 4 4 4 4 7 */
 /*:ref: zzekad02_ 14 6 4 4 4 4 7 12 */
 /*:ref: zzekrp2n_ 4 3 4 4 4 */
-/*:ref: dashlu_ 14 2 4 4 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
  
 extern int zzekue03_(integer *handle, integer *segdsc, integer *coldsc, integer *recptr, char *cval, logical *isnull, ftnlen cval_len);
 /*:ref: return_ 12 0 */
@@ -12199,10 +13212,9 @@ extern logical zzekvmch_(integer *ncnstr, logical *active, integer *lhans, integ
 /*:ref: movei_ 14 3 4 4 4 */
 /*:ref: zzekecmp_ 4 5 4 4 4 4 4 */
 /*:ref: zzekrsc_ 14 10 4 4 4 4 4 4 13 12 12 124 */
-/*:ref: dashlu_ 14 2 4 4 */
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: setmsg_ 14 2 13 124 */
-/*:ref: errfnm_ 14 3 13 4 124 */
+/*:ref: errhan_ 14 3 13 4 124 */
 /*:ref: errint_ 14 3 13 4 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
@@ -12256,6 +13268,22 @@ extern int zzekwpal_(integer *handle, integer *segdsc, integer *nvals, logical *
 /*:ref: zzekpgwc_ 14 4 4 4 13 124 */
 /*:ref: zzekslnk_ 14 4 4 4 4 4 */
 /*:ref: chkout_ 14 2 13 124 */
+ 
+extern int zzellbds_(doublereal *a, doublereal *b, doublereal *hmax, doublereal *hmin, doublereal *amax, doublereal *bmax, doublereal *amin, doublereal *bmin);
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+ 
+extern int zzelnaxx_(doublereal *a, doublereal *b, doublereal *lat, doublereal *xxpt, doublereal *yxpt);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: ednmpt_ 14 5 7 7 7 7 7 */
  
 extern int zzelvupy_(doublereal *ellips, doublereal *vertex, doublereal *axis, integer *n, doublereal *bounds, logical *found);
 /*:ref: return_ 12 0 */
@@ -12436,6 +13464,14 @@ extern int zzgetelm_(integer *frstyr, char *lines, doublereal *epoch, doublereal
 /*:ref: nparsd_ 14 6 13 7 13 4 124 124 */
 /*:ref: repmd_ 14 8 13 13 7 4 13 124 124 124 */
 /*:ref: ttrans_ 14 5 13 13 7 124 124 */
+ 
+extern int zzgetvox_(doublereal *voxsiz, doublereal *voxori, integer *nvox, doublereal *xyz, logical *inbox, integer *voxcor);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
  
 extern int zzgfcoq_(char *vecdef, char *method, integer *trgid, doublereal *et, char *ref, char *abcorr, integer *obsid, char *dref, doublereal *dvec, char *crdsys, integer *ctrid, doublereal *re, doublereal *f, char *crdnam, doublereal *value, logical *found, ftnlen vecdef_len, ftnlen method_len, ftnlen ref_len, ftnlen abcorr_len, ftnlen dref_len, ftnlen crdsys_len, ftnlen crdnam_len);
 /*:ref: return_ 12 0 */
@@ -12661,12 +13697,12 @@ extern int zzgfilgq_(doublereal *et, doublereal *angle);
 /*:ref: chkout_ 14 2 13 124 */
 /*:ref: return_ 12 0 */
 /*:ref: bods2c_ 14 4 13 4 12 124 */
+/*:ref: failed_ 12 0 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errch_ 14 4 13 13 124 124 */
 /*:ref: cmprss_ 14 7 13 4 13 13 124 124 124 */
 /*:ref: ucase_ 14 4 13 13 124 124 */
 /*:ref: zzvalcor_ 14 3 13 12 124 */
-/*:ref: failed_ 12 0 */
 /*:ref: bodvrd_ 14 7 13 13 4 4 7 124 124 */
 /*:ref: surfnm_ 14 5 7 7 7 7 7 */
 /*:ref: vequ_ 14 2 7 7 */
@@ -12733,11 +13769,13 @@ extern int zzgfocst_(doublereal *time, logical *ocstat);
 /*:ref: bods2c_ 14 4 13 4 12 124 */
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errch_ 14 4 13 13 124 124 */
+/*:ref: eqstr_ 12 4 13 13 124 124 */
+/*:ref: zzprsmet_ 14 15 4 13 4 13 13 12 4 4 13 13 124 124 124 124 124 */
+/*:ref: failed_ 12 0 */
 /*:ref: ljust_ 14 4 13 13 124 124 */
 /*:ref: ucase_ 14 4 13 13 124 124 */
 /*:ref: isrchc_ 4 5 13 4 13 124 124 */
 /*:ref: zzvalcor_ 14 3 13 12 124 */
-/*:ref: failed_ 12 0 */
 /*:ref: suffix_ 14 5 13 4 13 124 124 */
 /*:ref: bodvcd_ 14 6 4 13 4 4 7 124 */
 /*:ref: errint_ 14 3 13 4 124 */
@@ -12747,6 +13785,9 @@ extern int zzgfocst_(doublereal *time, logical *ocstat);
 /*:ref: maxad_ 14 4 7 4 7 4 */
 /*:ref: namfrm_ 14 3 13 4 124 */
 /*:ref: frinfo_ 14 5 4 4 4 4 12 */
+/*:ref: zzsudski_ 14 4 4 4 4 4 */
+/*:ref: zzminrad_ 14 1 7 */
+/*:ref: zzmaxrad_ 14 1 7 */
 /*:ref: cleard_ 14 2 4 7 */
 /*:ref: spkezp_ 14 9 4 7 13 13 4 7 7 124 124 */
 /*:ref: zzcorepc_ 14 5 13 7 7 7 124 */
@@ -12912,8 +13953,9 @@ extern int zzgfsolv_(S_fp udcond, S_fp udstep, S_fp udrefn, logical *bail, L_fp 
 /*:ref: errdp_ 14 3 13 7 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
-/*:ref: touchd_ 7 1 7 */
 /*:ref: failed_ 12 0 */
+/*:ref: dpmax_ 7 0 */
+/*:ref: touchd_ 7 1 7 */
 /*:ref: errint_ 14 3 13 4 124 */
 /*:ref: brcktd_ 7 3 7 7 7 */
 /*:ref: zzwninsd_ 14 5 7 7 13 7 124 */
@@ -12925,8 +13967,9 @@ extern int zzgfsolvx_(U_fp udfuns, S_fp udfunb, S_fp udstep, S_fp udrefn, logica
 /*:ref: errdp_ 14 3 13 7 124 */
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
-/*:ref: touchd_ 7 1 7 */
 /*:ref: failed_ 12 0 */
+/*:ref: dpmax_ 7 0 */
+/*:ref: touchd_ 7 1 7 */
 /*:ref: errint_ 14 3 13 4 124 */
 /*:ref: brcktd_ 7 3 7 7 7 */
 /*:ref: zzwninsd_ 14 5 7 7 13 7 124 */
@@ -13098,6 +14141,8 @@ extern int zzgpnm_(integer *namlst, integer *nmpool, char *names, integer *datls
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
  
+extern int zzgrav_(doublereal *grav);
+ 
 extern integer zzhashi_(integer *n, integer *m);
 /*:ref: chkin_ 14 2 13 124 */
 /*:ref: setmsg_ 14 2 13 124 */
@@ -13197,7 +14242,110 @@ extern int zzilusta_(char *method, char *target, char *illum, doublereal *et, ch
 /*:ref: vsep_ 7 2 7 7 */
 /*:ref: dvsep_ 7 2 7 7 */
  
+extern logical zzingrd_(integer *nvox, integer *voxel);
+ 
+extern int zzinil_(doublereal *geophs, integer *opmode, doublereal *ecco, doublereal *epoch, doublereal *inclo, doublereal *no, doublereal *ainv, doublereal *ao, doublereal *con41, doublereal *con42, doublereal *cosio, doublereal *cosio2, doublereal *eccsq, doublereal *omeosq, doublereal *posq, doublereal *rp, doublereal *rteosq, doublereal *sinio, doublereal *gsto);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: twopi_ 7 0 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+ 
+extern int zzinilnk_(integer *maxp, integer *maxc, integer *ncell, integer *pntrs, integer *cells);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+ 
+extern int zzinlat_(doublereal *p, doublereal *bounds, doublereal *margin, integer *exclud, logical *inside);
+/*:ref: return_ 12 0 */
+/*:ref: twopi_ 7 0 */
+/*:ref: halfpi_ 7 0 */
+/*:ref: reclat_ 14 4 7 7 7 7 */
+/*:ref: zzinlat0_ 14 6 7 7 7 7 4 12 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: zznrmlon_ 14 5 7 7 7 7 7 */
+ 
+extern int zzinlat0_(doublereal *r__, doublereal *lon, doublereal *lat, doublereal *bounds, integer *exclud, logical *inside);
+/*:ref: twopi_ 7 0 */
+/*:ref: zznrmlon_ 14 5 7 7 7 7 7 */
+ 
+extern int zzinpdt_(doublereal *p, doublereal *bounds, doublereal *corpar, doublereal *margin, integer *exclud, logical *inside);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: halfpi_ 7 0 */
+/*:ref: twopi_ 7 0 */
+/*:ref: pi_ 7 0 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: reclat_ 14 4 7 7 7 7 */
+/*:ref: zzinpdt0_ 14 6 7 7 7 7 4 12 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: zzpdcmpl_ 14 5 7 7 7 7 4 */
+/*:ref: failed_ 12 0 */
+/*:ref: zznrmlon_ 14 5 7 7 7 7 7 */
+ 
+extern int zzinpdt0_(doublereal *p, doublereal *lon, doublereal *bounds, doublereal *corpar, integer *exclud, logical *inside);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: twopi_ 7 0 */
+/*:ref: halfpi_ 7 0 */
+/*:ref: zzpdcmpl_ 14 5 7 7 7 7 4 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: zznrmlon_ 14 5 7 7 7 7 7 */
+/*:ref: zzellbds_ 14 8 7 7 7 7 7 7 7 7 */
+ 
+extern int zzinrec_(doublereal *p, doublereal *bounds, doublereal *margin, integer *exclud, logical *inside);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+ 
+extern int zzinrypl_(doublereal *vertex, doublereal *udir, doublereal *uplnml, doublereal *const__, doublereal *maxd, integer *nxpts, doublereal *xpt);
+/*:ref: vdot_ 7 2 7 7 */
+/*:ref: vequ_ 14 2 7 7 */
+ 
 extern int zzinssub_(char *in, char *sub, integer *loc, char *out, ftnlen in_len, ftnlen sub_len, ftnlen out_len);
+ 
+extern int zzinvelt_(doublereal *p, integer *corsys, doublereal *corpar, doublereal *bounds, doublereal *margin, integer *exclud, logical *inside);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: zzinlat_ 14 5 7 7 7 4 12 */
+/*:ref: zzinpdt_ 14 6 7 7 7 7 4 12 */
+/*:ref: zzinrec_ 14 5 7 7 7 4 12 */
+/*:ref: errint_ 14 3 13 4 124 */
+ 
+extern int zzlatbox_(doublereal *bounds, doublereal *center, doublereal *lr, doublereal *lt, doublereal *lz, doublereal *radius);
+/*:ref: return_ 12 0 */
+/*:ref: twopi_ 7 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: halfpi_ 7 0 */
+/*:ref: cylrec_ 14 4 7 7 7 7 */
+/*:ref: vpack_ 14 4 7 7 7 7 */
+/*:ref: vnorm_ 7 1 7 */
  
 extern int zzldker_(char *file, char *nofile, char *filtyp, integer *handle, ftnlen file_len, ftnlen nofile_len, ftnlen filtyp_len);
 /*:ref: return_ 12 0 */
@@ -13213,13 +14361,48 @@ extern int zzldker_(char *file, char *nofile, char *filtyp, integer *handle, ftn
 /*:ref: pcklof_ 14 3 13 4 124 */
 /*:ref: tkvrsn_ 14 4 13 13 124 124 */
 /*:ref: eklef_ 14 3 13 4 124 */
+/*:ref: zzdsklsf_ 14 3 13 4 124 */
 /*:ref: ldpool_ 14 2 13 124 */
 /*:ref: failed_ 12 0 */
 /*:ref: zzbodkik_ 14 0 */
  
+extern int zzlexmet_(char *method, integer *maxn, integer *n, integer *begs, integer *ends, ftnlen method_len);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: rtrim_ 4 2 13 124 */
+/*:ref: cpos_ 4 5 13 13 4 124 124 */
+/*:ref: ltrim_ 4 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: lxqstr_ 14 7 13 13 4 4 4 124 124 */
+/*:ref: errch_ 14 4 13 13 124 124 */
+ 
 extern int zzmkpc_(char *pictur, integer *b, integer *e, char *mark, char *pattrn, ftnlen pictur_len, ftnlen mark_len, ftnlen pattrn_len);
 /*:ref: lastnb_ 4 2 13 124 */
 /*:ref: zzrepsub_ 14 8 13 4 4 13 13 124 124 124 */
+ 
+extern int zzmkspin_(integer *np, integer *plates, doublereal *vrtces, doublereal *voxscl, integer *cgscal, integer *maxptr, integer *mxcell, integer *maxvxl, integer *cells, integer *nvox, doublereal *voxsiz, doublereal *voxori, integer *nvxtot, integer *nvxptr, integer *vxptr, integer *nvxlst, integer *vxlist, doublereal *extent, integer *cgrptr);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: dpmax_ 7 0 */
+/*:ref: dpmin_ 7 0 */
+/*:ref: zzinilnk_ 14 5 4 4 4 4 4 */
+/*:ref: cleari_ 14 2 4 4 */
+/*:ref: brcktd_ 7 3 7 7 7 */
+/*:ref: vpack_ 14 4 7 7 7 7 */
+/*:ref: zzgetvox_ 14 6 7 7 4 7 12 4 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: zzvoxcvo_ 14 6 4 4 4 4 4 4 */
+/*:ref: failed_ 12 0 */
+/*:ref: zzvox2id_ 4 2 4 4 */
+/*:ref: zzaddlnk_ 14 7 4 4 4 4 4 4 4 */
+/*:ref: zzuntngl_ 14 7 4 4 4 4 4 4 4 */
  
 extern int zzmobliq_(doublereal *et, doublereal *mob, doublereal *dmob);
 /*:ref: jyear_ 7 0 */
@@ -13274,6 +14457,16 @@ extern int zzdpper_(doublereal *t, doublereal *em, doublereal *xinc, doublereal 
 /*:ref: j1950_ 7 0 */
 /*:ref: zzsecprt_ 14 12 4 7 7 7 7 7 7 7 7 7 7 7 */
  
+extern int zznrmlon_(doublereal *inmin, doublereal *inmax, doublereal *tol, doublereal *outmin, doublereal *outmax);
+/*:ref: twopi_ 7 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: dpr_ 7 0 */
+/*:ref: touchd_ 7 1 7 */
+ 
 extern int zznwpool_(char *varnam, char *wtvars, integer *wtptrs, integer *wtpool, char *wtagnt, char *agtwrk, char *notify, char *agents, ftnlen varnam_len, ftnlen wtvars_len, ftnlen wtagnt_len, ftnlen agtwrk_len, ftnlen notify_len, ftnlen agents_len);
 /*:ref: return_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
@@ -13317,6 +14510,40 @@ extern integer zzocced_(doublereal *viewpt, doublereal *centr1, doublereal *sema
 /*:ref: zzasryel_ 14 7 13 7 7 7 7 7 124 */
 /*:ref: ucrss_ 14 3 7 7 7 */
 /*:ref: pi_ 7 0 */
+ 
+extern int zzpdcmpl_(doublereal *re, doublereal *f, doublereal *p, doublereal *lat, integer *rel);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: halfpi_ 7 0 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: zzelnaxx_ 14 5 7 7 7 7 7 */
+/*:ref: failed_ 12 0 */
+/*:ref: vsub_ 14 3 7 7 7 */
+/*:ref: reclat_ 14 4 7 7 7 7 */
+ 
+extern logical zzpdpltc_(doublereal *re, doublereal *f, doublereal *p, doublereal *lat);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: zzelnaxx_ 14 5 7 7 7 7 7 */
+/*:ref: failed_ 12 0 */
+ 
+extern int zzpdtbox_(doublereal *bounds, doublereal *corpar, doublereal *center, doublereal *lr, doublereal *lt, doublereal *lz, doublereal *radius);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: twopi_ 7 0 */
+/*:ref: halfpi_ 7 0 */
+/*:ref: georec_ 14 6 7 7 7 7 7 7 */
+/*:ref: vnorm_ 7 1 7 */
+/*:ref: cylrec_ 14 4 7 7 7 7 */
+/*:ref: vpack_ 14 4 7 7 7 7 */
  
 extern integer zzphsh_(char *word, integer *m, integer *m2, ftnlen word_len);
 extern integer zzshsh_(integer *m);
@@ -13371,8 +14598,75 @@ extern int zzprscor_(char *abcorr, logical *attblk, ftnlen abcorr_len);
 /*:ref: sigerr_ 14 2 13 124 */
 /*:ref: chkout_ 14 2 13 124 */
  
+extern int zzprsmet_(integer *bodyid, char *method, integer *mxnsrf, char *shape, char *subtyp, logical *pri, integer *nsurf, integer *srflst, char *pntdef, char *trmtyp, ftnlen method_len, ftnlen shape_len, ftnlen subtyp_len, ftnlen pntdef_len, ftnlen trmtyp_len);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: ljucrs_ 14 5 4 13 13 124 124 */
+/*:ref: zzlexmet_ 14 6 13 4 4 4 4 124 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: errch_ 14 4 13 13 124 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: srfscc_ 14 5 13 4 4 12 124 */
+/*:ref: eqstr_ 12 4 13 13 124 124 */
+ 
+extern int zzptpl02_(integer *handle, integer *dladsc, doublereal *dskdsc, doublereal *point, integer *plid, integer *plate, doublereal *verts, logical *found);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: dlassg_ 12 4 4 4 4 4 */
+/*:ref: dskd02_ 14 7 4 4 4 4 4 4 7 */
+/*:ref: dski02_ 14 7 4 4 4 4 4 4 4 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: zzsegbox_ 14 3 7 7 7 */
+/*:ref: movei_ 14 3 4 4 4 */
+/*:ref: dskgtl_ 14 2 4 7 */
+/*:ref: zzinvelt_ 14 7 7 4 7 7 7 4 12 */
+/*:ref: vsub_ 14 3 7 7 7 */
+/*:ref: brckti_ 4 3 4 4 4 */
+/*:ref: zzvoxcvo_ 14 6 4 4 4 4 4 4 */
+/*:ref: zzvox2id_ 4 2 4 4 */
+/*:ref: dpmax_ 7 0 */
+/*:ref: pltexp_ 14 3 7 7 7 */
+/*:ref: pltnrm_ 14 4 7 7 7 7 */
+/*:ref: vhatip_ 14 1 7 */
+/*:ref: vdot_ 7 2 7 7 */
+/*:ref: pltnp_ 14 6 7 7 7 7 7 7 */
+/*:ref: moved_ 14 3 7 4 7 */
+ 
+extern int zzraybox_(doublereal *vertex, doublereal *raydir, doublereal *boxori, doublereal *extent, doublereal *xpt, logical *found);
+/*:ref: return_ 12 0 */
+/*:ref: vzero_ 12 1 7 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: vhat_ 14 2 7 7 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: vsub_ 14 3 7 7 7 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: vnorm_ 7 1 7 */
+/*:ref: surfpt_ 14 7 7 7 7 7 7 7 12 */
+/*:ref: vlcom_ 14 5 7 7 7 7 7 */
+/*:ref: vadd_ 14 3 7 7 7 */
+ 
 extern int zzrbrkst_(char *string, char *lftend, char *rgtend, char *substr, integer *length, logical *bkpres, ftnlen string_len, ftnlen lftend_len, ftnlen rgtend_len, ftnlen substr_len);
 /*:ref: posr_ 4 5 13 13 4 124 124 */
+ 
+extern int zzrecbox_(doublereal *bounds, doublereal *center, doublereal *lx, doublereal *ly, doublereal *lz, doublereal *radius);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: vpack_ 14 4 7 7 7 7 */
+/*:ref: vnorm_ 7 1 7 */
  
 extern int zzrefch0_(integer *frame1, integer *frame2, doublereal *et, doublereal *rotate);
 /*:ref: return_ 12 0 */
@@ -13505,6 +14799,84 @@ extern int zzrvbf_(char *buffer, integer *bsize, integer *linnum, integer *namls
 extern int zzrxr_(doublereal *matrix, integer *n, doublereal *output);
 /*:ref: ident_ 14 1 7 */
  
+extern int zzrytelt_(doublereal *vertex, doublereal *raydir, doublereal *dskdsc, doublereal *margin, integer *nxpts, doublereal *xpt);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: zzrytlat_ 14 6 7 7 7 7 4 7 */
+/*:ref: zzrytrec_ 14 6 7 7 7 7 4 7 */
+/*:ref: zzrytpdt_ 14 7 7 7 7 7 7 4 7 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+ 
+extern int zzrytlat_(doublereal *vertex, doublereal *raydir, doublereal *bounds, doublereal *margin, integer *nxpts, doublereal *xpt);
+/*:ref: zzinlat_ 14 5 7 7 7 4 12 */
+/*:ref: failed_ 12 0 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: zznrmlon_ 14 5 7 7 7 7 7 */
+/*:ref: vhat_ 14 2 7 7 */
+/*:ref: dpmax_ 7 0 */
+/*:ref: zzryxsph_ 14 5 7 7 7 7 12 */
+/*:ref: reclat_ 14 4 7 7 7 7 */
+/*:ref: vdist_ 7 2 7 7 */
+/*:ref: vnorm_ 7 1 7 */
+/*:ref: vlcom_ 14 5 7 7 7 7 7 */
+/*:ref: halfpi_ 7 0 */
+/*:ref: incnsg_ 14 8 7 7 7 7 7 4 7 7 */
+/*:ref: vpack_ 14 4 7 7 7 7 */
+/*:ref: zzinrypl_ 14 7 7 7 7 7 7 4 7 */
+/*:ref: ucrss_ 14 3 7 7 7 */
+/*:ref: vdot_ 7 2 7 7 */
+/*:ref: vminus_ 14 2 7 7 */
+ 
+extern int zzrytpdt_(doublereal *vertex, doublereal *raydir, doublereal *bounds, doublereal *corpar, doublereal *margin, integer *nxpts, doublereal *xpt);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: vzero_ 12 1 7 */
+/*:ref: zzinpdt_ 14 6 7 7 7 7 4 12 */
+/*:ref: failed_ 12 0 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: zznrmlon_ 14 5 7 7 7 7 7 */
+/*:ref: zzellbds_ 14 8 7 7 7 7 7 7 7 7 */
+/*:ref: vhat_ 14 2 7 7 */
+/*:ref: dpmax_ 7 0 */
+/*:ref: surfpt_ 14 7 7 7 7 7 7 7 12 */
+/*:ref: vdist_ 7 2 7 7 */
+/*:ref: vnorm_ 7 1 7 */
+/*:ref: vlcom_ 14 5 7 7 7 7 7 */
+/*:ref: halfpi_ 7 0 */
+/*:ref: zzelnaxx_ 14 5 7 7 7 7 7 */
+/*:ref: vsub_ 14 3 7 7 7 */
+/*:ref: vsep_ 7 2 7 7 */
+/*:ref: incnsg_ 14 8 7 7 7 7 7 4 7 7 */
+/*:ref: zzpdpltc_ 12 4 7 7 7 7 */
+/*:ref: vpack_ 14 4 7 7 7 7 */
+/*:ref: zzinrypl_ 14 7 7 7 7 7 7 4 7 */
+/*:ref: ucrss_ 14 3 7 7 7 */
+/*:ref: vdot_ 7 2 7 7 */
+/*:ref: vminus_ 14 2 7 7 */
+ 
+extern int zzrytrec_(doublereal *vertex, doublereal *raydir, doublereal *bounds, doublereal *margin, integer *nxpts, doublereal *xpt);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: zzinrec_ 14 5 7 7 7 4 12 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: zzraybox_ 14 6 7 7 7 7 7 12 */
+ 
+extern int zzryxsph_(doublereal *vertex, doublereal *udir, doublereal *r__, doublereal *xpt, logical *found);
+/*:ref: vdot_ 7 2 7 7 */
+/*:ref: vlcom_ 14 5 7 7 7 7 7 */
+ 
 extern logical zzsclk_(integer *ckid, integer *sclkid);
 /*:ref: return_ 12 0 */
 /*:ref: chkin_ 14 2 13 124 */
@@ -13521,6 +14893,104 @@ extern logical zzsclk_(integer *ckid, integer *sclkid);
 /*:ref: removi_ 14 2 4 4 */
  
 extern int zzsecprt_(integer *isynfl, doublereal *dg, doublereal *del, doublereal *xni, doublereal *omegao, doublereal *atime, doublereal *omgdot, doublereal *xli, doublereal *xfact, doublereal *xldot, doublereal *xndot, doublereal *xnddt);
+ 
+extern int zzsegbox_(doublereal *dskdsc, doublereal *boxctr, doublereal *maxr);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: zzlatbox_ 14 6 7 7 7 7 7 7 */
+/*:ref: zzrecbox_ 14 6 7 7 7 7 7 7 */
+/*:ref: zzpdtbox_ 14 7 7 7 7 7 7 7 7 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+ 
+extern int zzsfxcor_(S_fp udnear, S_fp udmaxr, S_fp udrayx, integer *trgcde, doublereal *et, char *abcorr, logical *uselt, logical *usecn, logical *usestl, logical *xmit, char *fixref, integer *obscde, integer *dfrcde, integer *dclass, integer *dcentr, doublereal *dvec, doublereal *spoint, doublereal *trgepc, doublereal *srfvec, logical *found, ftnlen abcorr_len, ftnlen fixref_len);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: vzero_ 12 1 7 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: suffix_ 14 5 13 4 13 124 124 */
+/*:ref: spkezp_ 14 9 4 7 13 13 4 7 7 124 124 */
+/*:ref: failed_ 12 0 */
+/*:ref: vminus_ 14 2 7 7 */
+/*:ref: refchg_ 14 4 4 4 7 7 */
+/*:ref: mxv_ 14 3 7 7 7 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: pxform_ 14 6 13 13 7 7 124 124 */
+/*:ref: spkssb_ 14 5 4 7 13 7 124 */
+/*:ref: stelab_ 14 3 7 7 7 */
+/*:ref: stlabx_ 14 3 7 7 7 */
+/*:ref: vsub_ 14 3 7 7 7 */
+/*:ref: vadd_ 14 3 7 7 7 */
+/*:ref: vnorm_ 7 1 7 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: dasine_ 7 2 7 7 */
+/*:ref: vsep_ 7 2 7 7 */
+/*:ref: vdist_ 7 2 7 7 */
+/*:ref: clight_ 7 0 */
+/*:ref: touchd_ 7 1 7 */
+/*:ref: vhatip_ 14 1 7 */
+/*:ref: vscl_ 14 3 7 7 7 */
+ 
+extern int zzsglatx_(doublereal *p1, doublereal *p2, doublereal *minlat, doublereal *minp, doublereal *maxlat, doublereal *maxp);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: reclat_ 14 4 7 7 7 7 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: vcrss_ 14 3 7 7 7 */
+/*:ref: vzero_ 12 1 7 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: vhatip_ 14 1 7 */
+/*:ref: vdot_ 7 2 7 7 */
+/*:ref: opsgnd_ 12 2 7 7 */
+/*:ref: nvc2pl_ 14 3 7 7 7 */
+/*:ref: vsub_ 14 3 7 7 7 */
+/*:ref: inrypl_ 14 5 7 7 7 4 7 */
+/*:ref: failed_ 12 0 */
+ 
+extern int zzsgp4_(doublereal *geophs, doublereal *elems, integer *opmode, doublereal *t, doublereal *state);
+extern int xxsgp4i_(doublereal *geophs, doublereal *elems, integer *opmode);
+extern int xxsgp4e_(doublereal *t, doublereal *state);
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: return_ 12 0 */
+/*:ref: ttrans_ 14 5 13 13 7 124 124 */
+/*:ref: failed_ 12 0 */
+/*:ref: zzinil_ 14 19 7 4 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 */
+/*:ref: twopi_ 7 0 */
+/*:ref: zzdscm_ 14 88 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 */
+/*:ref: zzdspr_ 14 40 4 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 12 7 7 7 7 7 */
+/*:ref: zzdsin_ 14 73 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 4 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 */
+/*:ref: zzdspc_ 14 37 4 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: pi_ 7 0 */
+ 
+extern int zzsinutl_(integer *trgcde, integer *nsurf, integer *srflst, doublereal *et, integer *fixfid, doublereal *vertex, doublereal *raydir, doublereal *spoint, logical *found, doublereal *minrad, doublereal *maxrad, doublereal *pnear, doublereal *dist);
+extern int zzsuelin_(integer *trgcde);
+extern int zzsudski_(integer *trgcde, integer *nsurf, integer *srflst, integer *fixfid);
+extern int zzraysfx_(doublereal *vertex, doublereal *raydir, doublereal *et, doublereal *spoint, logical *found);
+extern int zzmaxrad_(doublereal *maxrad);
+extern int zzminrad_(doublereal *minrad);
+extern int zzraynp_(doublereal *vertex, doublereal *raydir, doublereal *et, doublereal *pnear, doublereal *dist);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: bodvcd_ 14 6 4 13 4 4 7 124 */
+/*:ref: failed_ 12 0 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: movei_ 14 3 4 4 4 */
+/*:ref: cleard_ 14 2 4 7 */
+/*:ref: zzdsksph_ 14 5 4 4 4 7 7 */
+/*:ref: surfpt_ 14 7 7 7 7 7 7 7 12 */
+/*:ref: zzsbfxr_ 14 9 4 4 4 7 4 7 7 7 12 */
+/*:ref: npedln_ 14 7 7 7 7 7 7 7 7 */
  
 extern int zzsizeok_(integer *size, integer *psize, integer *dsize, integer *offset, logical *ok, integer *n);
 /*:ref: rmaini_ 14 4 4 4 4 4 */
@@ -14035,6 +15505,57 @@ extern int zzspkzp1_(integer *targ, doublereal *et, char *ref, char *abcorr, int
 /*:ref: zzrefch1_ 14 4 4 4 7 7 */
 /*:ref: mxv_ 14 3 7 7 7 */
  
+extern int zzsrfini_(char *nornam, integer *codes, integer *bodies, integer *nvals, integer *maxval, integer *snmhls, integer *snmpol, integer *snmidx, integer *sidhls, integer *sidpol, integer *sididx, ftnlen nornam_len);
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: zzhsiini_ 14 3 4 4 4 */
+/*:ref: zzhscini_ 14 3 4 4 4 */
+/*:ref: cleari_ 14 2 4 4 */
+/*:ref: cmprss_ 14 7 13 4 13 13 124 124 124 */
+/*:ref: zzhash2_ 4 3 13 4 124 */
+/*:ref: errch_ 14 4 13 13 124 124 */
+/*:ref: zzhashi_ 4 2 4 4 */
+ 
+extern int zzsrfker_(char *kernam, char *nornam, integer *kersid, integer *kerbid, logical *extker, integer *nkvar, integer *snmhls, integer *snmpol, integer *snmidx, integer *sidhls, integer *sidpol, integer *sididx, ftnlen kernam_len, ftnlen nornam_len);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: swpool_ 14 5 13 4 13 124 124 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: dtpool_ 14 6 13 12 4 13 124 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errch_ 14 4 13 13 124 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: gcpool_ 14 8 13 4 4 4 13 12 124 124 */
+/*:ref: gipool_ 14 7 13 4 4 4 4 12 124 */
+/*:ref: ljucrs_ 14 5 4 13 13 124 124 */
+/*:ref: zzsrfini_ 14 12 13 4 4 4 4 4 4 4 4 4 4 124 */
+ 
+extern int zzsrftrn_(integer *bodyid, char *srfnam, integer *surfid, integer *usrctr, logical *found, logical *update, ftnlen srfnam_len);
+extern int zzsrfn2c_(char *srfnam, integer *bodyid, integer *surfid, logical *found, ftnlen srfnam_len);
+extern int zzsrfc2n_(integer *surfid, integer *bodyid, char *srfnam, logical *found, ftnlen srfnam_len);
+extern int zzsrftrk_(integer *usrctr, logical *update);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: zzctrsin_ 14 1 4 */
+/*:ref: zzctruin_ 14 1 4 */
+/*:ref: zzsrfker_ 14 14 13 13 4 4 12 4 4 4 4 4 4 4 124 124 */
+/*:ref: zzcvpool_ 14 4 13 4 12 124 */
+/*:ref: failed_ 12 0 */
+/*:ref: zzctrinc_ 14 1 4 */
+/*:ref: ljucrs_ 14 5 4 13 13 124 124 */
+/*:ref: cmprss_ 14 7 13 4 13 13 124 124 124 */
+/*:ref: zzhash2_ 4 3 13 4 124 */
+/*:ref: zzhashi_ 4 2 4 4 */
+/*:ref: zzctrchk_ 14 3 4 4 12 */
+ 
 extern int zzstelab_(logical *xmit, doublereal *accobs, doublereal *vobs, doublereal *starg, doublereal *scorr, doublereal *dscorr);
 /*:ref: return_ 12 0 */
 /*:ref: vminus_ 14 2 7 7 */
@@ -14055,6 +15576,64 @@ extern int zzstelab_(logical *xmit, doublereal *accobs, doublereal *vobs, double
 /*:ref: vlcom3_ 14 7 7 7 7 7 7 7 7 */
 /*:ref: vadd_ 14 3 7 7 7 */
 /*:ref: qderiv_ 14 5 4 7 7 7 7 */
+ 
+extern int zztangnt_(integer *curve, doublereal *srcrad, integer *shape, integer *trgcde, integer *nsurf, integer *srflst, integer *fixfid, doublereal *et, doublereal *plnvec, doublereal *axis, doublereal *schstp, doublereal *soltol, doublereal *result, doublereal *points);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: scardd_ 14 2 4 7 */
+/*:ref: vrotv_ 14 4 7 7 7 7 */
+/*:ref: pi_ 7 0 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: zztanini_ 14 10 4 7 4 4 4 4 4 7 7 7 */
+/*:ref: zzmaxrad_ 14 1 7 */
+/*:ref: failed_ 12 0 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: vnorm_ 7 1 7 */
+/*:ref: dasine_ 7 2 7 7 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: zztanslv_ 14 11 200 200 200 12 7 7 7 7 7 7 12 */
+/*:ref: cardd_ 4 1 7 */
+ 
+extern int zztanslv_(S_fp udcond, S_fp udstep, S_fp udrefn, logical *cstep, doublereal *step, doublereal *start, doublereal *finish, doublereal *tol, doublereal *result, doublereal *points, logical *endflg);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: touchd_ 7 1 7 */
+/*:ref: sized_ 4 1 7 */
+/*:ref: failed_ 12 0 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: brcktd_ 7 3 7 7 7 */
+/*:ref: zzwninsd_ 14 5 7 7 13 7 124 */
+ 
+extern int zztanutl_(integer *curve, doublereal *srcrad, integer *shape, integer *trgcde, integer *nsurf, integer *srflst, integer *fixfid, doublereal *et, doublereal *plnvec, doublereal *axis, doublereal *angle, logical *ocultd, doublereal *point);
+extern int zztanini_(integer *curve, doublereal *srcrad, integer *shape, integer *trgcde, integer *nsurf, integer *srflst, integer *fixfid, doublereal *et, doublereal *plnvec, doublereal *axis);
+extern int zztansta_(doublereal *angle, logical *ocultd, doublereal *point);
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: return_ 12 0 */
+/*:ref: vzero_ 12 1 7 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: vcrss_ 14 3 7 7 7 */
+/*:ref: vhatip_ 14 1 7 */
+/*:ref: vequ_ 14 2 7 7 */
+/*:ref: vhat_ 14 2 7 7 */
+/*:ref: zzsuelin_ 14 1 4 */
+/*:ref: zzsudski_ 14 4 4 4 4 4 */
+/*:ref: vrotv_ 14 4 7 7 7 7 */
+/*:ref: zzraysfx_ 14 5 7 7 7 7 12 */
+/*:ref: pi_ 7 0 */
+/*:ref: vsclip_ 14 2 7 7 */
+/*:ref: vadd_ 14 3 7 7 7 */
  
 extern int zzteme_(doublereal *et, doublereal *mt);
 /*:ref: return_ 12 0 */
@@ -14104,9 +15683,25 @@ extern logical zzvalt_(char *string, integer *b, integer *e, char *letter, ftnle
 extern int zztknerr_(char *templt, char *string, char *token, char *error, logical *status, ftnlen templt_len, ftnlen string_len, ftnlen token_len, ftnlen error_len);
 /*:ref: repmc_ 14 8 13 13 13 13 124 124 124 124 */
  
+extern int zztogrid_(doublereal *modxyz, doublereal *voxori, doublereal *voxsiz, doublereal *grdxyz);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errdp_ 14 3 13 7 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+ 
 extern logical zztpats_(integer *room, integer *nknown, char *known, char *meanng, ftnlen known_len, ftnlen meanng_len);
 /*:ref: orderc_ 14 4 13 4 4 124 */
 /*:ref: reordc_ 14 4 4 4 13 124 */
+ 
+extern int zztrvlnk_(integer *aval, integer *maxa, integer *pntrs, integer *cellsz, integer *cells, integer *maxb, integer *nb, integer *blist);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
  
 extern int zztwovxf_(doublereal *axdef, integer *indexa, doublereal *plndef, integer *indexp, doublereal *xform);
 /*:ref: return_ 12 0 */
@@ -14120,6 +15715,16 @@ extern int zztwovxf_(doublereal *axdef, integer *indexa, doublereal *plndef, int
 /*:ref: moved_ 14 3 7 4 7 */
 /*:ref: cleard_ 14 2 4 7 */
 /*:ref: vzero_ 12 1 7 */
+ 
+extern int zzuntngl_(integer *nptr, integer *maxcel, integer *cells, integer *maxb, integer *pntrs, integer *nout, integer *outlst);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: zztrvlnk_ 14 8 4 4 4 4 4 4 4 4 */
+/*:ref: failed_ 12 0 */
  
 extern int zzutcpm_(char *string, integer *start, doublereal *hoff, doublereal *moff, integer *last, logical *succes, ftnlen string_len);
 /*:ref: lx4uns_ 14 5 13 4 4 4 124 */
@@ -14135,6 +15740,28 @@ extern int zzvalcor_(char *abcorr, logical *attblk, ftnlen abcorr_len);
 /*:ref: setmsg_ 14 2 13 124 */
 /*:ref: errch_ 14 4 13 13 124 124 */
 /*:ref: sigerr_ 14 2 13 124 */
+ 
+extern integer zzvox2id_(integer *vixyz, integer *nvox);
+ 
+extern int zzvoxcvo_(integer *vixyz, integer *nvox, integer *cgrscl, integer *cgxyz, integer *cgoff, integer *cgof1d);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+ 
+extern int zzvrtplt_(integer *nv, integer *np, integer *plates, integer *cellsz, integer *maxlst, integer *cells, integer *vrtptr, integer *nlist, integer *pltlst);
+/*:ref: return_ 12 0 */
+/*:ref: chkin_ 14 2 13 124 */
+/*:ref: setmsg_ 14 2 13 124 */
+/*:ref: errint_ 14 3 13 4 124 */
+/*:ref: sigerr_ 14 2 13 124 */
+/*:ref: chkout_ 14 2 13 124 */
+/*:ref: zzinilnk_ 14 5 4 4 4 4 4 */
+/*:ref: failed_ 12 0 */
+/*:ref: zzaddlnk_ 14 7 4 4 4 4 4 4 4 */
+/*:ref: zzuntngl_ 14 7 4 4 4 4 4 4 4 */
  
 extern int zzvstrng_(doublereal *x, char *fill, integer *from, integer *to, logical *rnd, integer *expont, char *substr, logical *did, ftnlen fill_len, ftnlen substr_len);
 extern int zzvststr_(doublereal *x, char *fill, integer *expont, ftnlen fill_len);

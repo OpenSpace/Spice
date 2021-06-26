@@ -5,7 +5,7 @@
 -Abstract
 
    Perform CSPICE definitions for frame subsystem APIs.
-            
+
 -Disclaimer
 
    THIS SOFTWARE AND ANY RELATED MATERIALS WERE CREATED BY THE
@@ -36,13 +36,13 @@
    CK
    FRAMES
    PCK
-   
+
 -Particulars
 
-   This header defines constants that may be referenced in 
+   This header defines constants that may be referenced in
    application code that calls CSPICE frame subsystem APIs.
-   
-   
+
+
       CONSTANTS
       ==========
 
@@ -59,31 +59,31 @@
 
          Name                   Description
          ----                   ----------
- 
+
          SPICE_NFRAME_NINERT    Number of built-in inertial frames.
          SPICE_NFRAME_NNINRT    Number of built-in non-inertial frames.
-         
+
 
 
          Frame classes
          -------------
- 
+
          The following parameters identify SPICE frame classes. These
          parameters correspond to those defined in the SPICELIB Fortran
          INCLUDE file frmtyp.inc. See the Frames Required Reading for a
          detailed discussion of frame classes.
- 
+
 
          Name                   Description
          ----                   ----------
- 
+
          SPICE_FRMTYP_INERTL    an inertial frame that is listed in the
                                 f2c'd routine chgirf_ and that requires
                                 no external file to compute the
                                 transformation from or to any other
                                 inertial frame.
 
- 
+
          SPICE_FRMTYP_PCK       is a frame that is specified relative
                                 to some built-in, inertial frame (of
                                 class SPICE_FRMTYP_INERTL) and that has
@@ -100,18 +100,18 @@
                                 "relative" frames by a constant
                                 rotation.
 
- 
+
          SPICE_FRMTYP_DYN       is a "dynamic" frame. These currently
                                 are limited to parameterized frames
                                 where the full frame definition depends
                                 on parameters supplied via a frame
                                 kernel.
- 
+
          SPICE_FRMTYP_ALL       indicates any of the above classes.
                                 This parameter is used in APIs that
                                 fetch information about frames of a
                                 specified class.
-                  
+
 -Literature_References
 
    None.
@@ -119,24 +119,33 @@
 -Author_and_Institution
 
    N.J. Bachman       (JPL)
-   
+
 -Restrictions
 
    None.
-      
+
 -Version
 
-   -CSPICE Version 1.0.0, 23-MAY-2012 (NJB)  
+   -CSPICE Version 1.1.0, 25-JAN-2016 (EDW)
+
+       Increased the number of non-inertial frames from 105 to 106
+       in order to accomodate the following PCK based frame:
+
+          IAU_BENNU
+
+       This value matches that listed in nninrt.inc.
+
+   -CSPICE Version 1.0.0, 23-MAY-2012 (NJB)
 
 */
 
 #ifndef HAVE_SPICE_FRAME_DEFS
 
    #define HAVE_SPICE_FRAME_DEFS
-   
+
 
    /*
-   Frame counts: 
+   Frame counts:
    */
 
    /*
@@ -149,42 +158,42 @@
    Number of built-in non-inertial frames. This number must be kept in
    sync with that defined in the SPICELIB include file nninrt.inc.
    */
-   #define SPICE_NFRAME_NNINRT             105
+   #define SPICE_NFRAME_NNINRT             106
 
 
 
    /*
    The frame class codes defined here are identical
-   to those used in SPICELIB. 
+   to those used in SPICELIB.
    */
 
    /*
-   Inertial, built-in frames: 
+   Inertial, built-in frames:
    */
    #define SPICE_FRMTYP_INERTL              1
 
    /*
-   PCK frames: 
+   PCK frames:
    */
    #define SPICE_FRMTYP_PCK                 2
 
    /*
-   CK frames: 
+   CK frames:
    */
    #define SPICE_FRMTYP_CK                  3
 
    /*
-   TK frames: 
+   TK frames:
    */
    #define SPICE_FRMTYP_TK                  4
 
    /*
-   Dynamic frames: 
+   Dynamic frames:
    */
    #define SPICE_FRMTYP_DYN                 5
 
    /*
-   All frame classes: 
+   All frame classes:
    */
    #define SPICE_FRMTYP_ALL              ( -1 )
 

@@ -56,6 +56,68 @@
 
 -Version
 
+   -CSPICE Version 12.14.0, 05-JAN-2017 (EDW) (NJB)
+
+      Added prototypes for
+
+         chbder_c
+         cleard_c
+         dasdc_c
+         dashfn_c
+         dasopw_c 
+         dasrfr_c
+         dlabbs_c 
+         dlabfs_c
+         dlafns_c
+         dlafps_c
+         dskb02_c
+         dskcls_c
+         dskd02_c
+         dskgd_c
+         dskgtl_c
+         dski02_c
+         dskmi2_c 
+         dskn02_c
+         dskobj_c
+         dskopn_c
+         dskp02_c
+         dskrb2_c
+         dsksrf_c
+         dskstl_c
+         dskv02_c
+         dskw02_c
+         dskx02_c
+         dskxsi_c
+         dskxv_c
+         dskz02_c
+         hrmint_c
+         illum_pl02
+         illum_plid_pl02
+         latsrf_c
+         lgrind_c
+         limb_pl02
+         limbpt_c
+         llgrid_pl02
+         oscltx_c
+         pckcls_c
+         pckopn_c
+         pckw02_c
+         pltar_c
+         pltexp_c
+         pltnp_c
+         pltnrm_c
+         pltvol_c
+         polyds_c
+         srfc2s_c
+         srfcss_c
+         srfnrm_c
+         srfs2c_c
+         srfscc_c
+         subpt_pl02
+         subsol_pl02
+         term_pl02
+         termpt_c
+
    -CSPICE Version 12.13.0, 03-DEC-2013 (NJB) (SCK) (EDW)
 
       Correction to argument order for gfsep_c.c prototype.
@@ -640,6 +702,18 @@ Include Files:
 #include "SpiceZdf.h"
 #endif
 
+#ifndef  HAVE_SPICE_CELLS_H
+#include "SpiceCel.h"
+#endif
+
+#ifndef  HAVE_SPICE_DLA_H
+#include "SpiceDLA.h"
+#endif
+
+#ifndef  HAVE_SPICE_DSK_H
+#include "SpiceDSK.h"
+#endif
+
 #ifndef  HAVE_SPICE_EK_H
 #include "SpiceEK.h"
 #endif
@@ -650,10 +724,10 @@ Include Files:
 
 #ifndef  HAVE_SPICE_ELLIPSES_H
 #include "SpiceEll.h"
-#endif
+#endif 
 
-#ifndef  HAVE_SPICE_CELLS_H
-#include "SpiceCel.h"
+#ifndef  HAVE_SPICE_OSC_H
+#include "SpiceOsc.h"
 #endif
 
 #ifndef  HAVE_SPICE_SPK_H
@@ -817,6 +891,15 @@ Include Files:
                                 SpiceEllipse      * ellipse   );
 
 
+   void              chbder_c ( ConstSpiceDouble * cp,
+                                SpiceInt           degp,
+                                SpiceDouble        x2s[2],
+                                SpiceDouble        x,
+                                SpiceInt           nderiv,
+                                SpiceDouble      * partdp,
+                                SpiceDouble      * dpdxs );
+
+
    void              chkin_c  ( ConstSpiceChar    * module );
 
 
@@ -935,6 +1018,10 @@ Include Files:
                                 SpiceDouble          rate,
                                 SpiceInt             nints,
                                 ConstSpiceDouble     starts[]     );
+
+
+   void              cleard_c ( SpiceInt             ndim,
+                                SpiceDouble        * array );
 
 
    SpiceDouble       clight_c ( void );
@@ -1120,6 +1207,9 @@ Include Files:
    void              dascls_c ( SpiceInt            handle );
 
 
+   void              dasdc_c  ( SpiceInt            handle );
+
+
    void              dasec_c  ( SpiceInt            handle,
                                 SpiceInt            bufsiz,
                                 SpiceInt            buflen,
@@ -1128,8 +1218,29 @@ Include Files:
                                 SpiceBoolean      * done   );
 
 
+   void              dashfn_c ( SpiceInt            handle,
+                                SpiceInt            namlen,
+                                SpiceChar         * fname  );
+
+
    void              dasopr_c ( ConstSpiceChar    * fname,
                                 SpiceInt          * handle  );
+
+
+   void              dasopw_c ( ConstSpiceChar    * fname,
+                                SpiceInt          * handle  );
+
+
+
+   void              dasrfr_c ( SpiceInt            handle,
+                                SpiceInt            idwlen,
+                                SpiceInt            ifnlen,
+                                SpiceChar         * idword,
+                                SpiceChar         * ifname,
+                                SpiceInt          * nresvr,
+                                SpiceInt          * nresvc,
+                                SpiceInt          * ncomr,
+                                SpiceInt          * ncomc   );
 
 
    void              dcyldr_c ( SpiceDouble         x,
@@ -1164,16 +1275,39 @@ Include Files:
                                 SpiceDouble         jacobi[3][3] );
 
 
+   void              dlabbs_c ( SpiceInt            handle,
+                                SpiceDLADescr     * descr,
+                                SpiceBoolean      * found  );
+
+
+   void              dlabfs_c ( SpiceInt          handle,
+                                SpiceDLADescr   * descr,
+                                SpiceBoolean    * found  );
+
+
+   void              dlafns_c ( SpiceInt               handle,
+                                ConstSpiceDLADescr   * descr,
+                                SpiceDLADescr        * nxtdsc,
+                                SpiceBoolean         * found    );
+
+
+   void              dlafps_c ( SpiceInt               handle,
+                                ConstSpiceDLADescr   * descr,
+                                SpiceDLADescr        * prvdsc,
+                                SpiceBoolean         * found   );
+
+
    void              dlatdr_c ( SpiceDouble         x,
                                 SpiceDouble         y,
                                 SpiceDouble         z,
                                 SpiceDouble         jacobi[3][3] );
 
+
    void              dp2hx_c  ( SpiceDouble   number,
                                 SpiceInt      lenout,
                                 SpiceChar   * string,
-                               SpiceInt    * length
-                              );
+                                SpiceInt    * length  );
+
 
    void              dpgrdr_c ( ConstSpiceChar    * body,
                                 SpiceDouble         x,
@@ -1232,6 +1366,187 @@ Include Files:
                                 SpiceDouble         colat,
                                 SpiceDouble         lon,
                                 SpiceDouble         jacobi[3][3] );
+
+
+   void              dskb02_c ( SpiceInt               handle,
+                                ConstSpiceDLADescr   * dladsc,
+                                SpiceInt             * nv,
+                                SpiceInt             * np,
+                                SpiceInt             * nvxtot,
+                                SpiceDouble            vtxbds  [3][2],
+                                SpiceDouble          * voxsiz,
+                                SpiceDouble            voxori  [3],
+                                SpiceInt               vgrext  [3],
+                                SpiceInt             * cgscal,
+                                SpiceInt             * vtxnpl,
+                                SpiceInt             * voxnpt,
+                                SpiceInt             * voxnpl          );
+
+
+   void              dskcls_c ( SpiceInt               handle,
+                                SpiceBoolean           optmiz );
+
+
+   void              dskd02_c ( SpiceInt               handle,
+                                ConstSpiceDLADescr   * dladsc,
+                                SpiceInt               item,
+                                SpiceInt               start,
+                                SpiceInt               room,
+                                SpiceInt             * n,
+                                SpiceDouble          * values );
+
+
+   void              dskgd_c  ( SpiceInt               handle,
+                                ConstSpiceDLADescr   * dladsc,
+                                SpiceDSKDescr        * dskdsc );
+
+
+   void              dskgtl_c ( SpiceInt               keywrd,
+                                SpiceDouble          * dpval  );
+
+
+   void              dski02_c ( SpiceInt              handle,
+                                ConstSpiceDLADescr  * dladsc,
+                                SpiceInt              item,
+                                SpiceInt              start,
+                                SpiceInt              room,
+                                SpiceInt            * n,
+                                SpiceInt            * values   );
+
+   void              dskobj_c ( ConstSpiceChar      * dsk,
+                                SpiceCell           * bodids );
+
+   void              dskopn_c ( ConstSpiceChar      * fname,
+                                ConstSpiceChar      * ifname,
+                                SpiceInt              ncomch,
+                                SpiceInt           *  handle );
+
+
+   void              dskn02_c ( SpiceInt              handle,
+                                ConstSpiceDLADescr  * dladsc,
+                                SpiceInt              plid,
+                                SpiceDouble           normal[3] );
+
+
+   void              dskmi2_c ( SpiceInt              nv,
+                                ConstSpiceDouble      vrtces[][3],
+                                SpiceInt              np,
+                                ConstSpiceInt         plates[][3],
+                                SpiceDouble           finscl,
+                                SpiceInt              corscl,
+                                SpiceInt              worksz,
+                                SpiceInt              voxpsz,
+                                SpiceInt              voxlsz,
+                                SpiceBoolean          makvtl,
+                                SpiceInt              spxisz,
+                                SpiceInt              work   [][2],
+                                SpiceDouble           spaixd [],
+                                SpiceInt              spaixi []    );
+
+                    
+   void              dskp02_c ( SpiceInt              handle,
+                                ConstSpiceDLADescr  * dladsc,
+                                SpiceInt              start,
+                                SpiceInt              room,
+                                SpiceInt            * n,
+                                SpiceInt              plates[][3] );
+
+
+   void              dskrb2_c ( SpiceInt              nv,
+                                ConstSpiceDouble      vrtces[][3],
+                                SpiceInt              np,
+                                ConstSpiceInt         plates[][3],
+                                SpiceInt              corsys,
+                                ConstSpiceDouble      corpar[],
+                                SpiceDouble         * mncor3,
+                                SpiceDouble         * mxcor3       );
+
+
+   void              dsksrf_c ( ConstSpiceChar      * dsk,
+                                SpiceInt              bodyid,
+                                SpiceCell           * srfids ); 
+
+
+   void              dskstl_c ( SpiceInt               keywrd,
+                                SpiceDouble            dpval  );
+
+
+   void              dskv02_c ( SpiceInt               handle,
+                                ConstSpiceDLADescr   * dladsc,
+                                SpiceInt               start,
+                                SpiceInt               room,
+                                SpiceInt             * n,
+                                SpiceDouble            vrtces[][3] );
+
+
+   void              dskw02_c ( SpiceInt               handle,
+                                SpiceInt               center,
+                                SpiceInt               surfce,
+                                SpiceInt               dclass,
+                                ConstSpiceChar       * frame,
+                                SpiceInt               corsys,
+                                ConstSpiceDouble       corpar[],
+                                SpiceDouble            mncor1,
+                                SpiceDouble            mxcor1,
+                                SpiceDouble            mncor2,
+                                SpiceDouble            mxcor2,
+                                SpiceDouble            mncor3,
+                                SpiceDouble            mxcor3,
+                                SpiceDouble            first,
+                                SpiceDouble            last,
+                                SpiceInt               nv,
+                                ConstSpiceDouble       vrtces[][3],
+                                SpiceInt               np,
+                                ConstSpiceInt          plates[][3],
+                                ConstSpiceDouble       spaixd[],
+                                ConstSpiceInt          spaixi[]    );
+
+
+   void              dskx02_c ( SpiceInt               handle,
+                                ConstSpiceDLADescr   * dladsc,
+                                ConstSpiceDouble       vertex  [3],
+                                ConstSpiceDouble       raydir  [3],
+                                SpiceInt             * plid,
+                                SpiceDouble            xpt     [3],
+                                SpiceBoolean         * found        );
+
+
+   void              dskxsi_c ( SpiceBoolean           pri,
+                                ConstSpiceChar       * target,
+                                SpiceInt               nsurf,
+                                ConstSpiceInt          srflst [],
+                                SpiceDouble            et,
+                                ConstSpiceChar       * fixref,
+                                ConstSpiceDouble       vertex [3],
+                                ConstSpiceDouble       raydir [3],
+                                SpiceInt               maxd,
+                                SpiceInt               maxi,
+                                SpiceDouble            xpt    [3],
+                                SpiceInt             * handle,
+                                SpiceDLADescr        * dladsc,
+                                SpiceDSKDescr        * dskdsc,
+                                SpiceDouble            dc     [],
+                                SpiceInt               ic     [],
+                                SpiceBoolean         * found      );
+
+
+   void               dskxv_c ( SpiceBoolean           pri,
+                                ConstSpiceChar       * target,
+                                SpiceInt               nsurf,
+                                ConstSpiceInt          srflst[],
+                                SpiceDouble            et,
+                                ConstSpiceChar       * fixref,
+                                SpiceInt               nrays,
+                                ConstSpiceDouble       vtxarr[][3],
+                                ConstSpiceDouble       dirarr[][3],
+                                SpiceDouble            xptarr[][3],
+                                SpiceBoolean           fndarr[]     );
+
+
+   void              dskz02_c ( SpiceInt               handle,
+                                ConstSpiceDLADescr   * dladsc,
+                                SpiceInt             * nv,
+                                SpiceInt             * np     );
 
 
    void              dsphdr_c ( SpiceDouble         x,
@@ -2116,7 +2431,17 @@ Include Files:
                                 SpiceBoolean      * found  );
 
 
+  void               hrmint_c ( SpiceInt            n,
+                                ConstSpiceDouble  * xvals,
+                                ConstSpiceDouble  * yvals,
+                                SpiceDouble         x,
+                                SpiceDouble       * work,
+                                SpiceDouble       * f,
+                                SpiceDouble       * df );
+
+
    SpiceDouble       halfpi_c ( void );
+
 
    void              hx2dp_c  ( ConstSpiceChar  * string,
                                 SpiceInt          lenout,
@@ -2151,6 +2476,52 @@ Include Files:
                                 SpiceDouble       * phase,
                                 SpiceDouble       * solar,
                                 SpiceDouble       * emissn     );
+
+
+   void              illum_pl02 ( SpiceInt               handle,
+                                  ConstSpiceDLADescr   * dladsc,
+                                  ConstSpiceChar       * target,
+                                  SpiceDouble            et,
+                                  ConstSpiceChar       * abcorr,
+                                  ConstSpiceChar       * obsrvr,
+                                  SpiceDouble            spoint [3],
+                                  SpiceDouble          * phase,
+                                  SpiceDouble          * solar,
+                                  SpiceDouble          * emissn      );
+
+
+   void              illum_plid_pl02 ( SpiceInt               handle,
+                                       ConstSpiceDLADescr   * dladsc,
+                                       ConstSpiceChar       * target,
+                                       SpiceDouble            et,
+                                       ConstSpiceChar       * abcorr,
+                                       ConstSpiceChar       * obsrvr,
+                                       SpiceDouble            spoint [3],
+                                       SpiceInt               plid,
+                                       SpiceDouble          * trgepc,
+                                       SpiceDouble            srfvec [3],
+                                       SpiceDouble          * phase,
+                                       SpiceDouble          * solar,
+                                       SpiceDouble          * emissn,
+                                       SpiceBoolean         * visible,
+                                       SpiceBoolean         * lit       );
+
+
+   void              illumf_c ( ConstSpiceChar    * method,
+                                ConstSpiceChar    * target,
+                                ConstSpiceChar    * ilusrc,
+                                SpiceDouble         et,
+                                ConstSpiceChar    * fixref,
+                                ConstSpiceChar    * abcorr,
+                                ConstSpiceChar    * obsrvr,
+                                ConstSpiceDouble    spoint [3],
+                                SpiceDouble       * trgepc,
+                                SpiceDouble         srfvec [3],
+                                SpiceDouble       * phase,
+                                SpiceDouble       * incdnc,
+                                SpiceDouble       * emissn,
+                                SpiceBoolean      * visibl,
+                                SpiceBoolean      * lit       );
 
 
    void              illumg_c ( ConstSpiceChar    * method,
@@ -2339,12 +2710,71 @@ Include Files:
                                 SpiceDouble       * lons   );
 
 
+   void              latsrf_c ( ConstSpiceChar    * method,
+                                ConstSpiceChar    * target,
+                                SpiceDouble         et,
+                                ConstSpiceChar    * fixref,
+                                SpiceInt            npts,
+                                ConstSpiceDouble    lonlat[][2],
+                                SpiceDouble         srfpts[][3]  );
+
+
    void              lcase_c  ( SpiceChar         * in,
                                 SpiceInt            lenout,
                                 SpiceChar         * out     );
 
 
    void              ldpool_c ( ConstSpiceChar    * filename );
+
+
+   void              lgrind_c ( SpiceInt            n,
+                                ConstSpiceDouble  * xvals,
+                                ConstSpiceDouble  * yvals,
+                                SpiceDouble       * work,
+                                SpiceDouble         x,
+                                SpiceDouble       * p,
+                                SpiceDouble       * dp );
+
+
+   void              limb_pl02 ( SpiceInt              handle,
+                                 ConstSpiceDLADescr  * dladsc,
+                                 ConstSpiceChar      * target,
+                                 SpiceDouble           et,
+                                 ConstSpiceChar      * fixref,
+                                 ConstSpiceChar      * abcorr,
+                                 ConstSpiceChar      * obsrvr,
+                                 SpiceInt              npoints,
+                                 SpiceDouble         * trgepc,
+                                 SpiceDouble           obspos   [3],
+                                 SpiceDouble           limbpts  [][3],
+                                 SpiceInt              plateIDs []     );
+
+
+   void              limbpt_c ( ConstSpiceChar    * method,
+                                ConstSpiceChar    * target,
+                                SpiceDouble         et,
+                                ConstSpiceChar    * fixref,
+                                ConstSpiceChar    * abcorr,
+                                ConstSpiceChar    * corloc,
+                                ConstSpiceChar    * obsrvr,
+                                ConstSpiceDouble    refvec[3],
+                                SpiceDouble         rolstp,
+                                SpiceInt            ncuts,
+                                SpiceDouble         schstp,
+                                SpiceDouble         soltol,
+                                SpiceInt            maxn,
+                                SpiceInt            npts  [],
+                                SpiceDouble         points[][3],
+                                SpiceDouble         epochs[],
+                                SpiceDouble         tangts[][3]  );
+
+
+   void              llgrid_pl02 ( SpiceInt               handle,
+                                   ConstSpiceDLADescr   * dladsc,
+                                   SpiceInt               npoints,
+                                   ConstSpiceDouble       grid     [][2],
+                                   SpiceDouble            spoints  [][3],
+                                   SpiceInt               plateIDs []     );
 
 
    void              lmpool_c ( const void        * cvals,
@@ -2667,6 +3097,15 @@ Include Files:
                                 SpiceDouble         elts[8]  );
 
 
+   void              oscltx_c ( ConstSpiceDouble    state[6],
+                                SpiceDouble         et      ,
+                                SpiceDouble         mu      ,
+                                SpiceDouble         elts[SPICE_OSCLTX_NELTS] );
+
+
+   void              pckcls_c ( SpiceInt            handle );
+
+
    void              pckcov_c ( ConstSpiceChar    * pck,
                                 SpiceInt            idcode,
                                 SpiceCell         * cover   );
@@ -2680,7 +3119,26 @@ Include Files:
                                 SpiceInt          * handle );
 
 
+   void              pckopn_c ( ConstSpiceChar    * name,
+                                ConstSpiceChar    * ifname,
+                                SpiceInt            ncomch,
+                                SpiceInt          * handle  );
+
+
    void              pckuof_c ( SpiceInt            handle );
+
+
+   void              pckw02_c ( SpiceInt            handle,
+                                SpiceInt            clssid,
+                                ConstSpiceChar    * frame,
+                                SpiceDouble         first,
+                                SpiceDouble         last,
+                                ConstSpiceChar    * segid,
+                                SpiceDouble         intlen,
+                                SpiceInt            n,
+                                SpiceInt            polydg,
+                                SpiceDouble         cdata  [],
+                                SpiceDouble         btime      );
 
 
    void              pcpool_c ( ConstSpiceChar   * name,
@@ -2737,6 +3195,44 @@ Include Files:
                                 SpiceDouble         point[3],
                                 SpiceDouble         span1[3],
                                 SpiceDouble         span2[3]  );
+
+
+   SpiceDouble       pltar_c  ( SpiceInt            nv,
+                                ConstSpiceDouble    vrtces[][3],
+                                SpiceInt            np,
+                                ConstSpiceInt       plates[][3] );  
+
+
+   void              pltexp_c ( ConstSpiceDouble    iverts[3][3],
+                                SpiceDouble         delta,
+                                SpiceDouble         overts[3][3] );
+
+
+   void              pltnp_c  ( ConstSpiceDouble    point[3],
+                                ConstSpiceDouble    v1   [3],
+                                ConstSpiceDouble    v2   [3],
+                                ConstSpiceDouble    v3   [3],
+                                SpiceDouble         pnear[3],
+                                SpiceDouble       * dist      );
+
+
+   void              pltnrm_c ( ConstSpiceDouble   v1[3],
+                                ConstSpiceDouble   v2[3],
+                                ConstSpiceDouble   v3[3],
+                                SpiceDouble        normal[3] );
+
+
+   SpiceDouble       pltvol_c ( SpiceInt           nv,
+                                ConstSpiceDouble   vrtces[][3],
+                                SpiceInt           np,
+                                ConstSpiceInt      plates[][3] );  
+
+
+   void              polyds_c ( ConstSpiceDouble    * coeffs,
+                                SpiceInt              deg,
+                                SpiceInt              nderiv,
+                                SpiceDouble           t,
+                                SpiceDouble         * p );
 
 
    SpiceInt          pos_c    ( ConstSpiceChar    * str,
@@ -3543,7 +4039,7 @@ Include Files:
                                 SpiceInt             n,
                                 SpiceInt             polydg,
                                 ConstSpiceDouble     cdata[],
-                                SpiceDouble          dscale, 
+                                SpiceDouble          dscale,
                                 SpiceDouble          tscale,
                                 SpiceDouble          initjd,
                                 SpiceDouble          initfr  );
@@ -3554,6 +4050,41 @@ Include Files:
                                 SpiceDouble         lon,
                                 SpiceDouble         lat,
                                 SpiceDouble         rectan[3] );
+
+
+   void              srfc2s_c ( SpiceInt             code,
+                                SpiceInt             bodyid,
+                                SpiceInt             srflen,
+                                SpiceChar          * srfstr,
+                                SpiceBoolean       * isname  );
+
+
+   void              srfcss_c ( SpiceInt             code,
+                                ConstSpiceChar     * bodstr,
+                                SpiceInt             srflen,
+                                SpiceChar          * srfstr,
+                                SpiceBoolean       * isname  );
+
+
+   void              srfnrm_c ( ConstSpiceChar     * method,
+                                ConstSpiceChar     * target,
+                                SpiceDouble          et,
+                                ConstSpiceChar     * fixref,
+                                SpiceInt             npts,
+                                ConstSpiceDouble     srfpts[][3],
+                                SpiceDouble          normls[][3]  );
+
+
+   void              srfs2c_c ( ConstSpiceChar     * srfstr,
+                                ConstSpiceChar     * bodstr,
+                                SpiceInt           * code,
+                                SpiceBoolean       * found  );
+
+
+   void              srfscc_c ( ConstSpiceChar     * surfce,
+                                SpiceInt             bodyid,
+                                SpiceInt           * surfid,
+                                SpiceBoolean       * found  );
 
 
    void              srfxpt_c ( ConstSpiceChar    * method,
@@ -3611,6 +4142,17 @@ Include Files:
                                 SpiceDouble         spoint [3],
                                 SpiceDouble       * alt         );
 
+   void              subpt_pl02( SpiceInt               handle,
+                                 ConstSpiceDLADescr   * dladsc,
+                                 ConstSpiceChar       * method,
+                                 ConstSpiceChar       * target,
+                                 SpiceDouble            et,
+                                 ConstSpiceChar       * abcorr,
+                                 ConstSpiceChar       * obsrvr,
+                                 SpiceDouble            spoint [3],
+                                 SpiceDouble          * alt,
+                                 SpiceInt             * plateID     );
+
 
    void              subslr_c ( ConstSpiceChar    * method,
                                 ConstSpiceChar    * target,
@@ -3629,6 +4171,18 @@ Include Files:
                                 ConstSpiceChar    * abcorr,
                                 ConstSpiceChar    * obsrvr,
                                 SpiceDouble         spoint[3] );
+
+
+   void              subsol_pl02 ( SpiceInt               handle,
+                                   ConstSpiceDLADescr   * dladsc,
+                                   ConstSpiceChar       * method,
+                                   ConstSpiceChar       * target,
+                                   SpiceDouble            et,
+                                   ConstSpiceChar       * abcorr,
+                                   ConstSpiceChar       * obsrvr,
+                                   SpiceDouble            spoint [3],
+                                   SpiceDouble          * dist,
+                                   SpiceInt             * plateID   );
 
 
    SpiceDouble       sumad_c  ( ConstSpiceDouble    array[],
@@ -3679,6 +4233,42 @@ Include Files:
    void              szpool_c ( ConstSpiceChar    * name,
                                 SpiceInt          * n,
                                 SpiceBoolean      * found );
+
+
+   void              term_pl02 ( SpiceInt              handle,
+                                 ConstSpiceDLADescr  * dladsc,
+                                 ConstSpiceChar      * trmtyp,
+                                 ConstSpiceChar      * source,
+                                 ConstSpiceChar      * target,
+                                 SpiceDouble           et,
+                                 ConstSpiceChar      * fixref,
+                                 ConstSpiceChar      * abcorr,
+                                 ConstSpiceChar      * obsrvr,
+                                 SpiceInt              npoints,
+                                 SpiceDouble         * trgepc,
+                                 SpiceDouble           obspos   [3],
+                                 SpiceDouble           trmpts   [][3],
+                                 SpiceInt              plateIDs []     );
+
+
+   void              termpt_c ( ConstSpiceChar    * method,
+                                ConstSpiceChar    * ilusrc,
+                                ConstSpiceChar    * target,
+                                SpiceDouble         et,
+                                ConstSpiceChar    * fixref,
+                                ConstSpiceChar    * abcorr,
+                                ConstSpiceChar    * corloc,
+                                ConstSpiceChar    * obsrvr,
+                                ConstSpiceDouble    refvec[3],
+                                SpiceDouble         rolstp,
+                                SpiceInt            ncuts,
+                                SpiceDouble         schstp,
+                                SpiceDouble         soltol,
+                                SpiceInt            maxn,
+                                SpiceInt            npts  [],
+                                SpiceDouble         points[][3],
+                                SpiceDouble         epochs[],
+                                SpiceDouble         tangts[][3]  );
 
 
    void              timdef_c ( ConstSpiceChar    * action,
@@ -3777,7 +4367,7 @@ Include Files:
                               SpiceDouble  * deriv );
 
 
-   void              udf_c   ( SpiceDouble   x, 
+   void              udf_c   ( SpiceDouble   x,
                                SpiceDouble * value );
 
 

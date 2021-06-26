@@ -193,7 +193,7 @@
                                known.
  
          SPICE_GF_SPSHAP       Parameter indicating a target object's
-                               shape is modeled as a point.
+                               shape is modeled as a sphere.
 
 
 
@@ -252,6 +252,10 @@
    L.S. Elson      (JPL)
 
 -Version
+
+   -CSPICE Version 2.1.1, 29-NOV-2016 (NJB)
+
+      Corrected description of parameter SPICE_GF_SPSHAP.
 
    -CSPICE Version 2.1.0, 23-FEB-2012 (NJB)
 

@@ -88,6 +88,11 @@
 
 -Version
  
+   -CSPICE Version 5.0.0, 07-FEB-2017   (NJB)
+
+      Updated MaxAbs and MinAbs macros to cast their input arguments
+      to type double.
+
    -CSPICE Version 4.3.0, 18-SEP-2013   (NJB)
 
       Bug fix: missing comma was added to argument list
@@ -223,11 +228,15 @@ Return a value which is the maximum/minimum of the absolute values of
 two values.
 */
 
-#define MaxAbs(a,b)   ( fabs(a) >= fabs(b) ? fabs(a) : fabs(b) )
-#define MinAbs(a,b)   ( fabs(a) <  fabs(b) ? fabs(a) : fabs(b) )
+#define MaxAbs(a,b)                                                     \
+                                                                        \
+           ( fabs((double)(a)) >= fabs((double)(b)) ?                   \
+                                  fabs((double)(a)) : fabs((double)(b)) )
 
-
-
+#define MinAbs(a,b)                                                     \
+                                                                        \
+           ( fabs((double)(a)) <  fabs((double)(b)) ?                   \
+                                  fabs((double)(a)) : fabs((double)(b)) )
 
 
 /*
