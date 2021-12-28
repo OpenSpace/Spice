@@ -48,7 +48,7 @@ if (WIN32)
     set_target_properties(spice PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
 else ()
     target_compile_definitions(spice PRIVATE NON_ANSI_STDIO)
-    target_compile_options(spice PRIVATE -m64 -ansi -fPIC)
+    target_compile_options(spice PRIVATE -ansi)
 endif ()
 
 if (MSVC)
