@@ -23,12 +23,6 @@ typedef int uiolen;
 typedef long uiolen;
 #endif
 
-#ifdef WIN32
-#define LINKAGE _ACRTIMP
-#else
-#define LINKAGE
-#endif
-
 /*units*/
 typedef struct
 {	FILE *ufd;	/*0=unconnected*/
@@ -79,7 +73,7 @@ extern void f_init(void);
 extern int (*f__donewrec)(void), t_putc(int), x_wSL(void);
 extern void b_char(char*,char*,ftnlen), g_char(char*,ftnlen,char*);
 extern int c_sfe(cilist*), z_rnew(void);
-extern LINKAGE int isatty(int);
+extern _ACRTIMP int isatty(int);
 extern int err__fl(int,int,char*);
 extern int xrd_SL(void);
 extern int f__putbuf(int);
