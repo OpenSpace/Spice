@@ -7,18 +7,6 @@ Combining the different source code releases for Visual Studio, Linux, MacOS, an
 
 `fio.h`:
 ```cpp
-+ #ifdef WIN32
-+ #define LINKAGE _ACRTIMP
-+ #else
-+ #define LINKAGE
-+ #endif
-
 - extern int isatty(int);
-+ extern LINKAGE int isatty(int);
-```
-
-`open.c` (on Cygwin, Linux, and Mac)
-```cpp
-- (void) mktemp(buf);
-+ fclose(mkstemp(buf));
++ extern _ACRTIMP int isatty(int);
 ```
