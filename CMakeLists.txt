@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.4)
+cmake_minimum_required(VERSION 3.19.2)
 project(Spice)
 
 # Include all *.c files from the library
@@ -9,8 +9,23 @@ if (MSVC)
   file(GLOB SPICE_PLATFORM_SOURCE ${PROJECT_SOURCE_DIR}/src/msvc/*.c)
   set(INCLUDE_PATH "${PROJECT_SOURCE_DIR}/include/msvc" ${INCLUDE_PATH})
 elseif (APPLE)
-  file(GLOB SPICE_PLATFORM_SOURCE ${PROJECT_SOURCE_DIR}/src/mac/*.c)
-  set(INCLUDE_PATH "${PROJECT_SOURCE_DIR}/include/mac" ${INCLUDE_PATH})
+  # Detection code adapted from
+  # https://github.com/Kitware/CMake/blob/master/Modules/CMakeDetermineSystem.cmake
+  if (DEFINED CMAKE_APPLE_SILICON_PROCESSOR)
+    set(_CMAKE_APPLE_SILICON_PROCESSOR "${CMAKE_APPLE_SILICON_PROCESSOR}")
+  elseif(DEFINED ENV{CMAKE_APPLE_SILICON_PROCESSOR})
+    set(_CMAKE_APPLE_SILICON_PROCESSOR "$ENV{CMAKE_APPLE_SILICON_PROCESSOR}")
+  else()
+    set(_CMAKE_APPLE_SILICON_PROCESSOR "")
+  endif()
+  
+  if (_CMAKE_APPLE_SILICON_PROCESSOR STREQUAL "arm64")
+    file(GLOB SPICE_PLATFORM_SOURCE ${PROJECT_SOURCE_DIR}/src/mac_arm/*.c)
+    set(INCLUDE_PATH "${PROJECT_SOURCE_DIR}/include/mac_arm" ${INCLUDE_PATH})
+  else ()
+    file(GLOB SPICE_PLATFORM_SOURCE ${PROJECT_SOURCE_DIR}/src/mac/*.c)
+    set(INCLUDE_PATH "${PROJECT_SOURCE_DIR}/include/mac" ${INCLUDE_PATH})
+  endif()
 elseif (CYGWIN)
   file(GLOB SPICE_PLATFORM_SOURCE ${PROJECT_SOURCE_DIR}/src/cygwin/*.c)
   set(INCLUDE_PATH "${PROJECT_SOURCE_DIR}/include/cygwin" ${INCLUDE_PATH})
