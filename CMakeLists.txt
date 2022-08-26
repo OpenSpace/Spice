@@ -71,14 +71,16 @@ else ()
   target_compile_options(spice PRIVATE -w)
 endif ()
 
-target_precompile_headers(spice PRIVATE
-  <math.h>
-  <string.h>
-  <stdlib.h>
-  [["f2c.h"]]
-  [["SpiceUsr.h"]]
-  [["SpiceZfc.h"]]
-  [["SpiceZpr.h"]]
-  [["SpiceZst.h"]]
-  [["SpiceZmc.h"]]
+if (WIN32)
+  target_precompile_headers(spice PRIVATE
+    <math.h>
+    <string.h>
+    <stdlib.h>
+    [["f2c.h"]]
+    [["SpiceUsr.h"]]
+    [["SpiceZfc.h"]]
+    [["SpiceZpr.h"]]
+    [["SpiceZst.h"]]
+    [["SpiceZmc.h"]]
+  )
 )
