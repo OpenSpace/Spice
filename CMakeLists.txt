@@ -83,4 +83,4 @@ if (WIN32)
     [["SpiceZst.h"]]
     [["SpiceZmc.h"]]
   )
-)
+endif ()
