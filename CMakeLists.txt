@@ -45,7 +45,7 @@ if (SPICE_BUILD_SHARED_LIBRARY)
 else ()
   add_library(spice STATIC ${SPICE_COMMON_SOURCE} ${SPICE_PLATFORM_SOURCE})
 endif ()
-set_property(TARGET spice PROPERTY POSITION_INDEPENDENT_CODE 1)
+set_target_properties(spice PROPERTIES POSITION_INDEPENDENT_CODE 1)
 target_include_directories(spice PUBLIC "${INCLUDE_PATH}")
 
 if (WIN32)
