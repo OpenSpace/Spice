@@ -8,7 +8,7 @@ def branch = env.BRANCH_NAME;
 //
 parallel linux_gcc_make: {
   if (env.USE_BUILD_OS_LINUX == 'true') {
-    node('linux' && 'gcc') {
+    node('linux-gcc') {
       stage('linux-gcc-make/scm') {
         deleteDir();
         gitHelper.checkoutGit(url, branch);
@@ -22,7 +22,7 @@ parallel linux_gcc_make: {
 },
 linux_gcc_ninja: {
   if (env.USE_BUILD_OS_LINUX == 'true') {
-    node('linux' && 'gcc') {
+    node('linux-gcc') {
       stage('linux-gcc-ninja/scm') {
         deleteDir();
         gitHelper.checkoutGit(url, branch);
@@ -36,7 +36,7 @@ linux_gcc_ninja: {
 },
 linux_clang_make: {
   if (env.USE_BUILD_OS_LINUX == 'true') {
-    node('linux' && 'clang') {
+    node('linux-clang') {
       stage('linux-clang-make/scm') {
         deleteDir();
         gitHelper.checkoutGit(url, branch);
@@ -50,7 +50,7 @@ linux_clang_make: {
 },
 linux_clang_ninja: {
   if (env.USE_BUILD_OS_LINUX == 'true') {
-    node('linux' && 'clang') {
+    node('linux-clang') {
       stage('linux-clang-ninja/scm') {
         deleteDir();
         gitHelper.checkoutGit(url, branch);
