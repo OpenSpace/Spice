@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "name": "spice",
+  "version-string": "N0067",
+  "description": [
+    "An unofficial GitHub presence of JPL's NAIF's SPICE toolkit, combining the per-platform source releases (Visual Studio, Linux, macOS, Cygwin) into a single source tree of common and platform-specific files.",
+    "This port lives inside the Spice repository and builds the enclosing checkout. When publishing Spice to a registry, replace the path-based source in the portfile with vcpkg_from_github(REPO OpenSpace/Spice REF <tag> SHA512 <hash>).",
+    "Spice has no dependencies of its own, so there is no manifest to keep in sync, unlike the ghoul and sgct overlay ports."
+  ],
+  "homepage": "https://github.com/OpenSpace/Spice",
+  "supports": "!(uwp | android)",
+  "dependencies": [
+    { "name": "vcpkg-cmake", "host": true },
+    { "name": "vcpkg-cmake-config", "host": true }
+  ]
+}

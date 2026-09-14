@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.19.2)
-project(Spice)
+project(Spice VERSION 0.67.0)
+
+include(GNUInstallDirs)
 
 # Include all *.c files from the library
 file(GLOB SPICE_COMMON_SOURCE ${PROJECT_SOURCE_DIR}/src/common/*.c)
@@ -40,14 +42,28 @@ endif ()
 
 option(SPICE_BUILD_SHARED_LIBRARY "Build SPICE library as shared library" ON)
 
+# The install/export rules only make sense when Spice is configured as the top-level
+# project, which is how the vcpkg overlay port at support/vcpkg/ports/spice builds it. A
+# project that pulls Spice in through add_subdirectory has no use for them.
+if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
+  option(SPICE_ENABLE_INSTALL "Generate the install and export rules for Spice" ON)
+else ()
+  option(SPICE_ENABLE_INSTALL "Generate the install and export rules for Spice" OFF)
+endif ()
+
 if (SPICE_BUILD_SHARED_LIBRARY)
   add_library(spice SHARED ${SPICE_COMMON_SOURCE} ${SPICE_PLATFORM_SOURCE})
 else ()
   add_library(spice STATIC ${SPICE_COMMON_SOURCE} ${SPICE_PLATFORM_SOURCE})
 endif ()
+add_library(spice::spice ALIAS spice)
+
 set_target_properties(spice PROPERTIES POSITION_INDEPENDENT_CODE 1)
 set_target_properties(spice PROPERTIES C_STANDARD 90)
-target_include_directories(spice PUBLIC "${INCLUDE_PATH}")
+target_include_directories(spice PUBLIC
+  "$<BUILD_INTERFACE:${INCLUDE_PATH}>"
+  "$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>"
+)
 
 if (WIN32)
   # Our compile definitions on Windows
@@ -84,4 +100,8 @@ if (WIN32)
     [["SpiceZst.h"]]
     [["SpiceZmc.h"]]
   )
+endif ()
+
+if (SPICE_ENABLE_INSTALL)
+  include(${PROJECT_SOURCE_DIR}/support/cmake/spice_install.cmake)
 endif ()
