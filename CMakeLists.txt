@@ -67,7 +67,11 @@ endif ()
 add_library(spice::spice ALIAS spice)
 
 set_target_properties(spice PROPERTIES POSITION_INDEPENDENT_CODE 1)
-set_target_properties(spice PROPERTIES C_STANDARD 90)
+set_target_properties(spice PROPERTIES
+  C_STANDARD 90
+  C_STANDARD_REQUIRED ON
+  C_EXTENSIONS OFF
+)
 target_include_directories(spice PUBLIC
   "$<BUILD_INTERFACE:${INCLUDE_PATH}>"
   "$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>"
@@ -84,21 +88,22 @@ if (WIN32)
       OMIT_BLANK_CC
       NON_ANSI_STDIO
   )
-  target_compile_options(spice PRIVATE /MP)
-
   set_target_properties(spice PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
 else ()
   target_compile_definitions(spice PRIVATE NON_ANSI_STDIO)
-  target_compile_options(spice PRIVATE -ansi)
+endif ()
+
+if (UNIX)
+  target_link_libraries(spice PRIVATE m)
 endif ()
 
 if (MSVC)
-  target_compile_options(spice PRIVATE /W0)
+  target_compile_options(spice PRIVATE /W0 /MP)
 else ()
   target_compile_options(spice PRIVATE -w)
 endif ()
 
-if (WIN32)
+if (MSVC)
   target_precompile_headers(spice PRIVATE
     <math.h>
     <string.h>
