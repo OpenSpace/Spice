@@ -1,4 +1,12 @@
-cmake_minimum_required(VERSION 3.19.2)
+# This is free and unencumbered software released into the public domain.
+#
+# Anyone is free to copy, modify, publish, use, compile, sell, or distribute this
+# software, either in source code form or as a compiled binary, for any purpose,
+# commercial or non-commercial, and by any means.
+#
+# For more information, please refer to <https://unlicense.org>
+
+cmake_minimum_required(VERSION 4.0.0)
 project(Spice VERSION 0.67.0)
 
 include(GNUInstallDirs)
@@ -20,7 +28,7 @@ elseif (APPLE)
   else()
     set(_CMAKE_APPLE_SILICON_PROCESSOR "")
   endif()
-  
+
   if (_CMAKE_APPLE_SILICON_PROCESSOR STREQUAL "arm64")
     file(GLOB SPICE_PLATFORM_SOURCE ${PROJECT_SOURCE_DIR}/src/mac_arm/*.c)
     set(INCLUDE_PATH "${PROJECT_SOURCE_DIR}/include/mac_arm" ${INCLUDE_PATH})
@@ -68,11 +76,13 @@ target_include_directories(spice PUBLIC
 if (WIN32)
   # Our compile definitions on Windows
   # We are not manually setting the optimization level, but leave that to the Debug/Release flags
-  target_compile_definitions(spice PRIVATE 
-    _COMPLEX_DEFINED
-    MSDOS
-    OMIT_BLANK_CC
-    NON_ANSI_STDIO
+  target_compile_definitions(
+    spice
+    PRIVATE
+      _COMPLEX_DEFINED
+      MSDOS
+      OMIT_BLANK_CC
+      NON_ANSI_STDIO
   )
   target_compile_options(spice PRIVATE /MP)
 
