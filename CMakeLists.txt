@@ -1,5 +1,15 @@
-cmake_minimum_required(VERSION 3.19.2)
-project(Spice)
+# This is free and unencumbered software released into the public domain.
+#
+# Anyone is free to copy, modify, publish, use, compile, sell, or distribute this
+# software, either in source code form or as a compiled binary, for any purpose,
+# commercial or non-commercial, and by any means.
+#
+# For more information, please refer to <https://unlicense.org>
+
+cmake_minimum_required(VERSION 4.0.0)
+project(Spice VERSION 0.67.0)
+
+include(GNUInstallDirs)
 
 # Include all *.c files from the library
 file(GLOB SPICE_COMMON_SOURCE ${PROJECT_SOURCE_DIR}/src/common/*.c)
@@ -18,7 +28,7 @@ elseif (APPLE)
   else()
     set(_CMAKE_APPLE_SILICON_PROCESSOR "")
   endif()
-  
+
   if (_CMAKE_APPLE_SILICON_PROCESSOR STREQUAL "arm64")
     file(GLOB SPICE_PLATFORM_SOURCE ${PROJECT_SOURCE_DIR}/src/mac_arm/*.c)
     set(INCLUDE_PATH "${PROJECT_SOURCE_DIR}/include/mac_arm" ${INCLUDE_PATH})
@@ -40,39 +50,60 @@ endif ()
 
 option(SPICE_BUILD_SHARED_LIBRARY "Build SPICE library as shared library" ON)
 
+# The install/export rules only make sense when Spice is configured as the top-level
+# project, which is how the vcpkg overlay port at support/vcpkg/ports/spice builds it. A
+# project that pulls Spice in through add_subdirectory has no use for them.
+if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
+  option(SPICE_ENABLE_INSTALL "Generate the install and export rules for Spice" ON)
+else ()
+  option(SPICE_ENABLE_INSTALL "Generate the install and export rules for Spice" OFF)
+endif ()
+
 if (SPICE_BUILD_SHARED_LIBRARY)
   add_library(spice SHARED ${SPICE_COMMON_SOURCE} ${SPICE_PLATFORM_SOURCE})
 else ()
   add_library(spice STATIC ${SPICE_COMMON_SOURCE} ${SPICE_PLATFORM_SOURCE})
 endif ()
+add_library(spice::spice ALIAS spice)
+
 set_target_properties(spice PROPERTIES POSITION_INDEPENDENT_CODE 1)
-set_target_properties(spice PROPERTIES C_STANDARD 90)
-target_include_directories(spice PUBLIC "${INCLUDE_PATH}")
+set_target_properties(spice PROPERTIES
+  C_STANDARD 90
+  C_STANDARD_REQUIRED ON
+  C_EXTENSIONS OFF
+)
+target_include_directories(spice PUBLIC
+  "$<BUILD_INTERFACE:${INCLUDE_PATH}>"
+  "$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>"
+)
 
 if (WIN32)
   # Our compile definitions on Windows
   # We are not manually setting the optimization level, but leave that to the Debug/Release flags
-  target_compile_definitions(spice PRIVATE 
-    _COMPLEX_DEFINED
-    MSDOS
-    OMIT_BLANK_CC
-    NON_ANSI_STDIO
+  target_compile_definitions(
+    spice
+    PRIVATE
+      _COMPLEX_DEFINED
+      MSDOS
+      OMIT_BLANK_CC
+      NON_ANSI_STDIO
   )
-  target_compile_options(spice PRIVATE /MP)
-
   set_target_properties(spice PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
 else ()
   target_compile_definitions(spice PRIVATE NON_ANSI_STDIO)
-  target_compile_options(spice PRIVATE -ansi)
+endif ()
+
+if (UNIX)
+  target_link_libraries(spice PRIVATE m)
 endif ()
 
 if (MSVC)
-  target_compile_options(spice PRIVATE /W0)
+  target_compile_options(spice PRIVATE /W0 /MP)
 else ()
   target_compile_options(spice PRIVATE -w)
 endif ()
 
-if (WIN32)
+if (MSVC)
   target_precompile_headers(spice PRIVATE
     <math.h>
     <string.h>
@@ -84,4 +115,8 @@ if (WIN32)
     [["SpiceZst.h"]]
     [["SpiceZmc.h"]]
   )
+endif ()
+
+if (SPICE_ENABLE_INSTALL)
+  include(${PROJECT_SOURCE_DIR}/support/cmake/spice_install.cmake)
 endif ()
